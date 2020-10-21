@@ -1,0 +1,135 @@
+/*? MAIN */
+
+body {
+    color: white;
+}
+
+.hero-wrapper {
+    font-family: var(--main-content);
+    margin: 0 auto;
+}
+
+.featured-course-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    z-index: 1000;
+    padding: 1.6em;
+}
+
+.featured-course-desc {
+    margin-top: 5em;
+}
+
+.featured-course-wrap img {
+    width: 100%;
+}
+
+.hero-wrapper span h2 {
+    color: var(--silver);
+    padding: 0;
+    margin: 0;
+}
+
+.featured-course-wrap h2 {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+.bottom-layer {
+    background: var(--gold);
+    margin: 0;
+    padding: 0;
+    margin-top: 1.5em;
+    border-bottom-left-radius: 3px;
+}
+
+.course-cta {
+    border-left: 5px solid var(--bodyBackground);
+    border-right: 5px solid var(--bodyBackground);
+    padding: .5em;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--bodyBackground);
+    float: right;
+    transition: background 100ms;
+    border-right: none;
+}
+
+.course-cta:hover,
+.course-cta:focus {
+    cursor: pointer;
+    background: var(--off-white);
+}
+
+.bottom-layer i {
+    color: inherit;
+    font-size: inherit;
+}
+
+.hero-wrapper p {
+    color: var(--off-white);
+    margin-bottom: 0;
+}
+
+@media(min-width: 700px) {
+    .hero-wrapper {
+        display: flex;
+        grid-template-columns: repeat(3, 1fr);
+        
+    }
+
+    .featured-course-wrap {
+        flex-direction: column;
+        margin-bottom: 1em;
+        grid-column: 1 / -1;
+    }
+
+    .featured-course-wrap h2 {
+        margin-bottom: 0;
+    }
+
+    .course-cta {
+        display: block;
+    }
+}
+
+@media(min-width: 900px) {
+
+    .featured-course-wrap {
+        width: 50%;
+    }
+
+    .featured-course-desc {
+        margin-top: 0;
+    }
+}
+
+@media(min-width: 1200px) {
+    .hero-wrapper {
+        margin-top: 0;
+        margin-right: 0;
+        padding-left: 3.5em;
+    }
+
+    .featured-course-wrap {
+        display: flex;
+        flex-direction: column;
+        margin-top: .5em;
+        margin-bottom: 2em;
+    }
+
+    .featured-course-wrap p {
+        line-height: 1.5em;
+    }
+
+    .bottom-layer {
+        margin-top: 1.5em;
+        width: 100%;
+        margin-right: auto;
+        grid-column: 1 / 2;
+    }
+
+}
+

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Alumni</title>
+
+    <link rel="stylesheet" href="CSS/index.css">
+    <link rel="stylesheet" href="CSS/contact.css">
+
+    <!-- ? FONTS -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&family=Montserrat:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <!-- ? ICONS -->
+    <script src="https://kit.fontawesome.com/c0594c7b16.js" crossorigin="anonymous"></script>
+    <!-- ? JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- ? META DATA -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">
+                <p class="logo">SmartCourse<i class="fas fa-chevron-right"></i></p>
+            </a>
+
+            <span class="open-menu"><i class="fas fa-bars"></i></span>
+
+            <ul class="navigation">
+                <a href="#" class="close-menu"><i class="fas fa-times"></i></a>
+                <li><a href="index.html"><span>01.</span> Home</a></li>
+                <li><a href="courses.html"><span>02.</span> Courses</a></li>
+                <li><a href="alumni.html" class="active"><span>03.</span> Alumni</a></li>
+                <li><a href="contact.html"><span>04.</span> Contact</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <!-- ? MODAL -->
+
+    <div class="form-wrapper" id="modal">
+
+        <form ACTION="" method="POST">
+
+            <i class="fas fa-times-circle" id="close"></i>
+
+            <h2>Get the latest news about our courses</h2>
+
+            <span class="details">
+
+                <input type="text" id="Fname" class="format" placeholder="First Name" aria-label="First Name Field" />
+                <input type="text" id="Lname" class="format" placeholder="Last Name" aria-label="Last Name Field" />
+            </span>
+
+            <input type="email" id="email" class="format" placeholder="Email address"
+                aria-label="Email Address Field" />
+
+            <label id="checkbox" class="checkbox">
+                <input type="checkbox" id="accept" aria-label="Checkbox agreement" />
+                <p>By ticking this box you are accepting the terms and conditions provided.</p>
+            </label>
+
+            <button type="submit">Submit</button>
+
+        </form>
+
+    </div>
+
+    <footer>
+        <div class="social-media">
+            <div class="follow">
+
+                <p class="follow-us">follow us:</p>
+
+                <ul>
+                    <li class="links"><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+                    <li class="links"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li class="links"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                </ul>
+
+            </div>
+
+            <div class="menu-wrapper-content">
+                <ul>
+                    <li><a href="#">How it works</a></li>
+                    <li><a href="#">Benefits of joining</a></li>
+                    <li><a href="#">Refund policy</a></li>
+                </ul>
+
+            </div>
+
+            <div class="bottom-links-wrap">
+
+                <div class="bottom-links">
+                    <a href="terms.html" class="bottom-link">Terms & Agreements</a>
+                    <a href="legal.html" class="bottom-link">Legal</a>
+                    <a href="#subscribe" class="bottom-link" id="subscribe">Subscribe</a>
+                </div>
+
+                <p>SmartCourse&trade; all rights reserved 2020</p>
+            </div>
+
+        </div>
+
+        <script src="JS/index.js"></script>
+
+    </footer>
+    
+</body>
+</html>

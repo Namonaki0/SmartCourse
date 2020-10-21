@@ -1,0 +1,15 @@
+/*? GLOBAL */
+
+:root {
+	--gold: #ffc507;
+	--off-white: #EAEAEA;
+    --main-content: 'Montserrat', sans-serif;
+    --navigation: 'Josefin Sans', sans-serif;
+    --navy: #333d51;
+    --new-blue: #3f4c77;
+    --silver: #e0e7e9;
+    --bodyBackground: #1c1c1c;
+    --darkGrey: #2d2a2a;
+    --bannerGrey: #413F3F;
+    --csBackground: #fafafa1a;
+}

@@ -1,0 +1,12 @@
+/*GENERAL*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--darkGrey);
+    font-family: var(--main-content);
+    margin: 0;
+    padding: 0;
+}

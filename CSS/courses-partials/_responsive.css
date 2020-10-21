@@ -1,0 +1,75 @@
+
+/*? RESPONSIVENESS */
+
+
+/*? BANNER */
+
+@media(min-width: 850px) {
+
+    #course-list-wrapper-banner {
+        color: var(--navy);
+        position: relative;
+    }
+
+    #course-update {
+        background: var(--silver);
+        z-index: 1000;
+    }
+
+    .description-wrapper {
+        display: grid;
+        place-content: center;
+        margin-left: 2em;
+    }
+
+    .description-wrapper>p {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .description-wrapper .btns {
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+        width: 95%;
+    }
+}
+
+
+/*? COURSE LIST WRAPPER + CONTENT */
+
+@media(min-width: 950px) {
+
+    .course-list-wrapper {
+        background: rgba(63, 76, 119, 1);
+        /* padding-bottom: 2.5em; */
+    }
+
+    .overall-wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+        margin: 0 auto;
+        padding-bottom: 2em;
+    }
+
+    .course-desc {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        border-bottom: none;
+        background: rgba(0, 0, 0, .1);
+        box-shadow: 0 0 2px rgba(0, 0, 0, .1);
+        padding: .5em;
+    }
+
+    .course-desc img {
+        height: 300px;
+        max-width: 100%;
+        object-fit: cover;
+    }
+
+    .course-info {
+        padding: 0;
+        margin-top: 1em;
+    }
+}

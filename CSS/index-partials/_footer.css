@@ -1,0 +1,171 @@
+/*? FOOTER */
+
+footer {
+    background: var(--navy);
+    margin-bottom: 0;
+    border-top: .5px solid var(--gold);
+    padding: 0;
+    height: 40%;
+}
+
+footer div {
+    margin: 0;
+    padding: 0;
+}
+
+footer div ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+footer div ul i {
+    margin: 1em;
+    padding: .5em;
+    font-size: 1.5em;
+    color: var(--gold);
+    border-radius: 50%;
+    transition: all 100ms ease-in-out 0s;
+    border: 2px solid var(--gold);
+}
+
+footer div ul i:hover {
+    color: var(--silver);
+    border: 2px solid var(--silver);
+}
+
+.bottom-links {
+    text-align: center;
+    margin: 1em 0 .5em;
+    padding: 0 0 1em;
+    font-size: .8em;
+}
+
+footer div.bottom-links a {
+    text-decoration: none;
+    color: white;
+    border-right: 2px solid var(--gold);
+    padding: 0 .5em;
+    font-weight: bold;
+}
+
+footer div.bottom-links a:first-child {
+    padding-left: 0;
+}
+
+footer div.bottom-links a:last-child {
+    border-right: none;
+}
+
+div.follow {
+    padding: .5em;
+}
+
+div.follow p {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 1.5em;
+}
+
+div.bottom-links-wrap {
+    padding-bottom: .5em;
+}
+
+div.bottom-links-wrap p {
+    text-align: center;
+    color: white;
+    margin-top: 0;
+}
+
+.menu-wrapper-content {
+    visibility: hidden;
+    position: absolute;
+}
+
+@media (min-width: 930px) {
+
+    footer div.social-media {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1em;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .follow {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+        padding: 0;
+        order: 3;
+    }
+
+    p.follow-us {
+        margin-top: 0;
+    }
+
+    footer div ul i {
+        font-size: 1.5em;
+        padding: .5em;
+        margin: .5em;
+    }
+
+    .bottom-links-wrap {
+        border-left: 1.5px solid var(--gold);
+        margin-left: 1em;
+    }
+
+    .bottom-links {
+        order: -1;
+        font-size: 1em;
+        align-items: center;
+        margin: 0;
+        margin-left: 1em;
+    }
+
+    .bottom-link:hover {
+        color: var(--gold);
+    }
+
+    div.bottom-links-wrap p {
+        margin-bottom: 0;
+        padding: 0;
+        text-align: left;
+        margin-left: 1em;
+    }
+
+    a.bottom-link:nth-of-type(1) {
+        margin-left: 0;
+    }
+
+    .menu-wrapper-content {
+        visibility: visible;
+        position: relative;
+        order: 1;
+        border-left: 1.5px solid var(--gold);
+    }
+
+    .menu-wrapper-content ul {
+        display: flex;
+        flex-direction: column;
+        margin-left: 1em;
+        line-height: 2em;
+    }
+
+    .menu-wrapper-content ul a {
+        text-decoration: none;
+        color: white;
+        transition: color 100ms ease-in-out;
+    }
+
+    .menu-wrapper-content ul a:hover {
+        color: var(--gold);
+    }
+
+}

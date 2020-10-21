@@ -1,0 +1,39 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    place-content: center;
+    width: 90%;
+    margin: 0;
+    padding: 0;
+    margin: 0 auto;
+    font-size: 1.1em;
+}
+
+.legal-wrapper {
+    background: white;
+    color: black;
+    padding: 1em;
+}
+
+h1, h2 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+h1 {
+    margin-bottom: 1em;
+}
+
+h2 {
+    font-size: 1.2em;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.copyright {
+    padding-top: 1em;
+}
+
+.return-wrapper {
+    padding-top: 1em;
+}
