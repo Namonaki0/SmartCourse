@@ -18,7 +18,7 @@
     font-size: 2em;
     margin-top: 1em;
     margin-bottom: 1.5em;
-    z-index: 1000;
+    z-index: 100;
     position: relative;
 }
 
@@ -43,7 +43,7 @@
     width: 20%;
     text-align: right;
     align-self: center;
-    z-index: 1000;
+    z-index: 100;
 }
 
 .course-bottom-info h4 {
@@ -201,7 +201,7 @@ a.cta-course-page:focus,
     padding-bottom: 2em;
 }
 
-@media(min-width: 700px) {
+@media(min-width: 780px) {
 
     .course-list-wrapper {
         /* padding-top: 3em; */
@@ -212,6 +212,7 @@ a.cta-course-page:focus,
     .overall-wrapper {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+        /* grid-template-columns: 1fr; */
         margin: 0 auto;
     }
 
@@ -255,6 +256,11 @@ a.cta-course-page:focus,
 
     .course-list-wrapper {
         margin-top: 1em;
+    }
+
+    .overall-wrapper {
+        /* display: grid; */
+        grid-template-columns: repeat(2, 1fr);
     }
     
 }

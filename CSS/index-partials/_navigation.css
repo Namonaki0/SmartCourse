@@ -128,7 +128,7 @@ nav a p {
 	color: #444049;
 	text-shadow: 0px 1px 1px rgba(0,0,0,.2);
 	flex-direction: row;
-	z-index: 1000;;
+	z-index: 1000;
 }
 
 nav a {
