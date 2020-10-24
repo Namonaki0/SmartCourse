@@ -1,4 +1,4 @@
-# SmartCourse
+# SmartCourse - concept
 Online course concept website
 
 The sole purpouse of this project is to practice some skills. 
