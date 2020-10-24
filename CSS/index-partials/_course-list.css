@@ -1,14 +1,17 @@
 /* ? COURSE LIST WRAPPER */
 
+.course-list-wrapper {
+    background:var(--new-blue);
+}
 
-.course-list-wrapper::before {
+/* .course-list-wrapper::before {
     content: "";
     display: block;
     width: 100%;
     height: 1px;
     background: var(--navy);
     margin: 0 auto;
-}
+} */
 
 .course-list-wrapper h3 {
     text-align: center;
@@ -103,8 +106,10 @@
 }
 
 .course-desc {
-    border-bottom: 1px solid var(--off-white);
-    margin-bottom: 2.5em;
+    /* border-bottom: 1px solid var(--off-white); */
+    margin-bottom: 1.5em;
+    padding: .2em .2em .5em;
+    box-shadow: 0 0 1px rgba(250,250,250, .9);
 }
 
 .course-desc img {
@@ -122,6 +127,15 @@
 h4 {
     font-size: 1.4em;
     margin: .5em 0;
+}
+
+.course-info h4::after {
+    content: "";
+    height: 2px;
+    display: block;
+    background: var(--gold);
+    width: 30%;
+    margin-top: 5px;
 }
 
 .course-info {
