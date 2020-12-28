@@ -1,271 +1,325 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
+    <title>SmartCourse</title>
 
-	<title>SmartCourse</title>
+    <!-- ? META DATA -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
 
-	<link rel="stylesheet" href="CSS/index.css">
-	
-	<!-- ? FONTS -->
-	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
-	<!-- ? ICONS -->
-	<script src="https://kit.fontawesome.com/c0594c7b16.js" crossorigin="anonymous"></script>
-	<!-- ? JQUERY -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<!-- ? META DATA -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <link rel="stylesheet" href="CSS/index.css" />
 
-</head>
+    <!-- ? FONTS -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&family=Montserrat:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- ? ICONS -->
+    <script
+      src="https://kit.fontawesome.com/c0594c7b16.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- ? JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-<body>
-	<header>
-		
-		<nav>
-			<a href="index.html"><p class="logo">SmartCourse<i class="fas fa-chevron-right"></i></p></a>
+  </head>
 
-			<span class="open-menu"><i class="fas fa-bars"></i></span>
-			
-			<ul class="navigation">
-				<a href="#" class="close-menu"><i class="fas fa-times"></i></a>
-				<li><a href="index.html" class="active"><span>01.</span> Home</a></li>
-				<li><a href="courses.html"><span>02.</span> Courses</a></li>
-				<li><a href="alumni.html"><span>03.</span> Alumni</a></li>
-				<li><a href="contact.html"><span>04.</span> Contact</a></li>	
-			</ul>	
+  <body>
+    <header>
+      <nav>
+        <a href="index.html"
+          ><p class="logo">SmartCourse<i class="fas fa-chevron-right"></i></p
+        ></a>
 
-		</nav>
+        <span class="open-menu">
+          <i class="fas fa-bars"></i>
+        </span>
 
-	</header>
+        <ul class="navigation">
+          <a href="#" class="close-menu"><i class="fas fa-times"></i></a>
 
-		<div class="hero-wrapper">
+          <li>
+            <a href="index.html" class="active"><span>01.</span> Home</a>
+          </li>
+          <li>
+            <a href="courses.html"><span>02.</span> Courses</a>
+          </li>
+          <li>
+            <a href="testimonials.html"><span>03.</span> Testimonials</a>
+          </li>
+        </ul>
+      </nav>
 
-			<div id="countdown-wrapper">
-				<p class="promotion-banner">Promotion ends</p>
-				<p id="countdown"></p>
-			</div>
+      <!--? VIEWPORT -->
+      <span id="width" class="width-container"></span>
+    </header>
+          <div class="hero-message">
+            <h2>Welcome to SmartCourse</h2>
+            <p>
+                The only website you will need to upgrade your skills and be at the forefront of a world of innovation. We have instructors from different backgrounds with years of experience in the industry and you can take full advantage right here. <br/>
+            
+            </p>
+          </div>
+      </div>
+    </div>
 
-			<div class="featured-course-wrap">
-				<div class="featured-course-desc">
-					<p>Featured Course</p>
-					<h2>JavaScript Bootcamp</h2>
-				</div>
+    <main>
+      <section class="course-list-wrapper">
+        <div class="course-top-info">
+          <h3>Recently</h3>
+          <h4>
+            <a href="./courses.html">all courses<i class="fas fa-plus"></i></a>
+          </h4>
+        </div>
 
-				<!-- <div class="featured-course-wrap-description"> -->
-					<p>The most comprehensive JS course you will find online. Everything you need to know to get you hired is
-					emphasized here. Join now and take advantage of the 30% launch discount.</p>
+        <div class="overall-wrapper">
+          <div class="course-desc">
+            <img src="Images/Image1.jpeg" />
+            <div class="course-info">
+              <h4>Pattern design</h4>
+              <p>
+                Completely simplify alternative value via empowered niches.
+                Globally synergize market-driven e-commerce rather than
+                intermandated intellectual capital. Objectively maintain state
+                of.
+              </p>
+              <p><span>Led by: </span>Anthony Jenkins</p>
+              <p><span>Enlisted: </span>624 people</p>
+              <a class="cta-course-page" href="#">Explore</a>
+            </div>
+          </div>
 
-					<div class="bottom-layer">
-						<a href="featuredcourse.html" class="course-cta" aria-label="highlighted-course-link">Find out more <i
-							class="fas fa-angle-right"></i></a>
-					</div>
-				<!-- </div> -->
+          <div class="course-desc">
+            <img src="Images/Image2.jpg" />
+            <div class="course-info">
+              <h4>Design thinking</h4>
+              <p>
+                Completely simplify alternative value via empowered niches.
+                Globally synergize market-driven e-commerce rather than
+                intermandated intellectual capital. Objectively maintain state
+                of.
+              </p>
+              <p><span>Led by: </span>Mark Rogers</p>
+              <p><span>Enlisted: </span>522 people</p>
+              <a class="cta-course-page" href="#">Explore</a>
+            </div>
+          </div>
 
-			</div>	
-		</div>
-		
-<main>
+          <div class="course-desc">
+            <img src="Images/Image3.jpeg" />
+            <div class="course-info">
+              <h4>UX/UI fundamentals</h4>
+              <p>
+                Completely simplify alternative value via empowered niches.
+                Globally synergize market-driven e-commerce rather than
+                intermandated intellectual capital. Objectively maintain state
+                of.
+              </p>
+              <p><span>Led by: </span>Pablo Francisco</p>
+              <p><span>Enlisted: </span>972 people</p>
+              <a class="cta-course-page" href="#">Explore</a>
+            </div>
+          </div>
 
-	<section class="course-list-wrapper">
-			
-		<div class="course-top-info">
-			<h3>Recently </h3>
-			<h4><a href="./courses.html">all courses<i class="fas fa-plus"></i></a></h4>
-		</div>
+          <div class="course-desc">
+            <img src="Images/Image4.jpeg" />
+            <div class="course-info">
+              <h4>Python Bootcamp</h4>
+              <p>
+                Completely simplify alternative value via empowered niches.
+                Globally synergize market-driven e-commerce rather than
+                intermandated intellectual capital. Objectively maintain state
+                of.
+              </p>
+              <p><span>Led by: </span>Robert Stevens</p>
+              <p><span>Enlisted: </span>1634 people</p>
+              <a class="cta-course-page" href="#">Explore</a>
+            </div>
+          </div>
 
-	<div class="overall-wrapper">
+          <div class="course-desc">
+            <img src="Images/Image5.jpg" />
+            <div class="course-info">
+              <h4>Computer Science</h4>
+              <p>
+                Completely simplify alternative value via empowered niches.
+                Globally synergize market-driven e-commerce rather than
+                intermandated intellectual capital. Objectively maintain state
+                of.
+              </p>
+              <p><span>Led by: </span>Amelia Borges</p>
+              <p><span>Enlisted: </span>2652 people</p>
+              <a class="cta-course-page" href="#">Explore</a>
+            </div>
+          </div>
 
-		<div class="course-desc">
-			<img src="Images/Image1.jpeg">
-			<div class="course-info">
-				<h4>Pattern design</h4>
-				<p>Completely simplify alternative value via empowered niches. Globally synergize market-driven e-commerce rather than intermandated intellectual capital. Objectively maintain state of.</p>
-				<p><span>Led by: </span>Anthony Jenkins</p>
-				<p><span>Enlisted: </span>624 people</p>
-					<a class="cta-course-page" href="#">Explore</a>
-			</div>
+          <div class="course-desc">
+            <img src="Images/Image6.jpeg" />
+            <div class="course-info">
+              <h4>HTML & CSS Bootcamp</h4>
+              <p>
+                Completely simplify alternative value via empowered niches.
+                Globally synergize market-driven e-commerce rather than
+                intermandated intellectual capital. Objectively maintain state
+                of.
+              </p>
+              <p><span>Led by: </span>Kevin Powell</p>
+              <p class="enlisted"><span>Enlisted: </span>10239 people</p>
+              <a class="cta-course-page" href="#">Explore</a>
+            </div>
+          </div>
 
-		</div>
+          <div class="course-bottom-info">
+            <a href="./courses.html">all courses<i class="fas fa-plus"></i></a>
+          </div>
+        </div>
+      </section>
 
-		<div class="course-desc">
-			<img src="Images/Image2.jpg">
-			<div class="course-info">
-				<h4>Design thinking</h4>
-				<p>Completely simplify alternative value via empowered niches. Globally synergize market-driven e-commerce rather than intermandated intellectual capital. Objectively maintain state of.</p>
-				<p><span>Led by: </span>Mark Rogers</p>
-				<p><span>Enlisted: </span>522 people</p>
-				<a class="cta-course-page" href="#">Explore</a>
-			</div>
+      <section>
+        <div class="menu-wrapper" id="container">
+          <button onClick="change1()" class="exp1 btn-slider exp" href="#">
+            How it works<span class="minus-sign plus-sign" id="plus1"></span>
+          </button>
+          <div class="content">
+            <p class="root1 cont-para root">
+              After completing all modules, an instructor will evaluate your
+              projects and give you honest feedback as well as a final grade.
+              Should you pass all the criterias successfully, you will be given
+              a certificate equivalent to a level 3 degree that you can add to
+              your portfolio.<br />
+              <br />
+              Each course should have an average of 3 projects to complete,
+              quite similar to what you would find in real life work
+              environment, making them perfect to give you real experience.
+            </p>
+          </div>
 
-		</div>
+          <button onClick="change2()" class="exp2 btn-slider exp" href="#">
+            Benefits of joining<span
+              class="minus-sign plus-sign"
+              id="plus2"
+            ></span>
+          </button>
+          <div class="content">
+            <p class="root2 cont-para root">
+              When you join you are part of our great learning culture and our
+              aim is to provide you with all the right tools to land that dream
+              job. You also get: <br /><br />
+              - access to our discord channel <br />
+              - personalized one-to-one help with one of our tutors <br />
+              - mini daily challenges<br />
+              - fresh courses every month<br /><br />
 
-		<div class="course-desc">
-			<img src="Images/Image3.jpeg">
-			<div class="course-info">
-				<h4>UX/UI fundamentals</h4>
-				<p>Completely simplify alternative value via empowered niches. Globally synergize market-driven e-commerce rather than intermandated intellectual capital. Objectively maintain state of.</p>
-				<p><span>Led by: </span>Pablo Francisco</p>
-				<p><span>Enlisted: </span>972 people</p>
-				<a class="cta-course-page" href="#">Explore</a>
-			</div>
+              If you opt for the yearly subscription you will not only have
+              access to all our amazing material but a lot more extras that will
+              be emailed to you on a weekly basis such as job interview skills
+              and industry contacts.
+            </p>
+          </div>
 
-		</div>
+          <button onClick="change3()" class="exp3 btn-slider exp" href="#">
+            Refund policy<span class="minus-sign plus-sign" id="plus3"></span>
+          </button>
+          <div class="content">
+            <p class="root3 cont-para root">
+              Should you not be satisfied with any of our courses, you are
+              entitled to a refund or credit towards any other course as long as
+              your progress hasn't exceeded 30%. This does not infringe your
+              consumer's rights.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
 
-		<div class="course-desc">
-			<img src="Images/Image4.jpeg">
-			<div class="course-info">
-				<h4>Python Bootcamp</h4>
-				<p>Completely simplify alternative value via empowered niches. Globally synergize market-driven e-commerce rather than intermandated intellectual capital. Objectively maintain state of.</p>
-				<p><span>Led by: </span>Robert Stevens</p>
-				<p><span>Enlisted: </span>1634 people</p>
-				<a class="cta-course-page" href="#">Explore</a>
-			</div>
+    <!-- ? MODAL -->
 
-		</div>
+    <div class="form-wrapper" id="modal">
+      <form action="" method="POST">
+        <i class="fas fa-times-circle" id="close"></i>
 
-		<div class="course-desc">
-			<img src="Images/Image5.jpg">
-			<div class="course-info">
-				<h4>Computer Science</h4>
-				<p>Completely simplify alternative value via empowered niches. Globally synergize market-driven e-commerce rather than intermandated intellectual capital. Objectively maintain state of.</p>
-				<p><span>Led by: </span>Amelia Borges</p>
-				<p><span>Enlisted: </span>2652 people</p>
-				<a class="cta-course-page" href="#">Explore</a>
-			</div>
+        <h2>Get the latest news about our courses</h2>
 
-		</div>
+        <span class="details">
+          <input
+            type="text"
+            id="Fname"
+            class="format"
+            placeholder="First Name"
+            aria-label="First Name Field"
+          />
+          <input
+            type="text"
+            id="Lname"
+            class="format"
+            placeholder="Last Name"
+            aria-label="Last Name Field"
+          />
+        </span>
 
-		<div class="course-desc">
-			<img src="Images/Image6.jpeg">
-			<div class="course-info">
-				<h4>HTML & CSS Bootcamp</h4>
-				<p>Completely simplify alternative value via empowered niches. Globally synergize market-driven e-commerce rather than intermandated intellectual capital. Objectively maintain state of.</p>
-				<p><span>Led by: </span>Kevin Powell</p>
-				<p class="enlisted"><span>Enlisted: </span>10239 people</p>
-				<a class="cta-course-page" href="#">Explore</a>
-			</div>
+        <input
+          type="email"
+          id="email"
+          class="format"
+          placeholder="Email address"
+          aria-label="Email Address Field"
+        />
 
-		</div>
-		
-		<div class="course-bottom-info">
-			<a href="./courses.html">all courses<i class="fas fa-plus"></i></a>
-		</div>
+        <label id="checkbox" class="checkbox">
+          <input type="checkbox" id="accept" aria-label="Checkbox agreement" />
+          <p>
+            By ticking this box you are accepting the terms and conditions
+            provided.
+          </p>
+        </label>
 
-	</div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
 
-	</section>
+    <footer>
+      <div class="social-media">
+        <div class="follow">
+          <p class="follow-us">follow us:</p>
 
-	<section>
+          <ul>
+            <li class="links">
+              <a href="#"><i class="fab fa-facebook-square"></i></a>
+            </li>
+            <li class="links">
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </li>
+            <li class="links">
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </li>
+          </ul>
+        </div>
 
-		<div class="menu-wrapper" id="container">
+        <div class="menu-wrapper-content">
+          <ul>
+            <li><a href="howitworks.html">How it works</a></li>
+            <li><a href="benefits.html">Benefits of joining</a></li>
+            <li><a href="refundpolicy.html">Refund policy</a></li>
+          </ul>
+        </div>
 
-			<button onClick="change1()" class="exp1 btn-slider exp" href="#">How it works<span class="minus-sign plus-sign" id="plus1"></span></button>
-				<div class="content">
-					<p class="root1 cont-para root">After completing all modules, an instructor will evaluate your projects and give you honest feedback as well as a final grade. Should you pass all the criterias successfully, you will be given
-					a certificate equivalent to a level 3 degree that you can add to your portfolio.<br />
-					<br />
-					Each course should have an average of 3 projects to complete, quite similar to what you would find in real life work environment, making them perfect to give you real experience.</p>
-				</div>
+        <div class="bottom-links-wrap">
+          <div class="bottom-links">
+            <a href="terms.html" class="bottom-link">Terms & Agreements</a>
+            <a href="legal.html" class="bottom-link">Legal</a>
+            <a href="#subscribe" class="bottom-link" id="subscribe"
+              >Subscribe</a
+            >
+          </div>
 
-			<button onClick="change2()" class="exp2 btn-slider exp" href="#">Benefits of joining<span class="minus-sign plus-sign" id="plus2"></span></button>
-				<div class="content">
-					<p class="root2 cont-para root">When you join you are part of our great learning culture and our aim is to provide
-						you with all the right tools to land that dream job. You also get: <br /><br />
-					 - access to our discord channel <br />
-					 - personalized one-to-one help with one of our tutors <br />
-					 - mini daily challenges<br />
-					 - fresh courses every month<br /><br />
+          <p>SmartCourse&trade; all rights reserved 2020</p>
+        </div>
+      </div>
+    </footer>
 
-					If you opt for the yearly subscription you will not only have access to all our amazing material but a lot more extras that will be emailed to you on a weekly basis such as job interview skills and industry contacts.
-					</p>
-				</div>
-
-			<button onClick="change3()" class="exp3 btn-slider exp" href="#">Refund policy<span class="minus-sign plus-sign" id="plus3"></span></button>
-				<div class="content">
-					<p class="root3 cont-para root">Should you not be satisfied with any of our courses, you are entitled to a refund or credit towards any other course as long as your progress hasn't exceeded 30%. This does not infringe your consumer's rights.</p>
-				</div>
-		</div>
-
-	</section>
-
-</main>
-
-<!-- ? MODAL -->
-
-	<div class="form-wrapper" id="modal">
-		
-		<form ACTION="" method="POST">
-			
-			<i class="fas fa-times-circle" id="close"></i>
-
-			<h2>Get the latest news about our courses</h2>
-
-			<span class="details">
-
-			<input type="text" id="Fname" class="format" placeholder="First Name" aria-label="First Name Field" />
-			<input type="text" id="Lname" class="format" placeholder="Last Name" aria-label="Last Name Field" />
-			</span>
-
-			<input type="email" id="email" class="format" placeholder="Email address" aria-label="Email Address Field" />
-
-			<label id="checkbox" class="checkbox">
-				<input type="checkbox" id="accept" aria-label="Checkbox agreement" /> 
-				<p>By ticking this box you are accepting the terms and conditions provided.</p>
-			</label> 
-
-			<button type="submit">Submit</button>
-
-		</form>
-
-	</div>
-
-
-	
-	<footer>
-		<div class="social-media">
-			<div class="follow">
-
-				<p class="follow-us">follow us:</p>
-				
-				<ul>
-					<li class="links"><a href="#"><i class="fab fa-facebook-square"></i></a></li>
-					<li class="links"><a href="#"><i class="fab fa-instagram"></i></a></li>
-					<li class="links"><a href="#"><i class="fab fa-twitter"></i></a></li>
-				</ul>
-				
-			</div>
-
-			<div class="menu-wrapper-content">
-				<ul>
-					<li><a href="howitworks.html">How it works</a></li>
-					<li><a href="benefits.html">Benefits of joining</a></li>
-					<li><a href="refundpolicy.html">Refund policy</a></li>
-				</ul>
-
-			</div>
-			
-			<div class="bottom-links-wrap">
-
-				<div class="bottom-links">
-					<a href="terms.html" class="bottom-link">Terms & Agreements</a>
-					<a href="legal.html" class="bottom-link">Legal</a>
-					<a href="#subscribe" class="bottom-link" id="subscribe">Subscribe</a>
-				</div>
-
-					<p>SmartCourse&trade; all rights reserved 2020</p>
-			</div>
-
-		</div>
-	</footer>
-
-
-	<script src="JS/index.js"></script>
-</body>
+    <script src="JS/index.js"></script>
+  </body>
 </html>
-
-
-
-
 
 <!-- ? WEBSITE TERMS AND AGREEMENTS TEMPLATE
 Last updated [month day, year]
@@ -303,8 +357,6 @@ solely responsible for compliance with local laws, if and to the extent local la
 
 These terms and conditions were generated by Termly’s Terms and Conditions Generator. -->
 
-
-
 <!-- ? Terms & Agreements - responsive version
 
 ? HOW IT WORKS
@@ -337,8 +389,6 @@ Should you not be satisfied with any of our courses, you are entitled to a refun
 credit towards any other course as long as your progress hasn't exceeded 30%. This does not infringe your
 consumer's rights. -->
 
-
-
 <!-- * LEGAL - responsive version
 
 * PRIVACY POLICY
@@ -367,7 +417,6 @@ addressed in the Notification.
 Please be advised that pursuant to federal law you may be held liable for damages if you make material
 misrepresentations in a Notification. Thus, if you are not sure that material located on or linked to by the Site
 infringes your copyright, you should consider first contacting an attorney.] -->
-
 
 <!-- ? FORM EXAMPLE - NETLIFY FORM SUBMISSION
 
