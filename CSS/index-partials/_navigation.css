@@ -155,7 +155,7 @@ nav span i {
   nav {
     display: flex;
     justify-content: space-between;
-    border-bottom: 2px solid var(--gold);
+    border-bottom: 1px solid var(--gold);
     padding: 0.8em;
     box-shadow: 0 0px 1px rgba(0, 0, 0, 0.5);
     z-index: 1000;

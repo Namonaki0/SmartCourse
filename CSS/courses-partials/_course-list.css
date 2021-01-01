@@ -1,72 +1,69 @@
-
 /*? COURSE LIST WRAPPER */
 
 .course-list-wrapper {
-    background: rgba(63, 76, 119, 1);
-    margin-top: 0;
-    border-top: none;
-    padding-top: 0;
+  background: rgba(63, 76, 119, 1);
+  margin-top: 0;
+  border-top: none;
+  padding-top: 0;
 }
 
 #CS,
 .cs-btn {
-    background: var(--darkGrey);
+  background: var(--darkGrey);
 }
 
 #cs-course {
-    background: var(--csBackground);
+  background: var(--csBackground);
 }
 
 .overall-wrapper {
-    padding-top: 2em;
-    padding-bottom: 1.5em;
-    position: relative;
-    height: 100%;
+  padding-top: 2em;
+  padding-bottom: 1.5em;
+  position: relative;
+  height: 100%;
 }
 
 .course-list-wrapper * {
-    max-width: 95%;
-    margin-left: auto;
-    margin-right: auto;
-    color: white;
-    text-decoration: none;
+  max-width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  text-decoration: none;
 }
 
 .course-desc {
-    border-bottom: 1px solid var(--off-white);
-    margin-bottom: .8em;
-    background: rgba(0, 0, 0, .1);
-    box-shadow: 0 0 2px rgba(0, 0, 0, .1);
-    padding: .5em;
-    border-bottom: none;
+  border-bottom: 1px solid var(--off-white);
+  margin-bottom: 0.8em;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 0.5em;
+  border-bottom: none;
 }
 
 .course-desc:last-child {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 .course-desc img {
-    max-width: 100%;
-    border: 1px solid var(--off-white);
-    margin: 0;
-    padding: 0;
-    box-shadow: 0 0 2px rgba(0, 0, 0, .3);
+  max-width: 100%;
+  border: 1px solid var(--off-white);
+  margin: 0;
+  padding: 0;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
 }
 
 .course-desc span {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 h4 {
-    font-size: 1.4em;
-    margin: .5em 0;
+  font-size: 1.4em;
+  margin: 0.5em 0;
 }
 
 .course-info {
-    margin-bottom: 1.5em;
+  margin-bottom: 1.5em;
 }
 
 .course-desc div p.enlisted {
-    margin-bottom: 2em;
+  margin-bottom: 2em;
 }
-

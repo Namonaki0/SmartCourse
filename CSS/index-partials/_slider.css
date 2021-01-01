@@ -1,5 +1,22 @@
 /*? SLIDER SECTION */
 
+.terms-content {
+    height: 0;
+    position: absolute;
+    visibility: hidden;
+    transition: height 150ms ease-in-out;
+}
+
+.terms-content.active {
+    height: auto;
+    position: relative;
+    visibility: unset;
+}
+
+.content {
+    position: relative;
+}
+
 .cont-para {
     color: white;
     padding: 1em .5em;
@@ -40,7 +57,6 @@
 
 @media (min-width: 600px) {
     .menu-wrapper {
-        position: absolute;
-        visibility: hidden;
-    }
+        display: absolute;
+        display: none;
 }

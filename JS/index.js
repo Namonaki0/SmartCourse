@@ -1,101 +1,86 @@
 // //? COUNTDOWN
 
-// var futureDate = new Date("Dec 30, 2020 23:38:50").getTime();
-// var x = document.querySelector(".countdown-wrapper");
-// var promoText = document.querySelector(".promotion-banner");
+let futureDate = new Date("Jan 29, 2021 22:12:50").getTime();
+let counter = document.querySelector("#counter");
 
-// function tellTime() {
-//   var now = new Date().getTime();
+function tellTime() {
+  let now = new Date().getTime();
 
-//   var distance = futureDate - now;
+  let distance = futureDate - now;
 
-//   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-//   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-//   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-//   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-//   document.getElementById("countdown").innerHTML =
-//     days + "D " + hours + "H " + minutes + "M " + seconds + "S ";
+  counter.innerHTML = `<div class="promo-countdown"><span class="hurry-message">Hurry up! this promotion ends in </span><br/> ${days} Days ${hours} Hours ${minutes} Minutes ${seconds} Seconds</div>`;
 
-//   if (distance < 0) {
-//     clearInterval(tellTime);
-//     x.style.background = "#ff7a14";
-//     promoText.style.visibility = "hidden";
-//     promoText.style.position = "absolute";
-//     document.getElementById("countdown").innerHTML = "PROMOTION FINISHED";
-//   }
-// }
+  if (distance < 0) {
+    clearInterval(tellTime);
+    counter.innerHTML = `<div class="promo-finished">this promotion is now finished</div>`;
+  }
+}
 
 // setInterval(tellTime, 1000);
 
 //? MENU
 
-var open = document.querySelector(".open-menu");
-var close = document.querySelector(".close-menu");
-var nav = document.querySelector(".navigation");
-var bg = document.querySelector("main");
-var cd = document.querySelector(".countdown-wrapper");
-var section = document.querySelector("section");
+let open = document.querySelector(".open-menu");
+let close = document.querySelector(".close-menu");
+let nav = document.querySelector(".navigation");
 
 open.addEventListener("click", () => {
   nav.classList.add("open-menu-sect");
-  bg.style.opacity = 0.2;
-  cd.style.opacity = 0.2;
-  section.style.opacity = 0.2;
 });
 
 close.addEventListener("click", () => {
   nav.classList.remove("open-menu-sect");
-  bg.style.opacity = 1;
-  cd.style.opacity = 1;
-  section.style.opacity = 1;
 });
 
-//? DROP-DOWN
+//? DROP-DOWN + ICON CHANGE
 
-$(document).ready(() => {
-  $(".exp1")
-    .click((e) => {
-      e.preventDefault();
-      $(".root1").slideToggle(300);
-    })
-    .click();
-  $(".exp2")
-    .click((e) => {
-      e.preventDefault();
-      $(".root2").slideToggle(300);
-    })
-    .click();
-  $(".exp3")
-    .click((e) => {
-      e.preventDefault();
-      $(".root3").slideToggle(300);
-    })
-    .click();
+const btnSliders = document.querySelectorAll(".btn-slider");
+const termsContent = document.querySelectorAll(".terms-content");
+const content = document.querySelector(".content");
+const spanSign = document.querySelectorAll(".plus-sign");
+
+btnSliders.forEach((slider) => {
+  slider.addEventListener("click", (e) => {
+    if (e.target.classList.contains("btn-slider")) {
+      const sliderPosition = e.target.classList.length;
+
+      switch (sliderPosition) {
+        case 1:
+          termsContent[0].classList.toggle("active");
+          spanSign[0].classList.toggle("minus-sign");
+          break;
+        case 2:
+          termsContent[1].classList.toggle("active");
+          spanSign[1].classList.toggle("minus-sign");
+          break;
+        case 3:
+          termsContent[2].classList.toggle("active");
+          spanSign[2].classList.toggle("minus-sign");
+          break;
+        default:
+          return;
+      }
+    }
+  });
 });
-
-//? DROP-DOWN ICON CHANGE
-
-function change1() {
-  if (document.getElementById("plus1").classList.contains("plus-sign"))
-    document.getElementById("plus1").classList.toggle("minus-sign");
-}
-
-function change2() {
-  if (document.getElementById("plus2").classList.contains("plus-sign"))
-    document.getElementById("plus2").classList.toggle("minus-sign");
-}
-
-function change3() {
-  if (document.getElementById("plus3").classList.contains("plus-sign"))
-    document.getElementById("plus3").classList.toggle("minus-sign");
-}
 
 //? MODAL
 
-var subscribe = document.getElementById("subscribe");
-var modal = document.getElementById("modal");
-var close = document.getElementById("close");
+let subscribe = document.getElementById("subscribe");
+let modal = document.querySelector("#modal");
+let closeModal = document.getElementById("close");
+let form = document.querySelector("#subscription-form");
+// const subscriptionForm = document.querySelector("#subscription-form");
+const submit = document.querySelector("#submit");
+
+form.addEventListener("submit", () => {
+  form.submit();
+});
 
 //? MODAL FUNCTION
 
@@ -112,21 +97,14 @@ window.onclick = function (event) {
 };
 
 //? CLOSE MODAL BY CLICKING X
-close.onclick = function () {
+closeModal.onclick = function () {
   modal.style.display = "none";
 };
 
-// NAVBAR EFFECT
-
-// window.addEventListener("scroll", () => {
-// 	var navigation = document.querySelector("nav");
-// 	navigation.classList.add(".change", window.scrollY > 0);
-// })
-
-//* VIEWPORT
+// //* VIEWPORT
 
 let width = document.getElementById("width");
-var onresize = function () {
+let onresize = function () {
   //your code here
   //this is just an example
   width.innerText = document.body.clientWidth;
