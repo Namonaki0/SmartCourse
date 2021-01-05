@@ -75,10 +75,10 @@ let subscribe = document.getElementById("subscribe");
 let modal = document.querySelector("#modal");
 let closeModal = document.getElementById("close");
 let form = document.querySelector("#subscription-form");
-// const subscriptionForm = document.querySelector("#subscription-form");
 const submit = document.querySelector("#submit");
 
-form.addEventListener("submit", () => {
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
   form.submit();
 });
 
@@ -105,8 +105,6 @@ closeModal.onclick = function () {
 
 let width = document.getElementById("width");
 let onresize = function () {
-  //your code here
-  //this is just an example
   width.innerText = document.body.clientWidth;
   width.classList.add("display-width");
   setTimeout(() => {
@@ -114,3 +112,28 @@ let onresize = function () {
   }, 2000);
 };
 window.addEventListener("resize", onresize);
+
+//? COURSE OUTPUT TEMPLATE
+
+let coursePage = document.querySelectorAll(".cta-course-page");
+let pageTemplate = document.querySelector("#course-output");
+const outputBtn = document.querySelector(".output-btn");
+
+outputBtn.addEventListener("click", () => console.log("hi"));
+
+// const children = coursePage.children;
+coursePage.forEach((page) => {
+  page.addEventListener("click", (e) => {
+    if (e.target.classList.contains("pattern-design")) {
+      console.log(e);
+      console.log("hello");
+      // pageTemplate.innerHTML = `<h1>welcome</h1>`;
+    } else if (e.target.classList.contains("design-thinking")) {
+      console.log(e);
+      console.log("HO YEAH");
+    }
+    // const isBtn = e.target.contains(a);
+    // console.log(isBtn);
+  });
+});
+// coursePage.addEventListener("click", () => console.log("hello"));
