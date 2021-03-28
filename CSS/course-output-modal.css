@@ -1,0 +1,36 @@
+#course-output-wrapper {
+    visibility: hidden;
+    display: grid;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    margin: 0;
+    padding: 5em;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100vh;
+}
+
+@keyframes courseModal {
+    0% {
+        top: -200px;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    100% {
+        top: 0;
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.img-wrapper {
+    width: 50vw;
+    margin: auto;
+}
+
+.img-wrapper .course-img {
+    width: 100%;
+}
+

@@ -21,7 +21,7 @@ function tellTime() {
   }
 }
 
-// setInterval(tellTime, 1000);
+setInterval(tellTime, 1000);
 
 //? MENU
 
@@ -71,24 +71,20 @@ btnSliders.forEach((slider) => {
 
 //? MODAL
 
-let subscribe = document.getElementById("subscribe");
+let subscribe = document.querySelector("#subscribe");
 let modal = document.querySelector("#modal");
-let closeModal = document.getElementById("close");
-let form = document.querySelector("#subscription-form");
-const submit = document.querySelector("#submit");
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  form.submit();
-});
-
-//? MODAL FUNCTION
+// //? MODAL FUNCTION
 
 subscribe.onclick = function () {
   modal.style.display = "grid";
+  modal.style.animationName = "animatetop";
+  modal.style.opacity = "1";
+  modal.style.visibility = "visible";
+  modal.style.pointerEvents = "all";
 };
 
-//? CLOSE MODAL BY CLICKING OUTSIDE
+// //? CLOSE MODAL BY CLICKING OUTSIDE
 
 window.onclick = function (event) {
   if (event.target == modal) {
@@ -96,7 +92,7 @@ window.onclick = function (event) {
   }
 };
 
-//? CLOSE MODAL BY CLICKING X
+// //? CLOSE MODAL BY CLICKING X
 closeModal.onclick = function () {
   modal.style.display = "none";
 };
@@ -115,25 +111,79 @@ window.addEventListener("resize", onresize);
 
 //? COURSE OUTPUT TEMPLATE
 
-let coursePage = document.querySelectorAll(".cta-course-page");
-let pageTemplate = document.querySelector("#course-output");
-const outputBtn = document.querySelector(".output-btn");
+// coursePage.addEventListener("click", (e) => );
 
-outputBtn.addEventListener("click", () => console.log("hi"));
+class PageLoad {
+  constructor() {
+    this.$coursePage = document.querySelectorAll(".cta-course-page");
+    this.pageTemplate = document.querySelector("#course-output");
+    this.$outputBtn = document.querySelector("#output-btn");
 
-// const children = coursePage.children;
-coursePage.forEach((page) => {
-  page.addEventListener("click", (e) => {
-    if (e.target.classList.contains("pattern-design")) {
-      console.log(e);
+    this.addEventListeners();
+  }
+
+  addEventListeners() {
+    window.addEventListener("DOMcontentloaded", () => {
+      // this.paths();
+      this.pageLoad(page);
+      this.handleClick(page);
+    });
+
+    this.$coursePage.forEach((page) => {
+      page.addEventListener("click", (e) => {
+        this.handleClick(page);
+        e.preventDefault();
+        console.log(e);
+      });
+    });
+  }
+
+  // //? THIS WORKS
+  // template(event) {
+  //   window.addEventListener("load", (event) => {
+  //     pageTemplate.innerHTML = `
+  //     <h1 class="page">Hello</h1>
+  //     <p>loads of content</p>
+  //     `;
+  //   });
+  // }
+
+  handleClick(page) {
+    const isPatternDesign = page.classList.contains("pattern-design");
+    const isDesignThinking = page.target.classList === "design-thinking";
+    const isUxUiFundamentals = page.target.classList === "ux-ui-fundamentals";
+    const isPythonBootcamp = page.target.classList === "python-bootcamp";
+    const isComputerScience = page.target.classList === "computer-science";
+    const isHtmlCssBootcamp = page.target.classList === "html-css-bootcamp";
+
+    console.log(isPatternDesign);
+
+    if (isPatternDesign) {
+      console.log(page);
+      // template(event);
       console.log("hello");
-      // pageTemplate.innerHTML = `<h1>welcome</h1>`;
-    } else if (e.target.classList.contains("design-thinking")) {
-      console.log(e);
-      console.log("HO YEAH");
     }
-    // const isBtn = e.target.contains(a);
-    // console.log(isBtn);
+  }
+}
+
+new PageLoad();
+
+let pageTemplate = document.querySelector("#course-output");
+
+pageTemplate.addEventListener("load", pageLoad);
+
+function pageLoad(page) {
+  // window.addEventListener("load", () => {
+  //   console.log(window);
+  document.addEventListener("load", () => {
+    console.log(window);
+    this.pageTemplate.innerHTML = `
+      <h1 class="page">Hello</h1>
+      <p>loads of content</p>
+      `;
   });
-});
-// coursePage.addEventListener("click", () => console.log("hello"));
+
+  // });
+}
+
+// pageLoad();

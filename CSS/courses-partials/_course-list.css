@@ -67,3 +67,10 @@ h4 {
 .course-desc div p.enlisted {
   margin-bottom: 2em;
 }
+
+
+
+.page {
+  text-align: center;
+  /* color: red; */
+}
