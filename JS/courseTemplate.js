@@ -1,6 +1,8 @@
-const imageSrc = document.querySelector(".course-image");
+const imageSrc = document.querySelector(".course-img");
+const courses = document.querySelectorAll(".course-desc img");
 const courseCta = document.querySelector("#course-cta");
 const courseOutputWrapper = document.querySelector("#course-output-wrapper");
+const courseCtaAll = document.querySelectorAll(".cta-course-page");
 
 const courseImages = [
   { src: "Images/Image1.jpeg" },
@@ -12,16 +14,29 @@ const courseImages = [
   { src: "Images/image7.jpg" },
 ];
 
-console.log(courseImages[6].src);
-
-courseCta.addEventListener("click", () => {
-  imageSrc.src = courseImages[1].src;
-  console.log(imageSrc);
+courseCtaAll.forEach((cta) => {
+  cta.addEventListener("click", (e) => {
+    cta.href = "#course-output-wrapper";
+    courseOutputWrapper.style.display = "grid";
+    courseOutputWrapper.style.animation = ".2s courseModal";
+    courseOutputWrapper.style.opacity = "1";
+    courseOutputWrapper.style.visibility = "visible";
+    courseOutputWrapper.style.pointerEvents = "all";
+    const btnTarget = e.target;
+    if (btnTarget.classList.contains("python-bootcamp")) {
+      // console.log("CONTAINS");
+      imageSrc.src = courseImages[3].src;
+      // console.log(imageSrc.src);
+    } else {
+      imageSrc.src = courseImages[0].src;
+      // console.log("DOES NOT");
+    }
+  });
 });
 
 const fetchImage = async () => {
   imageSrc.src = await courseImages[0].src;
-  console.log(imageSrc);
+  // console.log(imageSrc);
 };
 
 fetchImage();

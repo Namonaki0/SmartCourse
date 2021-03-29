@@ -4,16 +4,15 @@
     z-index: 1000;
     position: fixed;
     top: 0;
-    margin: 0;
-    padding: 5em;
-    margin-left: auto;
-    margin-right: auto;
+    padding: 1em;
     height: 100vh;
+    background: rgba(36, 36, 36, .9);
+    margin: 0.2rem;
 }
 
 @keyframes courseModal {
     0% {
-        top: -200px;
+        top: -100px;
         opacity: 0;
         visibility: hidden;
     }
@@ -26,11 +25,18 @@
 }
 
 .img-wrapper {
-    width: 50vw;
+    min-width: 60vw;
     margin: auto;
+    border: 1px solid rgba(255, 217, 0, 0.795);
+    margin-top: 0;
 }
 
 .img-wrapper .course-img {
     width: 100%;
+    display: block;
+    margin-bottom: 0;
 }
 
+.course-description-wrapper p {
+    margin-top: 0;
+}
