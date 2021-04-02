@@ -2,9 +2,9 @@
 <html>
   <head>
     <title>Courses</title>
-
     <link rel="stylesheet" href="CSS/index.css" />
     <link rel="stylesheet" href="CSS/courses.css" />
+    <link rel="stylesheet" href="CSS/course-output-modal.css" />
 
     <!-- ? FONTS -->
     <link
@@ -12,12 +12,16 @@
       rel="stylesheet"
     />
     <!-- ? ICONS -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <script
       src="https://kit.fontawesome.com/c0594c7b16.js"
       crossorigin="anonymous"
     ></script>
     <!-- ? JQUERY -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
     <!-- ? META DATA -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
@@ -88,7 +92,7 @@
             </p>
             <p><span>Led by: </span>Anthony Jenkins</p>
             <p><span>Enlisted: </span>624 people</p>
-            <a class="cta-course-page" href="#">Explore</a>
+            <a class="cta-course-page pattern-design" href="#">Explore</a>
           </div>
         </div>
 
@@ -103,7 +107,7 @@
             </p>
             <p><span>Led by: </span>Mark Rogers</p>
             <p><span>Enlisted: </span>522 people</p>
-            <a class="cta-course-page" href="#">Explore</a>
+            <a class="cta-course-page design-thinking" href="#">Explore</a>
           </div>
         </div>
 
@@ -118,7 +122,7 @@
             </p>
             <p><span>Led by: </span>Pablo Francisco</p>
             <p><span>Enlisted: </span>972 people</p>
-            <a class="cta-course-page" href="#">Explore</a>
+            <a class="cta-course-page ux-ui-fundamentals" href="#">Explore</a>
           </div>
         </div>
       </div>
@@ -142,7 +146,7 @@
             </p>
             <p><span>Led by: </span>Robert Stevens</p>
             <p><span>Enlisted: </span>1634 people</p>
-            <a class="cta-course-page" href="#">Explore</a>
+            <a class="cta-course-page python-bootcamp" href="#">Explore</a>
           </div>
         </div>
 
@@ -157,7 +161,7 @@
             </p>
             <p><span>Led by: </span>Amelia Borges</p>
             <p><span>Enlisted: </span>2652 people</p>
-            <a class="cta-course-page" href="#">Explore</a>
+            <a class="cta-course-page computer-science" href="#">Explore</a>
           </div>
         </div>
 
@@ -172,7 +176,7 @@
             </p>
             <p><span>Led by: </span>Kevin Powell</p>
             <p class="enlisted"><span>Enlisted: </span>10239 people</p>
-            <a class="cta-course-page" href="#">Explore</a>
+            <a class="cta-course-page html-css-bootcamp" href="#">Explore</a>
           </div>
         </div>
 
@@ -185,6 +189,66 @@
 Completely brand standards compliant web-readiness.</p> -->
       </div>
     </section>
+
+    <!--? COURSE MODAL OUTPUT -->
+
+    <div id="course-output-wrapper">
+      <div class="img-wrapper">
+        <span class="material-icons close-btn">close</span>
+        <img class="course-img" src="Images/Image1.jpeg" alt="course-image" />
+        <div class="course-description-wrapper">
+          <h4>COURSE NAME</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
+            beatae eligendi aliquid maiores optio minus repellendus illo alias
+            modi possimus.
+          </p>
+          <div class="bottom-details">
+            <p>instructor: <span></span></p>
+            <p><span></span> enrolled</p>
+            <p><span></span></p>
+          </div>
+          <!-- <button id="course-cta">CLICK</button> -->
+        </div>
+      </div>
+      <div class="course-classes-wrapper">
+        <ul class="course-classes">
+          <li class="classVideo">
+            <span class="material-icons play-btn">play_circle</span
+            ><span>01. </span>intro
+          </li>
+          <li class="classVideo">
+            <span class="material-icons play-btn">play_circle</span
+            ><span>02. </span>basic concepts
+          </li>
+          <li class="classVideo">
+            <span class="material-icons play-btn">play_circle</span
+            ><span>03. </span>Lorem ipsum dolor sit amet.
+          </li>
+          <li class="classVideo">
+            <span class="material-icons play-btn">play_circle</span
+            ><span>04. </span>Lorem ipsum dolor sit amet.
+          </li>
+          <li class="classVideo">
+            <span class="material-icons play-btn">play_circle</span
+            ><span>05. </span>Lorem ipsum dolor sit amet.
+          </li>
+          <li class="classVideo">
+            <span class="material-icons play-btn">play_circle</span
+            ><span>06. </span>Lorem ipsum dolor sit amet.
+          </li>
+          <li class="classVideo">
+            <span class="material-icons play-btn">play_circle</span
+            ><span>07. </span>Lorem ipsum dolor sit amet.
+          </li>
+          <li class="classVideo">
+            <span class="material-icons play-btn">play_circle</span
+            ><span>08. </span>Lorem ipsum dolor sit amet.
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!--? COURSE MODAL OUTPUT -->
 
     <!-- ? MODAL -->
 
@@ -272,5 +336,6 @@ Completely brand standards compliant web-readiness.</p> -->
     </footer>
 
     <script src="JS/index.js"></script>
+    <script src="JS/courseTemplate.js"></script>
   </body>
 </html>

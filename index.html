@@ -16,10 +16,13 @@
       rel="stylesheet"
     />
     <!-- ? ICONS -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <script
       src="https://kit.fontawesome.com/c0594c7b16.js"
       crossorigin="anonymous"
     ></script>
+    
     <!-- ? JQUERY -->
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
 
@@ -72,7 +75,7 @@
         </div>
 
         <div class="overall-wrapper">
-          <div class="course-desc">
+          <div class="course-desc pattern-design">
             <img src="Images/Image1.jpeg" />
             <div class="course-info">
               <h4>Pattern design</h4>
@@ -84,7 +87,7 @@
               </p>
               <p><span>Led by: </span>Anthony Jenkins</p>
               <p><span>Enlisted: </span>624 people</p>
-              <a class="cta-course-page pattern-design" href="#course-output-wrapper">Explore</a>
+              <a class="cta-course-page pattern-design" href="#">Explore</a>
             </div>
           </div>
 
@@ -286,18 +289,39 @@
     </div>
 
     <!--? COURSE MODAL OUTPUT -->
+
     <div id="course-output-wrapper">
       <div class="img-wrapper">
+        <span class="material-icons close-btn">close</span>
         <img class="course-img" src="Images/Image1.jpeg" alt="course-image" />
+          <div class="course-description-wrapper">
+            <h4>COURSE NAME</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum beatae
+              eligendi aliquid maiores optio minus repellendus illo alias modi
+              possimus.
+            </p>
+            <div class="bottom-details">
+              <p>instructor: <span></span></p>
+              <p><span></span> enrolled</p>
+              <p><span></span></p>
+            </div>
+        <!-- <button id="course-cta">CLICK</button> -->
+         </div>
       </div>
-      <div class="course-description-wrapper">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum beatae
-          eligendi aliquid maiores optio minus repellendus illo alias modi
-          possimus.
-        </p>
-        <button id="course-cta">CLICK</button>
+      <div class="course-classes-wrapper">
+        <ul class="course-classes">
+          <li class="classVideo"><span class="material-icons play-btn">play_circle</span><span>01. </span>intro</li>
+          <li class="classVideo"><span class="material-icons play-btn">play_circle</span><span>02. </span>basic concepts</li>
+          <li class="classVideo"><span class="material-icons play-btn">play_circle</span><span>03. </span>Lorem ipsum dolor sit amet.</li>
+          <li class="classVideo"><span class="material-icons play-btn">play_circle</span><span>04. </span>Lorem ipsum dolor sit amet.</li>
+          <li class="classVideo"><span class="material-icons play-btn">play_circle</span><span>05. </span>Lorem ipsum dolor sit amet.</li>
+          <li class="classVideo"><span class="material-icons play-btn">play_circle</span><span>06. </span>Lorem ipsum dolor sit amet.</li>
+          <li class="classVideo"><span class="material-icons play-btn">play_circle</span><span>07. </span>Lorem ipsum dolor sit amet.</li>
+          <li class="classVideo"><span class="material-icons play-btn">play_circle</span><span>08. </span>Lorem ipsum dolor sit amet.</li>
+        </ul>
       </div>
+    
     </div>
     <!--? COURSE MODAL OUTPUT -->
 
@@ -341,7 +365,7 @@
       </div>
     </footer>
 
-    <script src="JS/index.js"></script>
+    <!-- <script src="JS/index.js"></script> -->
     <script src="JS/courseTemplate.js"></script>
   </body>
 </html>
