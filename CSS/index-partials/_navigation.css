@@ -7,7 +7,6 @@ header {
 
 nav {
   display: flex;
-  background: var(--navy);
   justify-content: space-between;
   margin-bottom: 0;
   z-index: 1000;
@@ -17,41 +16,40 @@ nav {
   border-bottom: 1px solid var(--silver);
 }
 
-nav p i {
-  margin: 0 6px;
-  -webkit-text-fill-color: var(--gold);
-  font-size: 0.79em;
-}
-
-nav span {
+.open-menu {
   font-size: 1.7em;
   padding: 0.5em 0.4em;
   position: relative;
   margin: 0;
-  color: var(--gold);
+}
+
+nav .menu {
+  font-size: 36px;
+
 }
 
 /*? MOBILE SETTINGS */
 
-nav ul {
+.navigation {
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   position: fixed;
-  background: var(--navy);
+  background: #1C1C1C;
+  /* background: var(--navy); */
   height: 100vh;
   width: 100%;
   z-index: 1000;
   top: 0;
-  transform: translateX(100%);
+  transform: translateY(-100%);
   transition: all 150ms ease-in;
   opacity: 0;
 }
 
 .open-menu-sect {
-  transform: translateX(0);
+  transform: translateY(0);
   visibility: unset;
   opacity: 1;
 }
@@ -75,18 +73,14 @@ nav ul li a {
   color: white;
   font-size: 1.2em;
   cursor: pointer;
-  width: 60%;
   margin-left: auto;
   border-bottom: 1px solid rgba(224, 231, 233, 0.2);
+  transition: all 200ms ease;;
 }
 
-nav ul li a:hover,
-nav ul li a:focus {
-  width: 100%;
-  background: rgba(46, 55, 73, 0.1);
+nav ul li a:hover{
+  background: rgba(46, 55, 73, 0.253);
   margin: 0;
-  padding-left: 0.8em;
-  margin-right: auto;
   border-bottom: 1px solid var(--silver);
 }
 
@@ -94,29 +88,28 @@ nav ul li {
   list-style-type: none;
   margin: 0;
   cursor: pointer;
-}
-
-nav ul li:hover,
-nav ul li:focus {
-  width: 60%;
+  width: 70%;
   margin-left: auto;
 }
 
-nav ul span {
-  color: var(--gold);
+nav ul .close-menu {
+  position: absolute;
+  color: white;
+  right: 10px;
+  top: 10px;
   margin: 0;
-  margin-right: 0.2em;
   padding: 0;
-  font-size: inherit;
+  font-size: 36px;
 }
 
 .active:hover {
   color: white;
 }
 
-nav a p {
-  -webkit-text-stroke: 1px var(--gold);
-  -webkit-text-fill-color: var(--navy);
+.logo {
+  /* -webkit-text-stroke: .5px var(--gold);
+  -webkit-text-fill-color: var(--navy); */
+  color: white;
   display: flex;
   align-items: center;
   font-family: var(--main-content);
@@ -129,6 +122,9 @@ nav a p {
   text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
   flex-direction: row;
   z-index: 1000;
+  color: rgba(255, 255, 255, 0.89);
+  text-transform: uppercase;
+  font-weight: 400;
 }
 
 nav a {
@@ -154,47 +150,59 @@ nav span i {
 @media (min-width: 950px) {
   nav {
     display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid var(--gold);
-    padding: 0.8em;
+    border: 1px solid cyan;
+  }
+
+  .navigation {
+    /* display: flex; */
     box-shadow: 0 0px 1px rgba(0, 0, 0, 0.5);
     z-index: 1000;
-  }
-
-  nav a p {
-    font-size: 3em;
-  }
-
-  nav ul {
+    visibility: unset;
+    align-items: center;
     justify-content: flex-end;
     flex-direction: row;
-    align-items: center;
-    visibility: visible;
     height: auto;
     opacity: unset;
     margin: 0;
     padding: 0;
     transform: unset;
-    background: none;
     position: unset;
-    width: 100%;
+    flex-grow: 1;
+    border: 1px solid red;
   }
 
-  nav ul li {
+.logo {
+    font-size: 3rem;
+    /* flex-grow: 2; */
+    /* border: 1px solid red; */
+    margin-left: 0;
+  }
+
+.navigation li {
+  /* display: flex; */
     margin-right: 1.5em;
+    justify-content: flex-end;
+    /* border: 1px solid orange; */
+    width: 100%;
+    text-align: right;
   }
 
-  nav ul li:hover,
-  nav ul li:focus {
+  .navigation li a {
+    width: auto;
+    text-align: right;
+    /* border: 1px solid orange; */
+  }
+
+ /* .navigation li:hover {
     width: unset;
     margin-left: unset;
-  }
+  } */
 
-  nav ul i {
+  /* nav ul .navigation{
     visibility: hidden;
-  }
+  } */
 
-  nav ul li a {
+  .navigation a {
     padding: 0;
     margin: 0;
     align-items: center;
@@ -202,10 +210,10 @@ nav span i {
     color: white;
     position: relative;
     border-bottom: none;
+    /* width: auto; */
   }
 
-  nav ul li a:hover,
-  nav ul li a:focus {
+.navigation a:hover {
     background: rgba(46, 55, 73, 0.1);
     margin: 0;
     padding-left: 0;
@@ -213,20 +221,20 @@ nav span i {
     border-bottom: none;
   }
 
-  nav ul li span {
+.navigation span {
     color: var(--gold);
     font-size: inherit;
     margin: 0;
     padding: 0;
-    margin-right: 0.2em;
+    /* margin-right: 0.2em; */
   }
 
-  nav span i {
+  nav span .menu {
     visibility: hidden;
     position: absolute;
   }
 
-  nav ul li a::before {
+.navigation a::before {
     content: "";
     position: absolute;
     height: 2px;
@@ -239,7 +247,7 @@ nav span i {
     transform-origin: 0;
   }
 
-  nav ul li a:hover::before {
+.navigation a:hover::before {
     visibility: visible;
     transform: scaleX(1);
   }
@@ -259,5 +267,9 @@ nav span i {
 
   .active {
     border-bottom: none;
+  }
+
+  .close-menu {
+    display: none;
   }
 }
