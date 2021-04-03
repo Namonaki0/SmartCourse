@@ -1,135 +1,128 @@
+/** VIEWPORT */
+.width-container {
+  display: none;
+}
+
+.display-width {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #e6e6e6;
+  padding: 0.3em;
+  font-size: 0.85em;
+}
+
 /*? MAIN */
 
 body {
-    color: white;
+  color: white;
 }
 
-.hero-wrapper {
-    font-family: var(--main-content);
-    margin: 0 auto;
+.hero-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  line-height: 1.4rem;
+  padding: 2em;
+  margin: 10px;
+  background: rgba(255, 255, 255, 0.055);
+  border-radius: 5px;
+  box-shadow: 0 0 1px rgba(0,0,0,.2);
 }
 
-.featured-course-wrap {
-    display: flex;
+.hero-message:after {
+  content: "";
+  height: 3px;
+  display: block;
+  background: var(--gold);
+  width: 30%;
+  margin-left: auto;
+}
+
+.hero-message h2:after {
+  content: "";
+  height: 2px;
+  display: block;
+  background: var(--gold);
+  width: 90%;
+  margin-top: 10px;
+}
+
+.hero-message p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.hero-message h2 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  line-height: 1.8rem;
+}
+
+@media (min-width: 700px) {
+
+
+  .hero-message {
     flex-direction: column;
-    justify-content: flex-end;
-    z-index: 1000;
-    padding: 1.6em;
-}
+    margin-top: 1rem;
+    grid-column: 1 / -1;
+  }
 
-.featured-course-desc {
-    margin-top: 5em;
-}
-
-.featured-course-wrap img {
-    width: 100%;
-}
-
-.hero-wrapper span h2 {
-    color: var(--silver);
-    padding: 0;
-    margin: 0;
-}
-
-.featured-course-wrap h2 {
-    margin-top: 0;
-    margin-bottom: 0.5em;
-}
-
-.bottom-layer {
-    background: var(--gold);
-    margin: 0;
-    padding: 0;
-    margin-top: 1.5em;
-    border-bottom-left-radius: 3px;
-}
-
-.course-cta {
-    border-left: 5px solid var(--bodyBackground);
-    border-right: 5px solid var(--bodyBackground);
-    padding: .5em;
-    text-align: center;
-    text-decoration: none;
-    font-weight: bold;
-    color: var(--bodyBackground);
-    float: right;
-    transition: background 100ms;
-    border-right: none;
-}
-
-.course-cta:hover,
-.course-cta:focus {
-    cursor: pointer;
-    background: var(--off-white);
-}
-
-.bottom-layer i {
-    color: inherit;
-    font-size: inherit;
-}
-
-.hero-wrapper p {
-    color: var(--off-white);
+  .hero-message h2 {
     margin-bottom: 0;
-}
-
-@media(min-width: 700px) {
-    .hero-wrapper {
-        display: flex;
-        grid-template-columns: repeat(3, 1fr);
-        
-    }
-
-    .featured-course-wrap {
-        flex-direction: column;
-        margin-bottom: 1em;
-        grid-column: 1 / -1;
-    }
-
-    .featured-course-wrap h2 {
-        margin-bottom: 0;
-    }
-
-    .course-cta {
-        display: block;
-    }
-}
-
-@media(min-width: 900px) {
-
-    .featured-course-wrap {
-        width: 50%;
-    }
-
-    .featured-course-desc {
-        margin-top: 0;
-    }
-}
-
-@media(min-width: 1200px) {
-    .hero-wrapper {
-        margin-top: 0;
-        margin-right: 0;
-        padding-left: 3.5em;
-    }
-
-    .featured-course-wrap {
-        display: flex;
-        flex-direction: column;
-        margin-top: .5em;
-        margin-bottom: 2em;
-    }
-
-    .featured-course-wrap p {
-        line-height: 1.5em;
-    }
-
-    .bottom-layer {
-        margin-top: 1.5em;
-        width: 100%;
-        margin-right: auto;
-        grid-column: 1 / 2;
-    }
+  }
 
 }
 
+@media (min-width: 560px) {
+  .hero-message{
+    margin: 1.2rem;
+  }
+
+ .hero-message p {
+   margin-top: .8rem;
+   margin-bottom: 1.5rem;
+ }
+}
+
+@media (min-width: 750px) {
+  .hero-message {
+    background: var(--new-blue);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.171);
+
+  }
+}
+
+@media (min-width: 800px) {
+  .hero-message {
+    width: 70%;
+    border-left: 3px solid var(--gold);
+    margin: 2rem auto;
+  }
+
+  .hero-message h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero-message p {
+    font-size: 1.1rem;
+  }
+
+}
+
+@media (min-width: 1200px) {
+
+  .hero-message {
+    width: 70%;
+    border-left: 3px solid var(--gold);
+  }
+
+  .hero-message h2 {
+    font-size: 2rem;
+  }
+
+  .hero-message h2:after {
+    margin-top: 1.1rem;
+  }
+  }

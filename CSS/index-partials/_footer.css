@@ -3,7 +3,6 @@
 footer {
     background: var(--navy);
     margin-bottom: 0;
-    border-top: .5px solid var(--gold);
     padding: 0;
     height: 40%;
 }

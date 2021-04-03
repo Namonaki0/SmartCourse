@@ -1,5 +1,22 @@
 /*? SLIDER SECTION */
 
+.terms-content {
+    height: 0;
+    position: absolute;
+    visibility: hidden;
+    transition: height 150ms ease-in-out;
+}
+
+.terms-content.active {
+    height: auto;
+    position: relative;
+    visibility: unset;
+}
+
+.content {
+    position: relative;
+}
+
 .cont-para {
     color: white;
     padding: 1em .5em;
@@ -11,7 +28,7 @@
     display: inline-block;
     background: var(--gold);
     border: none;
-    /* ! border-bottom: .01em solid rgb(63, 76, 119, .2); */
+    border-bottom: .01em solid rgb(63, 76, 119, .2);
     padding: .5em 1em;
     width: 100%;
     font-weight: bold;
@@ -40,7 +57,6 @@
 
 @media (min-width: 600px) {
     .menu-wrapper {
-        position: absolute;
-        visibility: hidden;
-    }
+        display: absolute;
+        display: none;
 }

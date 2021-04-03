@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Alumni</title>
+
+    <!-- ? META DATA -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+
+    <!-- ? FONTS -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&family=Montserrat:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- ? ICONS -->
+    <script
+      src="https://kit.fontawesome.com/c0594c7b16.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- ? JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="CSS/index.css" />
+    <link rel="stylesheet" href="CSS/testimonials.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="index.html">
+          <p class="logo">SmartCourse<i class="fas fa-chevron-right"></i></p>
+        </a>
+
+        <span class="open-menu"><i class="fas fa-bars"></i></span>
+
+        <ul class="navigation">
+          <a href="#" class="close-menu"><i class="fas fa-times"></i></a>
+          <li>
+            <a href="index.html"><span>01.</span> Home</a>
+          </li>
+          <li>
+            <a href="courses.html"><span>02.</span> Courses</a>
+          </li>
+          <li>
+            <a href="testimonials.html" class="active"
+              ><span>03.</span> Testimonials</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="alumni-main">
+      <div class="alumni-hero">
+        <p>What they are saying...</p>
+        <span></span>
+      </div>
+      <div class="testimonials">
+        <div class="testimonial">
+          <img src="./Images/image8.jpeg" alt="Liam S photograph" />
+          <span></span>
+          <div class="testimonial-content">
+            <p>
+              <q
+                >The CS course took my career to a whole different level. I
+                managed to land my first job in the field after completing their
+                projects. I highly recommend you checking out their wide range
+                of courses, you won't be disappointed.</q
+              >
+            </p>
+            <span class="testimonial-info">Liam S. - USA</span>
+          </div>
+        </div>
+
+        <div class="testimonial">
+          <img src="./Images/image9.jpeg" alt="Joan P photograph" />
+          <span></span>
+          <div class="testimonial-content">
+            <p>
+              <q
+                >I regret not investing my time into learning something like
+                UX/UI before but I'm glad I made the choice, my life is
+                definitely better because of it and I owe it to SmartCourse for
+                providing me with the right knowledge. I wish I did it
+                sooner.</q
+              >
+            </p>
+            <span class="testimonial-info">Joan P. - France</span>
+          </div>
+        </div>
+
+        <div class="testimonial">
+          <img src="./Images/image10.jpeg" alt="Helder M photograph" />
+          <span></span>
+          <div class="testimonial-content">
+            <p>
+              <q
+                >Looking through their course list I realized I could change my
+                life by starting a new career. I enrolled in the HTML/CSS
+                bootcamp and after finishing it I was hired by my local
+                advertising company.</q
+              >
+            </p>
+            <span class="testimonial-info">Helder M. - Brazil</span>
+          </div>
+        </div>
+
+        <div class="testimonial">
+          <img src="./Images/image11.jpeg" alt="Stephen S photograph" />
+          <span></span>
+          <div class="testimonial-content">
+            <p>
+              <q
+                >I took the Python Bootcamp really seriously and it gave me the
+                tools necessary to hold my own in the CS field. Do not hesitate
+                to upgrade your skills. I cannot recommend this course enough.
+                Best decision I ever made.</q
+              >
+            </p>
+            <span class="testimonial-info">Stephen S. - UK</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="secondary-testimonials">
+        <h2>Some of our reviews</h2>
+        <div class="secondary-testimonials-wrapper">
+          <div class="secondary-testimonials-info">
+            <img src="./Images/image14.jpeg" alt="Dimitri J picture" />
+            <p class="rating">★★★★★</p>
+            <p class="opinion">"Superb" - <i>JS Bootcamp</i></p>
+            <p class="name">Dimitri J.</p>
+          </div>
+
+          <div class="secondary-testimonials-info">
+            <img src="./Images/image12.jpeg" alt="Spencer R picture" />
+            <p class="rating">★★★★★</p>
+            <p class="opinion">"Best course out there" - <i>CS</i></p>
+            <p class="name">Spencer R.</p>
+          </div>
+
+          <div class="secondary-testimonials-info">
+            <img
+              class="suzan"
+              src="./Images/image13.jpeg"
+              alt="Suzan G picture"
+            />
+            <p class="rating">★★★★★</p>
+            <p class="opinion">"Best course ever" - <i>Design Thinking</i></p>
+            <p class="name">Suzan G.</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- ? MODAL -->
+
+    <div class="form-wrapper" id="modal">
+      <form action="" method="POST">
+        <i class="fas fa-times-circle" id="close"></i>
+
+        <h2>Get the latest news about our courses</h2>
+
+        <span class="details">
+          <input
+            type="text"
+            id="Fname"
+            class="format"
+            placeholder="First Name"
+            aria-label="First Name Field"
+          />
+          <input
+            type="text"
+            id="Lname"
+            class="format"
+            placeholder="Last Name"
+            aria-label="Last Name Field"
+          />
+        </span>
+
+        <input
+          type="email"
+          id="email"
+          class="format"
+          placeholder="Email address"
+          aria-label="Email Address Field"
+        />
+
+        <label id="checkbox" class="checkbox">
+          <input type="checkbox" id="accept" aria-label="Checkbox agreement" />
+          <p>
+            By ticking this box you are accepting the terms and conditions
+            provided.
+          </p>
+        </label>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <footer>
+      <div class="social-media">
+        <div class="follow">
+          <p class="follow-us">follow us:</p>
+
+          <ul>
+            <li class="links">
+              <a href="#"><i class="fab fa-facebook-square"></i></a>
+            </li>
+            <li class="links">
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </li>
+            <li class="links">
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="menu-wrapper-content">
+          <ul>
+            <li><a href="#">How it works</a></li>
+            <li><a href="#">Benefits of joining</a></li>
+            <li><a href="#">Refund policy</a></li>
+          </ul>
+        </div>
+
+        <div class="bottom-links-wrap">
+          <div class="bottom-links">
+            <a href="terms.html" class="bottom-link">Terms & Agreements</a>
+            <a href="legal.html" class="bottom-link">Legal</a>
+            <a href="#subscribe" class="bottom-link" id="subscribe"
+              >Subscribe</a
+            >
+          </div>
+
+          <p>SmartCourse&trade; all rights reserved 2020</p>
+        </div>
+      </div>
+
+      <script src="JS/index.js"></script>
+    </footer>
+  </body>
+</html>
