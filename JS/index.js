@@ -25,16 +25,21 @@ setInterval(tellTime, 1000);
 
 //? MENU
 
-let open = document.querySelector(".open-menu");
-let close = document.querySelector(".close-menu");
-let nav = document.querySelector(".navigation");
+const open = document.querySelector(".open-menu");
+const close = document.querySelector(".close-menu");
+const nav = document.querySelector(".navigation");
+const body = document.querySelector("body");
 
 open.addEventListener("click", () => {
+  open.style.display = "none";
   nav.classList.add("open-menu-sect");
+  body.style.overflowY = "hidden";
 });
 
 close.addEventListener("click", () => {
   nav.classList.remove("open-menu-sect");
+  body.style.overflowY = "unset";
+  open.style.display = "unset";
 });
 
 //? DROP-DOWN + ICON CHANGE
