@@ -1,6 +1,7 @@
 /*? GLOBAL */
 
 :root {
+    --body: #1c1c1c;
 	--gold: #ffc507;
 	--off-white: #EAEAEA;
     --main-content: 'Montserrat', sans-serif;

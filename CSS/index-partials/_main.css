@@ -17,36 +17,64 @@
 
 body {
   color: white;
+  background: black;
+}
+.hero-wrapper {
+  height: 90vh;
+  background: url("/Images/image19.jpeg") no-repeat;
+  background-position-y: 80px;
+  background-position-x: 50px;
+  /* background-position: top; */
+  background-size: cover;
+  position: relative;
+  z-index: 100;
 }
 
 .hero-message {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  /* align-items: center; */
   line-height: 1.4rem;
-  padding: 2em;
+  padding: 2rem 0.5rem;
   margin: 10px;
-  background: rgba(255, 255, 255, 0.055);
+  /* background: rgba(255, 255, 255, 0.055);
   border-radius: 5px;
-  box-shadow: 0 0 1px rgba(0,0,0,.2);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.2); */
+  position: relative;
+  z-index: 100;
 }
 
-.hero-message:after {
+/* .hero-message:after {
   content: "";
   height: 3px;
   display: block;
   background: var(--gold);
   width: 30%;
   margin-left: auto;
-}
+} */
 
 .hero-message h2:after {
   content: "";
-  height: 2px;
+  height: 1px;
   display: block;
   background: var(--gold);
   width: 90%;
-  margin-top: 10px;
+  margin-top: 12px;
+}
+
+.hero-message h2 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  line-height: 2.1rem;
+  font-size: 3rem;
+}
+
+.hero-message span {
+  display: block;
+  font-size: 2rem;
+  text-align: left;
+  /* font-weight: 400; */
 }
 
 .hero-message p {
@@ -54,15 +82,7 @@ body {
   margin-bottom: 1rem;
 }
 
-.hero-message h2 {
-  margin-top: 0;
-  margin-bottom: 0.5em;
-  line-height: 1.8rem;
-}
-
 @media (min-width: 700px) {
-
-
   .hero-message {
     flex-direction: column;
     margin-top: 1rem;
@@ -72,25 +92,23 @@ body {
   .hero-message h2 {
     margin-bottom: 0;
   }
-
 }
 
 @media (min-width: 560px) {
-  .hero-message{
+  .hero-message {
     margin: 1.2rem;
   }
 
- .hero-message p {
-   margin-top: .8rem;
-   margin-bottom: 1.5rem;
- }
+  .hero-message p {
+    margin-top: 0.8rem;
+    margin-bottom: 1.5rem;
+  }
 }
 
 @media (min-width: 750px) {
   .hero-message {
     background: var(--new-blue);
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.171);
-
   }
 }
 
@@ -108,11 +126,9 @@ body {
   .hero-message p {
     font-size: 1.1rem;
   }
-
 }
 
 @media (min-width: 1200px) {
-
   .hero-message {
     width: 70%;
     border-left: 3px solid var(--gold);
@@ -125,4 +141,4 @@ body {
   .hero-message h2:after {
     margin-top: 1.1rem;
   }
-  }
+}

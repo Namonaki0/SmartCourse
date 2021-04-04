@@ -1,29 +1,21 @@
 /* ? COURSE LIST WRAPPER */
 
 .course-list-wrapper {
-  background: var(--new-blue);
+  background: rgb(46, 51, 77);
 }
 
 .course-list-wrapper h3 {
   text-align: center;
-  font-size: 2em;
+  font-size: 2rem;
   margin-top: 1em;
   margin-bottom: 1.5em;
   z-index: 100;
   position: relative;
+  color: #fff;
+  text-transform: uppercase;
 }
 
-.course-list-wrapper h3::after {
-  content: "added";
-  color: #1c1c1c;
-  background: var(--gold);
-  position: relative;
-  bottom: -15px;
-  left: -20px;
-  padding: 2px 5px;
-  z-index: -1;
-  border-bottom-left-radius: 5px;
-}
+
 
 .course-top-info {
   display: flex;
@@ -105,10 +97,13 @@
 
 .course-desc {
   margin-bottom: 1.5em;
-  padding: 0.2em 0.2em 0.5em;
-  background: rgba(0, 0, 0, 0.1);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0.8);
-  border-radius: 3px;
+  padding: 0.2rem 0.2rem 0.5rem;
+  /* backdrop-filter: blur(10px); */
+  background: rgba(255, 255, 255, 0.055);
+  background: #2525252c;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+  /* border-radius: 5px; */
+  border: 1px solid rgba(192, 192, 192, 0.089);
 }
 
 .course-desc img {
@@ -117,24 +112,45 @@
   margin: 0;
   padding: 0;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+  /* border-radius: 2px; */
 }
 
 .course-desc span {
   font-weight: 700;
 }
 
-h4 {
+.course-desc p {
+  font-weight: 100;
+  margin-left: .2rem;
+}
+
+.course-info h4 {
   font-size: 1.4em;
-  margin: 0.5em 0;
+  margin: 0.5em .2rem;
+  font-weight: 200;
+  text-transform: uppercase;
 }
 
 .course-info h4::after {
   content: "";
-  height: 2px;
+  height: 1px;
   display: block;
   background: var(--gold);
   width: 30%;
   margin-top: 5px;
+}
+
+.course-bottom-details {
+  display: flex;
+  font-size: .9rem;
+  justify-content: space-between;
+  margin-top: 1rem;
+  padding-top: .8rem;
+  border-top: .5px solid rgba(192, 192, 192, 0.055);
+}
+
+.course-bottom-details p {
+  margin: 0;
 }
 
 .course-info {
@@ -148,7 +164,7 @@ a.cta-course-page {
   font-size: 0.8em;
   font-weight: bold;
   text-align: center;
-  margin-top: 2.5em;
+  margin-top: 1.8rem;
   text-decoration: none;
   margin-left: auto;
 }
