@@ -30,7 +30,7 @@ nav .menu {
   font-size: 36px;
 }
 
-nav .chevron {
+.chevron {
   color: #b3241a;
   transform: translateX(-3px);
 }
