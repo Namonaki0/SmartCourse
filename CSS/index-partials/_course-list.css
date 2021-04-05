@@ -52,20 +52,21 @@
 
 .course-bottom-info {
   display: flex;
-  grid-column: 1 / -1;
   width: 100%;
 }
 
 .course-bottom-info a {
   font-size: 1.2em;
-  border: 1px solid white;
-  padding: 1em;
   transition: all 100ms ease-in-out;
-  border: 1px solid white;
   padding: 0.5em 1em;
-  transition: all 100ms ease-in-out;
-  font-weight: 700;
-  margin: 1rem auto;
+  font-weight: 400;
+  margin: 1rem auto 2rem;
+  width: 80%;
+  text-align: center;
+  border-radius: 2px;
+  background: #3A4264;
+  border: 1px solid rgba(192, 192, 192, 0.233);
+  box-shadow: 0 1px 2px rgb(0 0 0 / 80%);
 }
 
 .course-bottom-info a:hover,
@@ -73,10 +74,12 @@
   background: var(--gold);
   border: 1px solid var(--gold);
   color: var(--navy);
-  font-weight: 700;
+  transition: all 100ms ease;
+  /* font-weight: 100; */
 }
 .course-bottom-info a:hover > i {
-  color: var(--bannerGrey);
+  color: var(--navy);
+  transform: rotate(180deg);
 }
 
 .course-bottom-info a i {
@@ -88,7 +91,7 @@
 }
 
 .course-list-wrapper * {
-  max-width: 95%;
+  max-width: 98%;
   margin-left: auto;
   margin-right: auto;
   color: white;
@@ -97,10 +100,11 @@
 
 .course-desc {
   margin-bottom: 1.5em;
-  padding: 0.2rem 0.2rem 0.5rem;
+  padding: 0.5rem 0.5rem 0.5rem;
   /* backdrop-filter: blur(10px); */
   background: rgba(255, 255, 255, 0.055);
   background: #2525252c;
+  background: #3a4264;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
   /* border-radius: 5px; */
   border: 1px solid rgba(192, 192, 192, 0.089);
@@ -146,7 +150,7 @@
   justify-content: space-between;
   margin-top: 1rem;
   padding-top: .8rem;
-  border-top: .5px solid rgba(192, 192, 192, 0.055);
+  border-top: .5px solid rgba(192, 192, 192, 0.13);
 }
 
 .course-bottom-details p {
@@ -210,18 +214,10 @@ a.cta-course-page:focus,
   margin-bottom: 2em;
 }
 
-.overall-wrapper {
-  padding-bottom: 2em;
-}
-
 @media (min-width: 780px) {
   .course-list-wrapper {
-    margin-top: 0;
-    background-image: linear-gradient(
-      12deg,
-      rgba(63, 76, 119, 1) 80%,
-      #1c1c1c 42%
-    );
+    margin-top: 2rem;
+
   }
 
   .overall-wrapper {
@@ -264,13 +260,17 @@ a.cta-course-page:focus,
   }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 950px) {
   .course-list-wrapper {
-    margin-top: 1em;
+    margin-top: 2em;
   }
 
   .overall-wrapper {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-wrapper {
+    padding: 2rem;
   }
 }
 

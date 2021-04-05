@@ -21,7 +21,7 @@ nav {
   font-size: 1.7em;
   position: relative;
   margin: 0;
-  margin-top: .5rem;
+  margin-top: .2rem;
   margin-right: .5rem;
   
 }
@@ -32,6 +32,7 @@ nav .menu {
 
 nav .chevron {
   color: #b3241a;
+  transform: translateX(-3px);
 }
 
 /*? MOBILE SETTINGS */
@@ -51,6 +52,7 @@ nav .chevron {
   transform: translateY(-100%);
   transition: all 150ms ease-in;
   opacity: 0;
+  /* padding-top: .5rem; */
 }
 
 .open-menu-sect {
@@ -122,12 +124,13 @@ nav ul .close-menu {
   margin: 0;
   font-weight: 700;
   margin-left: 1rem;
+  margin-top: .2rem;
   color: #444049;
   text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
   flex-direction: row;
   color: rgba(255, 255, 255, 0.89);
   text-transform: uppercase;
-  font-weight: 400;
+  font-weight: 700;
   z-index: 2000;
   position: relative;
 }
@@ -166,7 +169,7 @@ nav .open-nav {
 
   .logo {
     font-size: 3rem;
-    margin-left: 0;
+    margin-left: 1rem;
   }
 
   .navigation li {
@@ -225,13 +228,13 @@ nav .open-nav {
     transform: scaleX(1);
   }
 
-  body {
+  /* body {
     background-image: linear-gradient(
       112.1deg,
       #1c1c1c 57%,
       rgba(63, 76, 119, 1) 42%
-    );
-  }
+    ); */
+  /* } */
 
   .active {
     border-bottom: none;
