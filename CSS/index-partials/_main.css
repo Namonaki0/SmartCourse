@@ -19,14 +19,9 @@ body {
   font-size: clamp(1rem, 2vw, 3rem);
   flex-direction: column;
   justify-content: flex-end;
-  /* align-items: center; */
   line-height: 1.4rem;
   padding: 2rem 1rem;
   margin: 10px;
-  
-  /* background: rgba(255, 255, 255, 0.055);
-  border-radius: 5px;
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0.2); */
   position: relative;
   z-index: 100;
 }
@@ -59,20 +54,21 @@ body {
 }
 
 @media (min-width: 560px) {
-  /* .hero-message {
-    margin: 1.2rem;
-  } */
-
   .hero-message p {
     margin-top: 0.5rem;
   }
 }
 
 @media (min-width: 700px) {
-
-  .hero-message {
-    width: clamp(600px, 90vw, 700px);
+  .hero-wrapper {
+    background-position-x: 600px;
+    background-position-y: -350px;
+    background-size: 700px;
   }
+  .hero-message {
+    width: clamp(600px, 90vw, 600px);
+  }
+
   .hero-message h2 {
     margin-bottom: 0;
   }
@@ -80,7 +76,6 @@ body {
 
 
 @media (min-width: 800px) {
-
   .hero-message p {
     font-size: 1.1rem;
   }
