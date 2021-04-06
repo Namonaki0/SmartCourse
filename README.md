@@ -1,4 +1,4 @@
-# SmartCourse - concept
+# SmartCourseProject - concept
 Online course concept website
 
 The sole purpose of this project is to practice some skills. 
