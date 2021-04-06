@@ -13,6 +13,10 @@
       rel="stylesheet"
     />
     <!-- ? ICONS -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <script
       src="https://kit.fontawesome.com/c0594c7b16.js"
       crossorigin="anonymous"
@@ -26,28 +30,29 @@
   </head>
   <body>
     <header>
-      <nav>
-        <a href="index.html">
-          <p class="logo">SmartCourse<i class="fas fa-chevron-right"></i></p>
-        </a>
+         <nav>
+      <a href="index.html" class="logo">SC<span class="material-icons chevron">&#xe5e1</span></a>
+      <span class="open-menu">
+        <span class="material-icons menu">&#xe5cf</span>
+      </span>
 
-        <span class="open-menu"><i class="fas fa-bars"></i></span>
+      <!--? NAVIGATION -->
+      <ul class="navigation">
+        <a href="#" class="close-menu"><span class="material-icons close-menu">
+            &#xe5cd
+          </span></a>
 
-        <ul class="navigation">
-          <a href="#" class="close-menu"><i class="fas fa-times"></i></a>
-          <li>
-            <a href="index.html"><span>01.</span> Home</a>
-          </li>
-          <li>
-            <a href="courses.html"><span>02.</span> Courses</a>
-          </li>
-          <li>
-            <a href="testimonials.html" class="active"
-              ><span>03.</span> Testimonials</a
-            >
-          </li>
-        </ul>
-      </nav>
+        <li>
+          <a href="index.html" class="active">Home</a>
+        </li>
+        <li>
+          <a href="courses.html">Courses</a>
+        </li>
+        <li>
+          <a href="testimonials.html">Testimonials</a>
+        </li>
+      </ul>
+    </nav>
     </header>
 
     <main class="alumni-main">

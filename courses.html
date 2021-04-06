@@ -2,9 +2,10 @@
 <html>
   <head>
     <title>Courses</title>
-    <link rel="stylesheet" href="CSS/index.css" />
+    
     <link rel="stylesheet" href="CSS/courses.css" />
     <link rel="stylesheet" href="CSS/course-output-modal.css" />
+    <link rel="stylesheet" href="CSS/index.css" />
 
     <!-- ? FONTS -->
     <link
@@ -28,26 +29,29 @@
   </head>
   <body>
     <header>
-      <nav>
-        <a href="index.html"
-          ><p class="logo">SmartCourse<i class="fas fa-chevron-right"></i></p
-        ></a>
+         <nav>
+      <a href="index.html" class="logo">SC<span class="material-icons chevron">&#xe5e1</span></a>
+      <span class="open-menu">
+        <span class="material-icons menu">&#xe5cf</span>
+      </span>
 
-        <span class="open-menu"><i class="fas fa-bars"></i></span>
+      <!--? NAVIGATION -->
+      <ul class="navigation">
+        <a href="#" class="close-menu"><span class="material-icons close-menu">
+            &#xe5cd
+          </span></a>
 
-        <ul class="navigation">
-          <a href="#" class="close-menu"><i class="fas fa-times"></i></a>
-          <li>
-            <a href="index.html"><span>01.</span> Home</a>
-          </li>
-          <li>
-            <a href="courses.html" class="active"><span>02.</span> Courses</a>
-          </li>
-          <li>
-            <a href="testimonials.html"><span>03.</span> Testimonials</a>
-          </li>
-        </ul>
-      </nav>
+        <li>
+          <a href="index.html" class="active">Home</a>
+        </li>
+        <li>
+          <a href="courses.html">Courses</a>
+        </li>
+        <li>
+          <a href="testimonials.html">Testimonials</a>
+        </li>
+      </ul>
+    </nav>
     </header>
 
     <main class="courses-main">
@@ -66,9 +70,8 @@
 
             <div id="counter"></div>
 
-            <div class="btns">
               <a class="explore-btn" href="#">Explore</a>
-            </div>
+              
           </div>
         </div>
       </div>
@@ -90,8 +93,10 @@
               Globally synergize market-driven e-commerce rather than
               intermandated intellectual capital. Objectively maintain state of.
             </p>
-            <p><span>Led by: </span>Anthony Jenkins</p>
-            <p><span>Enlisted: </span>624 people</p>
+            <div class="course-bottom-details">
+              <p><span>Led by: </span>Anthony Jenkins</p>
+              <p><span>Enlisted: </span>624 people</p>
+            </div>
             <a class="cta-course-page pattern-design" href="#">Explore</a>
           </div>
         </div>
@@ -105,8 +110,10 @@
               Globally synergize market-driven e-commerce rather than
               intermandated intellectual capital. Objectively maintain state of.
             </p>
+            <div class="course-bottom-details">
             <p><span>Led by: </span>Mark Rogers</p>
             <p><span>Enlisted: </span>522 people</p>
+            </div>
             <a class="cta-course-page design-thinking" href="#">Explore</a>
           </div>
         </div>
@@ -120,8 +127,10 @@
               Globally synergize market-driven e-commerce rather than
               intermandated intellectual capital. Objectively maintain state of.
             </p>
+            <div class="course-bottom-details">
             <p><span>Led by: </span>Pablo Francisco</p>
             <p><span>Enlisted: </span>972 people</p>
+            </div>
             <a class="cta-course-page ux-ui-fundamentals" href="#">Explore</a>
           </div>
         </div>
@@ -144,8 +153,10 @@
               Globally synergize market-driven e-commerce rather than
               intermandated intellectual capital. Objectively maintain state of.
             </p>
+             <div class="course-bottom-details">
             <p><span>Led by: </span>Robert Stevens</p>
             <p><span>Enlisted: </span>1634 people</p>
+            </div>
             <a class="cta-course-page python-bootcamp" href="#">Explore</a>
           </div>
         </div>
@@ -159,8 +170,10 @@
               Globally synergize market-driven e-commerce rather than
               intermandated intellectual capital. Objectively maintain state of.
             </p>
+            <div class="course-bottom-details">
             <p><span>Led by: </span>Amelia Borges</p>
             <p><span>Enlisted: </span>2652 people</p>
+            </div>
             <a class="cta-course-page computer-science" href="#">Explore</a>
           </div>
         </div>
@@ -174,8 +187,10 @@
               Globally synergize market-driven e-commerce rather than
               intermandated intellectual capital. Objectively maintain state of.
             </p>
+            <div class="course-bottom-details">
             <p><span>Led by: </span>Kevin Powell</p>
             <p class="enlisted"><span>Enlisted: </span>10239 people</p>
+            </div>
             <a class="cta-course-page html-css-bootcamp" href="#">Explore</a>
           </div>
         </div>
