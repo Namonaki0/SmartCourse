@@ -1,8 +1,3 @@
-
 /*? COURSES PARTIALS */
 
-@import url("index-partials/_global.css");
 @import url("courses-partials/_course-list.css");
-@import url("courses-partials/_responsive.css");
-@import url("courses-partials/_featured.css");
-

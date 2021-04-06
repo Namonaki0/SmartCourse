@@ -71,14 +71,13 @@
   transition: all 150ms ease;
 }
 .course-bottom-info a:hover > i,
-.course-top-info a:hover>i {
+.course-top-info a:hover > i {
   color: var(--navy);
   transform: rotate(180deg);
 }
 
 .course-bottom-info a i,
-.course-bottom-info a i
- {
+.course-bottom-info a i {
   color: var(--gold);
   opacity: 0.8;
   font-size: 0.8em;
@@ -96,7 +95,7 @@
 
 .course-desc {
   margin-bottom: 1.5em;
-  padding: 0.5rem 0.5rem 0.5rem;
+  padding: 0.5rem 0.5rem;
   background: linear-gradient(to bottom right, #313857, #3d4466);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
   border: 1px solid rgba(192, 192, 192, 0.089);
@@ -136,16 +135,16 @@
 }
 
 .course-bottom-details {
-  display: flex;
-  font-size: 0.9rem;
-  justify-content: space-between;
-  margin-top: 1rem;
-  padding-top: 0.8rem;
+  font-size: 0.95rem;
   border-top: 0.5px solid rgba(192, 192, 192, 0.13);
 }
 
-.course-bottom-details p {
-  margin: 0;
+.course-bottom-details > p {
+  margin-bottom: 0;
+}
+
+.course-bottom-details p:last-child {
+  margin-top: 0.2rem;
 }
 
 .course-info {
@@ -205,11 +204,21 @@ a.cta-course-page:focus,
   margin-bottom: 2em;
 }
 
-@media (min-width: 780px) {
-  /* .course-list-wrapper {
-    margin-top: 2rem;
-  } */
+/*? MEDIA QUERIES */
 
+/*? MOBILE */
+
+@media (min-width: 500px) {
+}
+
+/*? MOBILE - LANDSCAPE */
+
+@media (min-width: 700px) {
+}
+
+/*? TABLET */
+
+@media (min-width: 820px) {
   .overall-wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, auto));
@@ -226,8 +235,6 @@ a.cta-course-page:focus,
     flex-direction: column;
     justify-content: flex-start;
     border-bottom: none;
-    /* background: rgba(0, 0, 0, 0.1); */
-    /* box-shadow: 0 0 2px rgba(0, 0, 0, 0.1); */
     padding: 0.5em;
   }
 
@@ -250,11 +257,9 @@ a.cta-course-page:focus,
   }
 }
 
-@media (min-width: 950px) {
-  /* .course-list-wrapper {
-    margin-top: 2em;
-  } */
+/*? TABLET - LANDSCAPE */
 
+@media (min-width: 1000px) {
   .overall-wrapper {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -263,6 +268,8 @@ a.cta-course-page:focus,
     padding: 2rem;
   }
 }
+
+/*? DESKTOP */
 
 @media (min-width: 1200px) {
   .hero-wrapper {
