@@ -5,7 +5,9 @@
 /*? FEATURED COURSE */
 
 .featured-course-wrap-courses {
-  padding: 1.2em 0.2em;
+  padding: 0.5rem;
+  margin: 1.2rem 0.5rem;
+  background: linear-gradient(to bottom right, #bbbbbb2a, #c0c0c025);
 }
 
 .featured-course-wrap-courses p,
@@ -15,12 +17,20 @@
   padding: 0 0.5rem;
 }
 
+.featured-course-wrap-courses h2::after {
+  content: "";
+  height: 1px;
+  display: block;
+  background: var(--gold);
+  margin: .5rem 0 1rem;
+  width: 50%;
+}
+
 .featured-course-wrap-courses img {
   width: 100%;
   margin: 0 auto;
   margin-bottom: 0.5rem;
-  padding: 0.5rem;
-  border: 1px solid rgba(192, 192, 192, 0.212);
+  border: 1px solid silver;
 }
 
 #course-list-wrapper-banner,
@@ -51,6 +61,7 @@
 #course-list-wrapper-banner,
 #cs-banner,
 #course-update {
+  text-align: center;
   display: block;
 }
 
@@ -83,21 +94,23 @@
   text-align: center;
   transition: all 150ms ease;
   background: transparent;
-  border: 1px solid silver;
+  border: 1px solid #545c81;
+  border-radius: 2px;
   font-weight: 100;
   letter-spacing: 0.2rem;
   margin: 2rem auto 1rem;
 }
 
 .explore-btn:hover {
-  background: white;
-  color: #1c1c1c;
+  background: #6e77a1;
+  color: #fff;
 }
 
 /* ? PROMOTIONAL COUNTDOWN */
 .promo-countdown {
   font-size: 1.2rem;
   background: var(--bannerGrey);
+  background: #454f80;
 }
 
 .promo-finished {
@@ -158,5 +171,3 @@
     margin: 1.5rem 0;
   }
 }
-
-

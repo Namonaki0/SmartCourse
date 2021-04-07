@@ -6,12 +6,21 @@ body {
 }
 .hero-wrapper {
   height: 95vh;
-  background: url("/Images/image19.jpeg") no-repeat;
-  background-position-y: 80px;
-  background-position-x: 50px;
-  background-size: contain;
   position: relative;
-  z-index: 100;
+  overflow: hidden;
+}
+
+.hero-img-wrapper {
+  width: 80%;
+  position: absolute;
+  bottom: -150px;
+  right: -100px;
+}
+
+.hero-wrapper img {
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
 }
 
 .hero-message {
@@ -26,7 +35,7 @@ body {
   z-index: 100;
 }
 
-.hero-message h2:after {
+.main-title-underline::after {
   content: "";
   height: 1px;
   display: block;
@@ -74,14 +83,37 @@ body {
   }
 }
 
+/*? ----- */
+
+@media (min-width: 520px) {
+  .hero-img-wrapper {
+    width: 80%;
+    bottom: -200px;
+  }
+
+  .hero-message p {
+    margin-top: 0.5rem;
+  }
+}
+
+/*? ----- */
+
+@media (min-width: 600px) {
+  .hero-img-wrapper {
+    width: 80%;
+  }
+}
+
 /*? MOBILE - LANDSCAPE */
 
 @media (min-width: 700px) {
-  .hero-wrapper {
-    background-position-x: 150px;
-    background-position-y: -150px;
-    background-size: 700px;
+  .hero-img-wrapper {
+    width: 80%;
+    position: absolute;
+    bottom: -250px;
+    right: -100px;
   }
+
   .hero-message {
     margin-top: 2.5rem;
     width: clamp(600px, 90vw, 600px);
@@ -95,10 +127,11 @@ body {
 /*? TABLET */
 
 @media (min-width: 750px) {
-  .hero-wrapper {
-    background-position-x: 350px;
-    background-position-y: -150px;
-    background-size: 700px;
+  .hero-img-wrapper {
+    width: 65%;
+    position: absolute;
+    bottom: -300px;
+    right: -100px;
   }
   .hero-message p {
     font-size: 1.1rem;
@@ -108,11 +141,6 @@ body {
 /*? TABLET - LANDSCAPE */
 
 @media (min-width: 1000px) {
-  .hero-wrapper {
-    background-position-x: 350px;
-    background-position-y: -100px;
-    background-size: 700px;
-  }
 }
 
 /*? DESKTOP */
