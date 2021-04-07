@@ -13,7 +13,7 @@ function tellTime() {
   let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  counter.innerHTML = `<div class="promo-countdown"><span class="hurry-message">Hurry up! this promotion ends in </span><br/> ${days} Days ${hours} Hours ${minutes} Minutes ${seconds} Seconds</div>`;
+  counter.innerHTML = `<div class="promo-countdown"><span class="hurry-message">Hurry up! promotion ends in </span><br/> ${days} Days ${hours} Hours ${minutes} Minutes ${seconds} Seconds</div>`;
 
   if (distance < 0) {
     clearInterval(tellTime);

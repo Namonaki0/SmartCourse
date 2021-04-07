@@ -7,8 +7,8 @@
 .course-list-wrapper h3 {
   text-align: center;
   font-size: 2rem;
-  margin-top: 1em;
-  margin-bottom: 1.5em;
+  margin-top: 2rem;
+  margin-bottom: 0.2rem;
   z-index: 100;
   position: relative;
   color: #fff;
@@ -18,6 +18,15 @@
 .course-top-info {
   display: flex;
   width: 90%;
+}
+
+.sec-title-underline::after {
+  content: "";
+  height: 1px;
+  display: block;
+  background: var(--gold);
+  margin: 0.2rem auto 2rem;
+  width: 80%;
 }
 
 .course-top-info a {
@@ -246,9 +255,14 @@ a.cta-course-page:focus,
 
   .course-list-wrapper h3 {
     text-align: left;
-    margin-bottom: 2em;
+    margin-bottom: 4rem;
     font-size: 2.5em;
     position: relative;
+  }
+
+  .sec-title-underline::after {
+    margin: 0;
+    width: 40%;
   }
 
   .course-info {
