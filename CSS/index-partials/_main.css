@@ -11,10 +11,10 @@ body {
 }
 
 .hero-img-wrapper {
-  width: 80%;
+  width: 90%;
   position: absolute;
-  bottom: -150px;
-  right: -100px;
+  transform: translate(20%, -60%);
+  margin-top: 1rem;
 }
 
 .hero-wrapper img {
@@ -27,7 +27,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  line-height: 1.4rem;
+  line-height: 1.2rem;
   padding: 2rem 1rem;
   margin: 10px;
   margin-top: 1rem;
@@ -49,7 +49,8 @@ body {
   margin-top: 0;
   margin-bottom: 0.5rem;
   line-height: 2.1rem;
-  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-size: clamp(2.5rem, 4vw, 8vw);
+  /* font-size: 10vw; */
 }
 
 .hero-message span {
@@ -78,6 +79,10 @@ body {
 /*? MOBILE */
 
 @media (min-width: 400px) {
+   /* .hero-img-wrapper {
+     width: 100%;
+   } */
+
   .hero-message p {
     margin-top: 0.5rem;
   }
@@ -86,10 +91,14 @@ body {
 /*? ----- */
 
 @media (min-width: 520px) {
-  .hero-img-wrapper {
+  /* .hero-img-wrapper {
     width: 80%;
     bottom: -200px;
-  }
+  } */
+
+   .hero-message {
+     width: 60%;
+   }
 
   .hero-message p {
     margin-top: 0.5rem;
@@ -99,24 +108,23 @@ body {
 /*? ----- */
 
 @media (min-width: 600px) {
-  .hero-img-wrapper {
-    width: 80%;
-  }
+  /* .hero-img-wrapper {
+    width: 70%;
+  } */
 }
 
 /*? MOBILE - LANDSCAPE */
 
 @media (min-width: 700px) {
-  .hero-img-wrapper {
+  /* .hero-img-wrapper {
     width: 80%;
     position: absolute;
-    bottom: -250px;
-    right: -100px;
-  }
+    bottom: -300px;
+  } */
 
   .hero-message {
-    margin-top: 2.5rem;
-    width: clamp(600px, 90vw, 600px);
+    margin-top: 1.8rem;
+    width: 50%;
   }
 
   .hero-message h2 {
@@ -127,12 +135,12 @@ body {
 /*? TABLET */
 
 @media (min-width: 750px) {
-  .hero-img-wrapper {
-    width: 65%;
+  /* .hero-img-wrapper {
+    width: 90%;
     position: absolute;
     bottom: -300px;
     right: -100px;
-  }
+  } */
   .hero-message p {
     font-size: 1.1rem;
   }
@@ -141,12 +149,16 @@ body {
 /*? TABLET - LANDSCAPE */
 
 @media (min-width: 1000px) {
+    /* .hero-img-wrapper {
+      bottom: -500px;
+      right: -150px;
+    } */
 }
 
 /*? DESKTOP */
 
 @media (min-width: 1200px) {
-  .hero-message {
+  /* .hero-message {
     margin-top: 1.1rem;
-  }
+  } */
 }

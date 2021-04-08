@@ -10,8 +10,6 @@ const closeBtn = courseOutputWrapper.querySelector(".close-btn");
 const bottomDetails = document.querySelector(".bottom-details");
 const instructorDetails = bottomDetails.querySelectorAll("span");
 
-console.log(courseCtaAll);
-
 //? COURSE INFORMATION
 const courseInfo = [
   {
