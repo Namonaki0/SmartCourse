@@ -212,6 +212,18 @@ a.cta-course-page:focus,
   margin-bottom: 2em;
 }
 
+/*? ----- COURSE OUTPUT MODAL ----- */
+
+.course-description-wrapper h4 {
+  font-size: 1.8rem;
+}
+
+.course-description-wrapper > p {
+  font-size: 1.1rem;
+}
+
+/*? -------------------------------- */
+
 /*? MEDIA QUERIES */
 
 /*? MOBILE */
@@ -268,6 +280,8 @@ a.cta-course-page:focus,
     padding: 0;
     margin-top: 1em;
   }
+
+
 }
 
 /*? TABLET - LANDSCAPE */
