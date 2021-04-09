@@ -94,6 +94,34 @@ const modalProps = () => {
   }
 };
 
+//? ---- NEEDS WORK -------------------
+
+const videoDuration = [
+  { video1: "30mins" },
+  { video2: "1h 05mins" },
+  { video3: "2h 15mins" },
+  { video4: "1h 05mins" },
+  { video5: "2h 30mins" },
+  { video6: "3h 10mins" },
+  { video7: "2h 30mins" },
+  { video8: "2h 50mins" },
+  { video9: "2h 20mins" },
+  { video10: "3h 15mins" },
+  { video11: "2h 45mins" },
+  { video12: "35mins" },
+];
+
+const classVideos = document.querySelectorAll(".classVideo span:last-child");
+
+for (let video in videoDuration) {
+  // console.log();
+  classVideos.forEach((classVideo) => {
+    classVideo.textContent = Object.values(videoDuration[video]);
+  });
+}
+
+//? ----------------------------------
+
 //? CTA - MODAL DISPLAY
 courseCtaAll.forEach((cta) => {
   cta.addEventListener("click", (e) => {
