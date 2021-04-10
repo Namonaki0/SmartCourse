@@ -51,7 +51,6 @@ nav .menu {
   transform: translateY(-100%);
   transition: all 150ms ease-in;
   opacity: 0;
-  /* padding-top: .5rem; */
 }
 
 .open-menu-sect {
@@ -225,18 +224,6 @@ nav .open-nav {
   .navigation a:hover::before {
     visibility: visible;
     transform: scaleX(1);
-  }
-
-  /* body {
-    background-image: linear-gradient(
-      112.1deg,
-      #1c1c1c 57%,
-      rgba(63, 76, 119, 1) 42%
-    ); */
-  /* } */
-
-  .active {
-    border-bottom: none;
   }
 
   .close-menu {
