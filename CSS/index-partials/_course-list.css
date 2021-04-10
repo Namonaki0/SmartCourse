@@ -222,6 +222,11 @@ a.cta-course-page:focus,
   font-size: 1.1rem;
 }
 
+.classVideo span:last-child {
+  font-size: .8rem;
+  margin-left: auto;
+}
+
 /*? -------------------------------- */
 
 /*? MEDIA QUERIES */

@@ -112,12 +112,10 @@ const videoDuration = [
 ];
 
 const classVideos = document.querySelectorAll(".classVideo span:last-child");
-classVideos.forEach((video) => {
-  for (const key in videoDuration) {
-    console.log(videoDuration);
-    video.textContent = `${videoDuration[key]}`;
-  }
-});
+
+for (i = 0; i < classVideos.length; i++) {
+  classVideos[i].textContent = videoDuration[i];
+}
 
 //? ----------------------------------
 
