@@ -15,7 +15,7 @@
 
 @keyframes courseModal {
   0% {
-    bottom: -20px;
+    top: -20px;
     opacity: 0;
     visibility: hidden;
   }

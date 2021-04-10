@@ -9,6 +9,7 @@ const courseDetails = courseOutputWrapper.querySelector("p");
 const closeBtn = courseOutputWrapper.querySelector(".close-btn");
 const bottomDetails = document.querySelector(".bottom-details");
 const instructorDetails = bottomDetails.querySelectorAll("span");
+const classVideos = document.querySelectorAll(".classVideo span:last-child");
 
 //? COURSE INFORMATION
 const courseInfo = [
@@ -72,6 +73,16 @@ const courseInfo = [
     enrolled: "10239 people",
     rating: "★★★★★",
   },
+  {
+    //? JAVASCRIPT BOOTCAMP
+    name: "JavaScript Bootcamp",
+    src: "Images/image7.jpg",
+    details:
+      "The most comprehensive JS course you will find online. Everything you need to know to get you hired is emphasized here.",
+    instructor: "Bob Zeroll",
+    enrolled: "25239 people",
+    rating: "★★★★★",
+  },
 ];
 
 const modalProps = () => {
@@ -82,6 +93,7 @@ const modalProps = () => {
     courseOutputWrapper.style.opacity = "1";
     courseOutputWrapper.style.visibility = "visible";
     courseOutputWrapper.style.pointerEvents = "all";
+    courseOutputWrapper.style.zIndex = "10000";
     document.body.style.overflowY = "hidden";
   } else {
     courseOutputWrapper.style.display = "";
@@ -90,11 +102,14 @@ const modalProps = () => {
     courseOutputWrapper.style.opacity = "1";
     courseOutputWrapper.style.visibility = "visible";
     courseOutputWrapper.style.pointerEvents = "all";
+    courseOutputWrapper.style.zIndex = "10000";
     document.body.style.overflowY = "hidden";
   }
 };
 
-//? ---- NEEDS WORK -------------------
+//? ----------------------------------
+
+//? ADDING VIDEO DURATION TO EACH CLASS
 
 const videoDuration = [
   "30mins",
@@ -110,8 +125,6 @@ const videoDuration = [
   "2h 45mins",
   "35mins",
 ];
-
-const classVideos = document.querySelectorAll(".classVideo span:last-child");
 
 for (i = 0; i < classVideos.length; i++) {
   classVideos[i].textContent = videoDuration[i];
@@ -180,6 +193,24 @@ courseCtaAll.forEach((cta) => {
         break;
     }
   });
+});
+
+//? FEATURED COURSE
+
+const featuredCourseBtn = document.querySelector(".explore-btn");
+
+featuredCourseBtn.addEventListener("click", (e) => {
+  console.log(e);
+  if (e.target.classList.contains("javascript-bootcamp")) {
+    e.preventDefault();
+    modalProps();
+    imageSrc.src = courseInfo[6].src;
+    courseTitle.innerText = courseInfo[6].name;
+    courseDetails.innerText = courseInfo[6].details;
+    instructorDetails[0].innerText = courseInfo[6].instructor;
+    instructorDetails[1].innerText = courseInfo[6].enrolled;
+    instructorDetails[2].innerText = courseInfo[6].rating;
+  }
 });
 
 //? CLOSE MODAL BY CLICKING OUTSIDE

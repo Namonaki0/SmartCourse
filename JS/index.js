@@ -21,8 +21,10 @@ close.addEventListener("click", () => {
 
 const btnSliders = document.querySelectorAll(".btn-slider");
 const termsContent = document.querySelectorAll(".terms-content");
-const content = document.querySelector(".content");
+const content = document.querySelectorAll(".content");
 const spanSign = document.querySelectorAll(".plus-sign");
+
+console.log(content);
 
 btnSliders.forEach((slider) => {
   slider.addEventListener("click", (e) => {
