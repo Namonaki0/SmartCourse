@@ -1,177 +1,89 @@
-/*? SUBSCRIPTION FORM */
-
-form h2 {
-  background: #3f4c77;
-  margin: 0;
-  padding: 0.6em;
-  text-align: center;
-  margin-bottom: 1em;
-  color: white;
-  font-size: 1.5em;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-}
-
-.top {
-  width: 80%;
-  margin: 0;
-  margin: auto;
-  padding: 2em;
-  background: blue;
-}
-
-.form-wrapper {
-  left: 0;
-  top: 0;
-  z-index: 1000;
-  visibility: hidden;
+#mc_embed_signup {
+  display: none;
   opacity: 0;
+  transition: all 350ms ease;
+  background-color: rgba(0, 0, 0, 0.842);
   pointer-events: none;
+}
+
+#mc_embed_signup.show {
+  display: grid;
+  opacity: 1;
   position: fixed;
-  height: 100%;
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  top: 0;
   width: 100%;
-  padding: 30px;
-  overflow: auto;
-  background: rgb(0, 0, 0);
-  background: rgb(0, 0, 0, 0.4);
-  margin-bottom: 0;
-  animation-name: animatetop;
-  animation-duration: 200ms;
-}
-
-@keyframes animatetop {
-  from {
-    top: -200px;
-    opacity: 0;
-  }
-
-  to {
-    top: 0;
-    opacity: 1;
-  }
-}
-
-.details {
-  color: #3f4c77;
-  width: 85%;
-  margin: auto;
-  margin-bottom: 1em;
-  margin-top: 1em;
-  display: flex;
-}
-
-#Fname,
-#Lname {
-  width: 45%;
-}
-
-.agreement {
-  margin-bottom: 0;
+  animation: showSlider 150ms ease; 
+  z-index: 10000;
+  pointer-events: unset;
+  overflow-y: hidden;
 }
 
 form {
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  background: white;
-  border-radius: 5px;
-  position: relative;
+  background: linear-gradient(to bottom right, #313857, #3d4466);
+  width: 450px;
+  margin: 0 auto;
 }
 
-input {
-  margin: 0.5em;
-  padding: 0.5em;
-  border: none;
-  border-bottom: 0.5px solid #3f4c77;
-  font-family: inherit;
-  transition: all 100ms ease-in-out;
+/* #mc_embed_signup_scroll {
+
+} */
+
+form input {
+
+ width: 90%;
+ padding: .5rem .2rem;
+ font-family: inherit;
+  border: 1px solid red;
 }
 
-input:hover,
-input:focus {
-  border-bottom: 0.5px solid var(--gold);
+.mc-field-group {
+ width: 100%;
+
+ padding: 1rem 0;
 }
 
-input[class="format"] {
-  width: 82%;
-  margin: auto;
-  border-bottom: 1px solid var(--new-blue);
-}
 
-input[class="format"]:hover,
-input[class="format"]:focus {
-  width: 82%;
-  margin: auto;
-  border-bottom: 1px solid var(--gold);
-}
-
-label {
-  display: flex;
-  flex-direction: row;
-  text-align: center;
-  margin: auto;
-}
-
-label[class="checkbox"] {
-  display: flex;
-  justify-content: center;
-  font-size: 0.7em;
-  align-items: center;
-  margin-top: 2.5em;
-  color: var(--new-blue);
-}
-
-label[class="checkbox"] p {
-  width: 82%;
-}
-
-#accept {
-  justify-content: flex-end;
-  margin: 0;
-  padding: 0;
-}
-
-form button {
-  padding: 0.5em;
+input[type="submit"] {
+  all: unset;
+  border: 1px solid silver;
+  padding: .5rem 1rem;
   cursor: pointer;
-  background: none;
-  border: none;
-  border-radius: 5px;
+  transition: all 100ms linear;
+  display: block;
   width: 80%;
-  margin: 1em auto 2em;
-  font-family: inherit;
-  transition: all 100ms ease-in;
-  font-weight: 400;
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
+  margin: 1rem auto 2rem;
+  text-align: center;
+  color: rgb(230, 230, 230);
 }
 
-form button:hover {
-  background: var(--new-blue);
-  opacity: 0.8;
-  color: white;
+input[type="submit"]:hover {
+ background-color: white;
+ color: #3C4365;
+ border: 1px solid #3C4365;
 }
 
-form i {
-  right: -15px;
-  top: -20px;
-  font-size: 2em;
-  position: absolute;
-  color: white;
-  cursor: pointer;
+.indicates-required {
+  text-align: right;
+  margin: .2rem .5rem;
 }
 
-@media (min-width: 1000px) {
-  .form-wrapper {
-    width: 100%;
+.indicates-required,
+.asterisk {
+  font-size: .8rem;
+}
+
+.asterisk {
+  vertical-align: top;
+}
+
+@keyframes showSlider {
+  0%{
+transform: translateY(-100%);
   }
-
-  label[class="checkbox"] p {
-    width: 100%;
-    margin-left: 1em;
-  }
-
-  form {
-    width: 50%;
+  100%{
+transform: translateY(0%);
   }
 }

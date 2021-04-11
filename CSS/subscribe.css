@@ -1,7 +1,5 @@
-@import url("index-partials/_global.css");
+/* @import url("index-partials/_global.css");
 @import url("index-partials/_general.css");
-
-/*? MODAL */
 
 h2 {
   background: #3f4c77;
@@ -31,7 +29,6 @@ h2 {
   margin-right: auto;
   height: 100vh;
   background: white;
-  /* animation: animatetop; */
 }
 
 @keyframes animatetop {
@@ -86,7 +83,6 @@ input {
 input:hover,
 input:focus {
   border-bottom: 0.5px solid var(--gold);
-  /*color: var(--gold);*/
 }
 
 input[class="format"] {
@@ -143,4 +139,4 @@ button:hover {
   form {
     width: 80%;
   }
-}
+} */
