@@ -7,6 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
 
+    <!--? STYLESHEETS -->
+    <link rel="stylesheet" href="CSS/testimonials.css" />
+    <link rel="stylesheet" href="CSS/course-output-modal.css" />
+    <link rel="stylesheet" href="CSS/index.css" />
+
     <!-- ? FONTS -->
     <link
       href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&family=Montserrat:wght@300;400;600;700&display=swap"
@@ -22,9 +27,7 @@
       crossorigin="anonymous"
     ></script>
 
-    <link rel="stylesheet" href="CSS/course-output-modal.css" />
-    <link rel="stylesheet" href="CSS/testimonials.css" />
-    <link rel="stylesheet" href="CSS/index.css" />
+  
   </head>
   <body>
     <header>
@@ -158,46 +161,70 @@
 
     <!-- ? MODAL -->
 
-    <div class="form-wrapper" id="modal">
-      <form action="" method="POST">
-        <i class="fas fa-times-circle" id="close"></i>
+    <div id="mc_embed_signup">
+      <form
+        action="https://live.us1.list-manage.com/subscribe/post?u=6315f79f943612699e119f068&amp;id=61b1dad95c"
+        method="post"
+        id="mc-embedded-subscribe-form"
+        name="mc-embedded-subscribe-form"
+        class="validate"
+        target="_blank"
+        novalidate
+      >
+        <div id="mc_embed_signup_scroll">
+          <div class="indicates-required">
+            <span class="asterisk">*</span> required
+          </div>
+          <div class="mc-field-group">
+            <label for="mce-EMAIL"
+              >Email <span class="asterisk">*</span>
+            </label>
+            <input
+            placeholder="enter email..." 
+              type="email"
+              value=""
+              name="EMAIL"
+              class="required email"
+              id="mce-EMAIL"
+            />
+          </div>
+          <div class="mc-field-group">
+            <label for="mce-NAME">Name </label>
+            <input placeholder="enter name..." type="text" value="" name="FNAME" class="" id="mce-NAME" />
+          </div>
+          
+          </div>
+          <div id="mce-responses" class="clear">
+            <div
+              class="response"
+              id="mce-error-response"
+              style="display: none"
+            ></div>
+            <div
+              class="response"
+              id="mce-success-response"
+              style="display: none"
+            ></div>
+          </div>
 
-        <h2>Get the latest news about our courses</h2>
-
-        <span class="details">
-          <input
-            type="text"
-            id="Fname"
-            class="format"
-            placeholder="First Name"
-            aria-label="First Name Field"
-          />
-          <input
-            type="text"
-            id="Lname"
-            class="format"
-            placeholder="Last Name"
-            aria-label="Last Name Field"
-          />
-        </span>
-
-        <input
-          type="email"
-          id="email"
-          class="format"
-          placeholder="Email address"
-          aria-label="Email Address Field"
-        />
-
-        <label id="checkbox" class="checkbox">
-          <input type="checkbox" id="accept" aria-label="Checkbox agreement" />
-          <p>
-            By ticking this box you are accepting the terms and conditions
-            provided.
-          </p>
-        </label>
-
-        <button type="submit">Submit</button>
+          <div style="position: absolute; left: -5000px" aria-hidden="true">
+            <input
+              type="text"
+              name="b_6315f79f943612699e119f068_61b1dad95c"
+              tabindex="-1"
+              value=""
+            />
+          </div>
+          <div class="clear">
+            <input
+              type="submit"
+              value="Subscribe"
+              name="subscribe"
+              id="mc-embedded-subscribe"
+              class="button"
+            />
+          </div>
+        </div>
       </form>
     </div>
 
@@ -221,9 +248,9 @@
 
         <div class="menu-wrapper-content">
           <ul>
-            <li><a href="#">How it works</a></li>
-            <li><a href="#">Benefits of joining</a></li>
-            <li><a href="#">Refund policy</a></li>
+            <li><a href="howitworks.html">How it works</a></li>
+            <li><a href="benefits.html">Benefits of joining</a></li>
+            <li><a href="refundpolicy.html">Refund policy</a></li>
           </ul>
         </div>
 
@@ -231,16 +258,15 @@
           <div class="bottom-links">
             <a href="terms.html" class="bottom-link">Terms & Agreements</a>
             <a href="legal.html" class="bottom-link">Legal</a>
-            <a href="#subscribe" class="bottom-link" id="subscribe"
-              >Subscribe</a
-            >
           </div>
 
           <p>SmartCourse&trade; all rights reserved 2020</p>
         </div>
       </div>
 
-      <script src="JS/index.js"></script>
     </footer>
+      <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+      <!-- <script src="JS/courseTemplate.js"></script> -->
+      <script src="JS/index.js"></script>
   </body>
 </html>

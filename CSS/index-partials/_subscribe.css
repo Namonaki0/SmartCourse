@@ -15,75 +15,107 @@
   place-content: center;
   top: 0;
   width: 100%;
-  animation: showSlider 150ms ease; 
+  animation: showSlider 150ms ease;
   z-index: 10000;
   pointer-events: unset;
   overflow-y: hidden;
 }
 
 form {
-  background: linear-gradient(to bottom right, #313857, #3d4466);
-  width: 450px;
+  background: linear-gradient(to bottom right, #2d334e, #3d4466);
+  min-width: 450px;
   margin: 0 auto;
+  border: 1px solid rgba(192, 192, 192, 0.116);
 }
 
-/* #mc_embed_signup_scroll {
-
-} */
-
 form input {
-
- width: 90%;
- padding: .5rem .2rem;
- font-family: inherit;
-  border: 1px solid red;
+  width: 90%;
+  padding: 0.5rem 0.2rem;
+  font-family: inherit;
 }
 
 .mc-field-group {
- width: 100%;
-
- padding: 1rem 0;
+  width: 100%;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: left;
 }
 
+.mc-field-group label {
+  width: 90%;
+  margin-bottom: 0.2rem;
+}
+
+#mce-responses {
+  width: 100%;
+  display: absolute;
+}
+
+#mce-error-response,
+#mce-success-response {
+  width: 80%;
+  text-align: center;
+  margin: 0 auto 2rem;
+  font-size: 0.9rem;
+}
+
+#mce-error-response a,
+#mce-success-response a {
+  display: none;
+}
 
 input[type="submit"] {
   all: unset;
   border: 1px solid silver;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   cursor: pointer;
   transition: all 100ms linear;
   display: block;
   width: 80%;
-  margin: 1rem auto 2rem;
+  margin: 3rem auto;
   text-align: center;
   color: rgb(230, 230, 230);
 }
 
 input[type="submit"]:hover {
- background-color: white;
- color: #3C4365;
- border: 1px solid #3C4365;
+  background-color: white;
+  color: #3c4365;
+  border: 1px solid #3c4365;
 }
 
 .indicates-required {
   text-align: right;
-  margin: .2rem .5rem;
+  margin: 0.5rem 0.8rem;
 }
 
 .indicates-required,
 .asterisk {
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 .asterisk {
   vertical-align: top;
 }
 
+.mce_inline_error {
+  width: 90%;
+  margin: 0;
+}
+
 @keyframes showSlider {
-  0%{
-transform: translateY(-100%);
+  0% {
+    transform: translateY(-100%);
   }
-  100%{
-transform: translateY(0%);
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@media (min-width: 700px) {
+  form {
+    min-width: 600px;
   }
 }
