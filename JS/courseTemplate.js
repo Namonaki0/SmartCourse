@@ -200,7 +200,6 @@ courseCtaAll.forEach((cta) => {
 const featuredCourseBtn = document.querySelector(".explore-btn");
 
 featuredCourseBtn.addEventListener("click", (e) => {
-  console.log(e);
   if (e.target.classList.contains("javascript-bootcamp")) {
     e.preventDefault();
     modalProps();
@@ -212,17 +211,3 @@ featuredCourseBtn.addEventListener("click", (e) => {
     instructorDetails[2].innerText = courseInfo[6].rating;
   }
 });
-
-//? CLOSE MODAL BY CLICKING OUTSIDE
-window.onclick = function (event) {
-  if (event.target == courseOutputWrapper) {
-    courseOutputWrapper.style.display = "none";
-    document.body.style.overflowY = "unset";
-  }
-};
-
-//? CLOSE MODAL BY CLICKING BUTTON
-closeBtn.onclick = () => {
-  document.body.style.overflowY = "unset";
-  courseOutputWrapper.style.display = "none";
-};
