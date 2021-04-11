@@ -85,31 +85,29 @@ const courseInfo = [
   },
 ];
 
-const modalProps = () => {
+const modalSharedProps = () => {
+  courseOutputWrapper.style.animation = "courseModal";
+  courseOutputWrapper.style.animationDuration = "150ms";
+  courseOutputWrapper.style.opacity = "1";
+  courseOutputWrapper.style.visibility = "visible";
+  courseOutputWrapper.style.pointerEvents = "all";
+  courseOutputWrapper.style.zIndex = "10000";
+  document.body.style.overflowY = "hidden";
+};
+
+function modalProps() {
   if (window.screen.width >= 900 && window.screen.height >= 750) {
     courseOutputWrapper.style.display = "flex";
-    courseOutputWrapper.style.animation = "courseModal";
-    courseOutputWrapper.style.animationDuration = "150ms";
-    courseOutputWrapper.style.opacity = "1";
-    courseOutputWrapper.style.visibility = "visible";
-    courseOutputWrapper.style.pointerEvents = "all";
-    courseOutputWrapper.style.zIndex = "10000";
-    document.body.style.overflowY = "hidden";
+    modalSharedProps();
   } else {
     courseOutputWrapper.style.display = "";
-    courseOutputWrapper.style.animation = "courseModal";
-    courseOutputWrapper.style.animationDuration = "150ms";
-    courseOutputWrapper.style.opacity = "1";
-    courseOutputWrapper.style.visibility = "visible";
-    courseOutputWrapper.style.pointerEvents = "all";
-    courseOutputWrapper.style.zIndex = "10000";
-    document.body.style.overflowY = "hidden";
+    modalSharedProps();
   }
-};
+}
 
 //? ----------------------------------
 
-//? ADDING VIDEO DURATION TO EACH CLASS
+//? ADDING VIDEO DURATION TO EACH LESSON
 
 const videoDuration = [
   "30mins",
@@ -195,19 +193,9 @@ courseCtaAll.forEach((cta) => {
   });
 });
 
-//? FEATURED COURSE
+//? CLOSE MODAL BY CLICKING BUTTON
 
-const featuredCourseBtn = document.querySelector(".explore-btn");
-
-featuredCourseBtn.addEventListener("click", (e) => {
-  if (e.target.classList.contains("javascript-bootcamp")) {
-    e.preventDefault();
-    modalProps();
-    imageSrc.src = courseInfo[6].src;
-    courseTitle.innerText = courseInfo[6].name;
-    courseDetails.innerText = courseInfo[6].details;
-    instructorDetails[0].innerText = courseInfo[6].instructor;
-    instructorDetails[1].innerText = courseInfo[6].enrolled;
-    instructorDetails[2].innerText = courseInfo[6].rating;
-  }
-});
+closeBtn.onclick = () => {
+  document.body.style.overflowY = "unset";
+  courseOutputWrapper.style.display = "none";
+};
