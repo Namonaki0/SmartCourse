@@ -142,6 +142,33 @@ nav .open-nav {
   cursor: pointer;
 }
 
+.sign-in-wrapper {
+  border-bottom: 1px solid var(--gold);
+  padding: 0.4rem 1.2rem;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all 150ms ease;
+  width: 70%;
+  margin-left: auto;
+  margin-top: 3rem;
+}
+
+.sign-in-wrapper:hover {
+  border-bottom: 1px solid var(--silver);
+}
+
+.sign-in-wrapper .sign-in {
+  color: var(--gold);
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.3rem;
+  transition: all 150ms ease;
+}
+
+.sign-in-wrapper:hover .sign-in {
+  color: white;
+}
+
 /*? DESKTOP VERSION */
 
 @media (min-width: 950px) {
@@ -228,5 +255,42 @@ nav .open-nav {
 
   .close-menu {
     display: none;
+  }
+
+  /*? SING-IN BUTTON */
+
+  .sign-in-wrapper {
+    padding: 0.4rem 1.1rem;
+    margin-right: 1.5rem;
+    margin-left: 0.5rem;
+  }
+
+  .sign-in-wrapper .sign-in:hover {
+    margin-right: 0;
+    background: none;
+  }
+
+  .sign-in-wrapper .sign-in::before {
+    all: unset;
+  }
+
+  .sign-in-wrapper {
+    border: 1px solid var(--gold);
+    padding: 0.4rem 1.2rem;
+    width: auto;
+    margin-top: unset;
+  }
+
+  .sign-in-wrapper:hover {
+    border: 1px solid rgba(192, 192, 192, 0.315);
+    background: rgba(192, 192, 192, 0.096);
+  }
+
+  .sign-in-wrapper .sign-in {
+    font-size: 1rem;
+  }
+
+  .sign-in-wrapper:hover .sign-in {
+    color: rgb(226, 226, 226);
   }
 }

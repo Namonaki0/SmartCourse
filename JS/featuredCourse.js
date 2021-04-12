@@ -1,6 +1,6 @@
 //? FEATURED COURSE
 
-const modalProps = () => {
+const courseModalProps = () => {
   courseOutputWrapper.style.animation = "courseModal";
   courseOutputWrapper.style.animationDuration = "150ms";
   courseOutputWrapper.style.opacity = "1";
@@ -12,12 +12,12 @@ const modalProps = () => {
 
 const modalFlexLayout = () => {
   courseOutputWrapper.style.display = "flex";
-  modalProps();
+  courseModalProps();
 };
 
 const modalOriginalLayout = () => {
   courseOutputWrapper.style.display = "";
-  modalProps();
+  courseModalProps();
 };
 
 function modalProps() {
