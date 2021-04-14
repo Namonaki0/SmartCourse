@@ -2,3 +2,5 @@
 .netlify
 /.netlify
 /.vscode
+public/404.html
+public/index.html
