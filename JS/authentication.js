@@ -1,3 +1,5 @@
+// const { listenerCount } = require("node:events");
+
 var firebaseConfig = {
   apiKey: "AIzaSyATXY1UvN2imRgwsLM1TZ2AowEX22QcFQM",
   authDomain: "smartcourse-authentication.firebaseapp.com",
@@ -14,6 +16,7 @@ firebase.analytics();
 
 firebase.auth().onAuthStateChanged(function (user) {
   if (user) {
+    //? USER LOGGED IN
     document.querySelector("#logged-in-wrapper").style.display = "flex";
     document.querySelector("#auth-wrapper").style.display = "none";
 
@@ -26,10 +29,9 @@ firebase.auth().onAuthStateChanged(function (user) {
       ).innerHTML = `You are currently logged in as ${email_id}`;
     }
   } else {
+    //? USER NOT LOGGED IN
     document.querySelector("#auth-wrapper").style.display = "flex";
     document.querySelector("#logged-in-wrapper").style.display = "none";
-
-    // No user is signed in.
   }
 });
 
@@ -42,9 +44,8 @@ const userAuth = () => {
     .auth()
     .signInWithEmailAndPassword(userEmail, userPassword)
     .then((userCredential) => {
-      // Signed in
+      //? LOGGED IN
       var user = userCredential.user;
-      // ...
     })
     .catch((error) => {
       var errorCode = error.code;
@@ -57,3 +58,21 @@ const userAuth = () => {
 const logout = () => {
   firebase.auth().signOut();
 };
+
+document.addEventListener("DOMContentLoaded", (e) => {
+  const app = firebase.app();
+});
+
+function googleLogin() {
+  const provider = new firebase.auth.GoogleAuthProvider();
+
+  firebase
+    .auth()
+    .SignInWithPopup(provider)
+    .then((result) => {
+      const user = result.user;
+      document.write(`Hi, ${user.displayName}`);
+      console.log(user);
+    })
+    .catch(err);
+}
