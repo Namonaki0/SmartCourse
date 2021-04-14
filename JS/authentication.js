@@ -1,16 +1,19 @@
-// const { listenerCount } = require("node:events");
+let firebaseApp = {};
+(function () {
+  var firebaseConfig = {
+    apiKey: "AIzaSyATXY1UvN2imRgwsLM1TZ2AowEX22QcFQM",
+    authDomain: "smartcourse-authentication.firebaseapp.com",
+    projectId: "smartcourse-authentication",
+    storageBucket: "smartcourse-authentication.appspot.com",
+    messagingSenderId: "282877508454",
+    appId: "1:282877508454:web:c7847880520cec428126a7",
+    measurementId: "G-T8SLX37Z4V",
+  };
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
 
-var firebaseConfig = {
-  apiKey: "AIzaSyATXY1UvN2imRgwsLM1TZ2AowEX22QcFQM",
-  authDomain: "smartcourse-authentication.firebaseapp.com",
-  projectId: "smartcourse-authentication",
-  storageBucket: "smartcourse-authentication.appspot.com",
-  messagingSenderId: "282877508454",
-  appId: "1:282877508454:web:c7847880520cec428126a7",
-  measurementId: "G-T8SLX37Z4V",
-};
-firebase.initializeApp(firebaseConfig);
-firebase.analytics();
+  firebaseApp = firebase;
+})();
 
 //? AUTHENTICATION
 
@@ -42,7 +45,6 @@ firebase.auth().onAuthStateChanged(function (user) {
 const userAuth = () => {
   let userEmail = document.querySelector("#user-email").value;
   let userPassword = document.querySelector("#user-password").value;
-  // console.log(userEmail, userPassword);
 
   firebase
     .auth()
@@ -50,7 +52,6 @@ const userAuth = () => {
     .then((userCredential) => {
       //? LOGGED IN
       var user = userCredential.user;
-      document.querySelector("#sign-in-btn").innerText = "LOGOUT";
     })
     .catch((error) => {
       var errorCode = error.code;
@@ -70,27 +71,10 @@ auth.onAuthStateChanged(function (user) {
   if (user) {
     let email = user.email;
     console.log(`${email} signed in`);
-    //is signed in
+
+    //? IS SIGNED IN
   } else {
-    console.log(`${email} not signed in`);
-    //not signed in
+    console.log(`Not signed in`);
+    //? NOT SIGNED IN
   }
 });
-
-// document.addEventListener("DOMContentLoaded", (e) => {
-//   const app = firebase.app();
-// });
-
-// function googleLogin() {
-//   const provider = new firebase.auth.GoogleAuthProvider();
-
-//   firebase
-//     .auth()
-//     .SignInWithPopup(provider)
-//     .then((result) => {
-//       const user = result.user;
-//       document.write(`Hi, ${user.displayName}`);
-//       console.log(user);
-//     })
-//     .catch(err);
-// }
