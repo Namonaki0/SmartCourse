@@ -14,6 +14,10 @@ firebase.analytics();
 
 //? AUTHENTICATION
 
+window.addEventListener("DOMContentLoaded", (e) => {
+  console.log(e.value);
+});
+
 firebase.auth().onAuthStateChanged(function (user) {
   if (user) {
     //? USER LOGGED IN
@@ -38,7 +42,7 @@ firebase.auth().onAuthStateChanged(function (user) {
 const userAuth = () => {
   let userEmail = document.querySelector("#user-email").value;
   let userPassword = document.querySelector("#user-password").value;
-  console.log(userEmail, userPassword);
+  // console.log(userEmail, userPassword);
 
   firebase
     .auth()
@@ -46,6 +50,7 @@ const userAuth = () => {
     .then((userCredential) => {
       //? LOGGED IN
       var user = userCredential.user;
+      document.querySelector("#sign-in-btn").innerText = "LOGOUT";
     })
     .catch((error) => {
       var errorCode = error.code;
@@ -59,20 +64,33 @@ const logout = () => {
   firebase.auth().signOut();
 };
 
-document.addEventListener("DOMContentLoaded", (e) => {
-  const app = firebase.app();
+const auth = firebase.auth();
+
+auth.onAuthStateChanged(function (user) {
+  if (user) {
+    let email = user.email;
+    console.log(`${email} signed in`);
+    //is signed in
+  } else {
+    console.log(`${email} not signed in`);
+    //not signed in
+  }
 });
 
-function googleLogin() {
-  const provider = new firebase.auth.GoogleAuthProvider();
+// document.addEventListener("DOMContentLoaded", (e) => {
+//   const app = firebase.app();
+// });
 
-  firebase
-    .auth()
-    .SignInWithPopup(provider)
-    .then((result) => {
-      const user = result.user;
-      document.write(`Hi, ${user.displayName}`);
-      console.log(user);
-    })
-    .catch(err);
-}
+// function googleLogin() {
+//   const provider = new firebase.auth.GoogleAuthProvider();
+
+//   firebase
+//     .auth()
+//     .SignInWithPopup(provider)
+//     .then((result) => {
+//       const user = result.user;
+//       document.write(`Hi, ${user.displayName}`);
+//       console.log(user);
+//     })
+//     .catch(err);
+// }
