@@ -1,3 +1,5 @@
+// const { sign } = require("node:crypto");
+
 let firebaseApp = {};
 (function () {
   var firebaseConfig = {
@@ -10,16 +12,12 @@ let firebaseApp = {};
     measurementId: "G-T8SLX37Z4V",
   };
   firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
+  // firebase.analytics();
 
   firebaseApp = firebase;
 })();
 
 //? AUTHENTICATION
-
-window.addEventListener("DOMContentLoaded", (e) => {
-  console.log(e.value);
-});
 
 firebase.auth().onAuthStateChanged(function (user) {
   if (user) {
@@ -28,6 +26,13 @@ firebase.auth().onAuthStateChanged(function (user) {
     document.querySelector("#auth-wrapper").style.display = "none";
 
     var user = firebase.auth().currentUser;
+
+    // const changeBtn = (signInBtn) => {
+    setTimeout(() => {
+      window.location.replace("/index.html");
+    }, 2000);
+    changeBtn(signInBtn);
+    // };
 
     if (user != null) {
       let email_id = user.email;
@@ -66,6 +71,8 @@ const logout = () => {
 };
 
 const auth = firebase.auth();
+
+const signInBtn = document.querySelector("#sign_in_btn");
 
 auth.onAuthStateChanged(function (user) {
   if (user) {
