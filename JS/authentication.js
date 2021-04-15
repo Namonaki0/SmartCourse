@@ -1,5 +1,3 @@
-// const { sign } = require("node:crypto");
-
 let firebaseApp = {};
 (function () {
   var firebaseConfig = {
@@ -12,12 +10,31 @@ let firebaseApp = {};
     measurementId: "G-T8SLX37Z4V",
   };
   firebase.initializeApp(firebaseConfig);
-  // firebase.analytics();
 
   firebaseApp = firebase;
 })();
 
 //? AUTHENTICATION
+
+window.addEventListener("onload", changeText);
+
+function changeText(text) {
+  const signInBtn = (document.querySelector(
+    "#sign_in_btn"
+  ).innerText = `${text}`);
+  // console.log(signInBtn);
+}
+
+function checkState() {
+  if (document.readyState !== "loading") {
+    console.log("document is already ready, just execute code here");
+    changeText("LOGOUT");
+  }
+  document.addEventListener("DOMContentLoaded", function () {
+    console.log("document was not ready, place code here");
+    changeText("LOGOUT");
+  });
+}
 
 firebase.auth().onAuthStateChanged(function (user) {
   if (user) {
@@ -27,12 +44,11 @@ firebase.auth().onAuthStateChanged(function (user) {
 
     var user = firebase.auth().currentUser;
 
-    // const changeBtn = (signInBtn) => {
     setTimeout(() => {
       window.location.replace("/index.html");
     }, 2000);
-    changeBtn(signInBtn);
-    // };
+    checkState();
+    function myInitCode() {}
 
     if (user != null) {
       let email_id = user.email;
@@ -71,8 +87,6 @@ const logout = () => {
 };
 
 const auth = firebase.auth();
-
-const signInBtn = document.querySelector("#sign_in_btn");
 
 auth.onAuthStateChanged(function (user) {
   if (user) {
