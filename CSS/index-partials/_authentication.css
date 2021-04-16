@@ -9,14 +9,13 @@
   z-index: 2000;
   display: none;
   position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  height: 100vh;
+  top: 10%;
+  bottom: 25%;
+  right: 5px;
 }
 
 .auth-overall-wrapper.show {
-  display: unset;
+  display: flex;
 }
 
 .main-auth-wrapper,
@@ -27,15 +26,23 @@
   justify-content: center;
   color: black;
   width: 300px;
-  height: 400px;
+  height: 300px;
   margin: auto;
-  height: 100vh;
   font-family: "Montserrat", sans-serif;
+  padding: 3rem .5rem;
 }
 
 .logged-in-wrapper {
   display: inherit;
   justify-self: flex-start;
+  text-align: center;
+}
+
+.logged-in-wrapper *,
+.main-auth-wrapper,
+.logged-in-wrapper,
+.user-input {
+  font-weight: 300;
 }
 
 .validate-btn,
