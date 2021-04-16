@@ -48,3 +48,22 @@ btnSliders.forEach((slider) => {
     }
   });
 });
+
+const loggedInWrapper = document.querySelector("#logged-in-wrapper");
+const signInBtn = document.querySelector("#sign_in_btn");
+const authOverallWrapper = document.querySelector("#auth-overall-wrapper");
+signInBtn.addEventListener("click", () => {
+  authOverallWrapper.classList.add("show");
+  if (loggedInWrapper.style.display == "flex") {
+    console.log("yes");
+    setTimeout(() => {
+      authOverallWrapper.classList.remove("show");
+      checkState();
+      console.log(loggedInWrapper.style.display);
+    }, 2000);
+  }
+  // } else {
+  //   authOverallWrapper.classList == "";
+  //   console.log(authOverallWrapper.classList);
+  // }
+});

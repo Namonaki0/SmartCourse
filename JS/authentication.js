@@ -44,10 +44,6 @@ firebase.auth().onAuthStateChanged(function (user) {
 
     var user = firebase.auth().currentUser;
 
-    setTimeout(() => {
-      window.location.replace("/index.html");
-    }, 2000);
-    checkState();
     function myInitCode() {}
 
     if (user != null) {
