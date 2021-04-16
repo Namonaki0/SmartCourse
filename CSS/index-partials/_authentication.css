@@ -4,6 +4,21 @@
   box-sizing: border-box;
 }
 
+.auth-overall-wrapper {
+  background: white;
+  z-index: 2000;
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 100vh;
+}
+
+.auth-overall-wrapper.show {
+  display: unset;
+}
+
 .main-auth-wrapper,
 .logged-in-wrapper {
   display: flex;

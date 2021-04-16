@@ -9,7 +9,9 @@
   <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
 
   <!--? STYLESHEETS -->
+
   <link rel="stylesheet" href="CSS/course-output-modal.css">
+  <link rel="stylesheet" href="CSS/index-partials/_authentication.css">
   <link rel="stylesheet" href="CSS/index.css" />
 
   <!-- ? FONTS -->
@@ -47,7 +49,7 @@
         </li>
 
         <div class="sign-in-wrapper">
-          <a href="authentication.html" id="sign_in_btn" class="sign-in">Sign-up</a>
+          <a href="#uth-overall-wrapper" id="sign_in_btn" class="sign-in">Sign-up</a>
         </div>
       </ul>
     
@@ -339,6 +341,32 @@
 
   </div>
   <!--? COURSE MODAL OUTPUT -->
+
+<!--? AUTHENTICATION -->
+  <div class="auth-overall-wrapper" id="auth-overall-wrapper">
+      <div class="main-auth-wrapper" id="auth-wrapper">
+        <input
+          type="text"
+          class="user-email user-input"
+          id="user-email"
+          placeholder="enter email..."
+        />
+        <input type="text" class="user-password user-input" id="user-password"
+        placeholder="enter password..."">
+        <button onclick="userAuth()" class="validate-btn" id="validate-btn">
+          confirm
+        </button>
+      </div>
+
+      <div class="logged-in-wrapper" id="logged-in-wrapper">
+        <h2>Welcome</h2>
+        <p id="welcome-text">You are now logged in.</p>
+        <button class="logout-btn" id="logout-btn" onclick="logout()">
+          logout
+        </button>
+      </div>
+    </div>
+
 
   <footer>
     <div class="social-media">
