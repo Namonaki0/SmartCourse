@@ -16,6 +16,10 @@ let firebaseApp = {};
 
 //? AUTHENTICATION
 
+window.addEventListener("click", (e) => {
+  console.log(e.path[0].firstChild);
+});
+
 window.addEventListener("onload", changeText);
 
 function changeText(text) {
@@ -28,11 +32,9 @@ function changeText(text) {
 function checkState() {
   if (document.readyState !== "loading") {
     console.log("document is already ready, just execute code here");
-    changeText("LOGOUT");
   }
   document.addEventListener("DOMContentLoaded", function () {
     console.log("document was not ready, place code here");
-    changeText("LOGOUT");
   });
 }
 
@@ -41,6 +43,8 @@ firebase.auth().onAuthStateChanged(function (user) {
     //? USER LOGGED IN
     document.querySelector("#logged-in-wrapper").style.display = "flex";
     document.querySelector("#auth-wrapper").style.display = "none";
+    document.querySelector("#sign_in_btn").style.display = "none";
+    document.querySelector("#sign_out_btn").style.display = "flex";
 
     var user = firebase.auth().currentUser;
 
@@ -51,11 +55,15 @@ firebase.auth().onAuthStateChanged(function (user) {
       document.querySelector(
         "#welcome-text"
       ).innerHTML = `You are currently logged in as ${email_id}`;
+      authOverallWrapper.classList.remove("show");
+      checkState();
     }
   } else {
     //? USER NOT LOGGED IN
     document.querySelector("#auth-wrapper").style.display = "flex";
     document.querySelector("#logged-in-wrapper").style.display = "none";
+    document.querySelector("#sign_in_btn").style.display = "flex";
+    document.querySelector("#sign_out_btn").style.display = "none";
   }
 });
 
