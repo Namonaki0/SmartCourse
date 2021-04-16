@@ -48,27 +48,3 @@ btnSliders.forEach((slider) => {
     }
   });
 });
-
-const loggedInWrapper = document.querySelector("#logged-in-wrapper");
-const authWrapper = document.querySelector("#auth-wrapper");
-const signInBtn = document.querySelector("#sign_in_btn");
-const authOverallWrapper = document.querySelector("#auth-overall-wrapper");
-signInBtn.addEventListener("click", () => {
-  authOverallWrapper.classList.toggle("show");
-  if (loggedInWrapper.style.display == "flex") {
-    let email = user.email;
-    console.log(`${email} signed in`);
-    // console.log("LOGGED WRAPPER");
-    setTimeout(() => {
-      // checkState();
-      authOverallWrapper.classList.toggle("show");
-      console.log(loggedInWrapper.style.display);
-    }, 2000);
-  } else {
-    return;
-  }
-  // } else {
-  //   authOverallWrapper.classList == "";
-  //   console.log(authOverallWrapper.classList);
-  // }
-});

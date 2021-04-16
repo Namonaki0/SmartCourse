@@ -5,6 +5,7 @@
     
     <link rel="stylesheet" href="CSS/courses.css" />
     <link rel="stylesheet" href="CSS/course-output-modal.css" />
+     <link rel="stylesheet" href="CSS/index-partials/_authentication.css">
     <link rel="stylesheet" href="CSS/index.css" />
 
     <!-- ? FONTS -->
@@ -51,7 +52,8 @@
         </li>
 
          <div class="sign-in-wrapper">
-          <a href="authentication.html" class="sign-in" target="_blank">Sign-up</a>
+           <a href="#auth-overall-wrapper" id="sign_in_btn" class="sign-in">Sign-in</a>
+          <a href="#auth-overall-wrapper" id="sign_out_btn" class="sign-out" onclick="logout()">Sign-out</a>
         </div>
       </ul>
     </nav>
@@ -287,12 +289,41 @@
           <p>SmartCourse&trade; all rights reserved 2021</p>
         </div>
       </div>
+
+
+      <!--? AUTHENTICATION -->
+  <div class="auth-overall-wrapper" id="auth-overall-wrapper">
+      <div class="main-auth-wrapper" id="auth-wrapper">
+        <input
+          type="text"
+          class="user-email user-input"
+          id="user-email"
+          placeholder="enter email..."
+        />
+        <input type="text" class="user-password user-input" id="user-password"
+        placeholder="enter password..."">
+        <button onclick="userAuth()" class="validate-btn" id="validate-btn">
+          confirm
+        </button>
+      </div>
+
+      <div class="logged-in-wrapper" id="logged-in-wrapper">
+        <h2>Welcome</h2>
+        <p id="welcome-text">You are now logged in.</p>
+        <button class="logout-btn" id="logout-btn" onclick="logout()">
+          logout
+        </button>
+      </div>
+    </div>
+
     </footer>
 
-    
+  <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script>
     <script src="JS/countdownPromo.js"></script>
     <script src="JS/featuredCourse.js"></script>
      <script src="JS/courseTemplate.js"></script>
+      <script src="JS/authentication.js"></script>
     <script src="JS/index.js"></script>
 
   </body>
