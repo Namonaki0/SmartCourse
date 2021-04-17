@@ -15,10 +15,14 @@ let firebaseApp = {};
   firebaseApp = firebase;
 })();
 
+const signInWrapper = document.querySelector(".sign-in-wrapper");
 const signInBtn = document.querySelector("#sign_in_btn");
 const loggedInWrapper = document.querySelector("#logged-in-wrapper");
 const authWrapper = document.querySelector("#auth-wrapper");
 const authOverallWrapper = document.querySelector("#auth-overall-wrapper");
+const userInput = document.querySelectorAll(".user-input");
+const userEmail = document.querySelector("#user-email");
+const userPassword = document.querySelector("#user-password");
 
 signInBtn.addEventListener("click", () => {
   authOverallWrapper.classList.add("show");
@@ -46,14 +50,13 @@ function checkState() {
 firebase.auth().onAuthStateChanged(function (user) {
   if (user) {
     //? USER LOGGED IN
-    document.querySelector("#logged-in-wrapper").style.display = "flex";
-    document.querySelector("#auth-wrapper").style.display = "none";
+    loggedInWrapper.style.display = "flex";
+    authWrapper.style.display = "none";
     signInBtn.style.display = "none";
     document.querySelector("#sign_out_btn").style.display = "flex";
 
     //? MODAL DISAPPEARS AFTER LOGIN
     if (loggedInWrapper.style.display == "flex") {
-      console.log("LOGGED WRAPPER");
       setTimeout(() => {
         authOverallWrapper.classList.remove("show");
       }, 2000);
@@ -70,9 +73,27 @@ firebase.auth().onAuthStateChanged(function (user) {
       ).innerHTML = `You are currently logged in as ${email_id}`;
     }
   } else {
+    window.onclick = (e) => {
+      if (e.target == signInBtn) {
+        authWrapper.style.display = "flex";
+        loggedInWrapper.style.display = "none";
+        signInBtn.style.display = "flex";
+        document.querySelector("#sign_out_btn").style.display = "none";
+      } else if (
+        e.target == authOverallWrapper ||
+        e.target == authWrapper ||
+        e.target == userEmail ||
+        e.target == userPassword
+      ) {
+        authWrapper.style.display = "";
+      } else {
+        authOverallWrapper.classList.remove("show");
+      }
+    };
+
     //? USER NOT LOGGED IN
-    document.querySelector("#auth-wrapper").style.display = "flex";
-    document.querySelector("#logged-in-wrapper").style.display = "none";
+    authWrapper.style.display = "flex";
+    loggedInWrapper.style.display = "none";
     signInBtn.style.display = "flex";
     document.querySelector("#sign_out_btn").style.display = "none";
   }
