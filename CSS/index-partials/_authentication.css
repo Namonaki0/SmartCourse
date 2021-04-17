@@ -12,6 +12,7 @@
   top: 10%;
   bottom: 25%;
   right: 5px;
+  border-bottom: 5px solid #3f50a0ea;
 }
 
 .auth-overall-wrapper.show {
@@ -30,6 +31,7 @@
   margin: auto;
   font-family: "Montserrat", sans-serif;
   padding: 3rem .5rem;
+  
 }
 
 .logged-in-wrapper {
@@ -53,23 +55,34 @@
   margin-top: 2rem;
   display: block;
   border: 1px solid rgba(255, 153, 0, 0.288);
-  background: orange;
+  background: rgba(255, 166, 0, 0.815);
   color: white;
   cursor: pointer;
   padding: 0.5rem 1rem;
+  transition: all 150ms ease;
+}
+
+.validate-btn:hover,
+.logout-btn:hover {
+  background: orange;
 }
 
 .user-input {
   width: 90%;
   margin-bottom: 1rem;
   padding: 0.8rem 1rem;
-  border: 1px solid rgba(0, 0, 0, 0.288);
+}
+
+.user-input:focus {
+  border: none;
+  padding: .9rem 1.1rem;
+ outline: 1px solid orange;
 }
 
 .validate-btn,
 .user-input,
 .logout-btn {
-  border-radius: 5px;
+  /* border-radius: 5px; */
   font-family: inherit;
 }
 
