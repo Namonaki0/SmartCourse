@@ -13,15 +13,6 @@ nav {
   align-items: center;
 }
 
-.user-log-in-message {
-  /* border: 1px solid red; */
-  display: block;
-  text-align: right;
-  padding-right: 1.5rem;
-  margin-top: 0;
-color: gold;
-}
-
 .active {
   border-bottom: 1px solid var(--silver);
 }

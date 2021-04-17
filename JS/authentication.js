@@ -37,6 +37,7 @@ function changeText(text) {
   ).innerText = `${text}`);
 }
 
+//? CHECK DOCUMENT STATE
 function checkState() {
   if (document.readyState !== "loading") {
     console.log("document is already ready, just execute code here");
@@ -71,12 +72,10 @@ firebase.auth().onAuthStateChanged(function (user) {
       let email = user.email;
       document.querySelector(
         ".user-log-in-message"
-      ).innerHTML = `Welcome, ${email}`;
-      // document.querySelector(
-      //   "#welcome-text"
-      // ).innerHTML = `You are currently logged in as ${email_id}`;
+      ).innerHTML = `Logged in as ${email}`;
     }
   } else {
+    //? CLOSING BY CLICKING OUTSIDE MODAL
     window.onclick = (e) => {
       if (e.target == signInBtn) {
         authWrapper.style.display = "flex";
@@ -120,27 +119,26 @@ const userAuth = () => {
     .catch((error) => {
       var errorCode = error.code;
       var errorMessage = error.message;
-
       window.alert("Error: " + errorMessage);
     });
 };
 
-//? LOGOUT FUNCTION
+//? LOGOUT FUNCTION - CHANGE USER WELCOME TEXT AFTER SIGN-OUT
 const logout = () => {
   firebase.auth().signOut();
+  document.querySelector(".user-log-in-message").innerHTML = "";
 };
 
-//? STATE FOR ENTIRE WEBSITE
+//? STATE THROUGHOUT ENTIRE WEBSITE
 const auth = firebase.auth();
 
 auth.onAuthStateChanged(function (user) {
   if (user) {
+    //? IS SIGNED IN
     let email = user.email;
     console.log(`${email} signed in`);
-
-    //? IS SIGNED IN
   } else {
-    console.log(`Not signed in`);
     //? NOT SIGNED IN
+    console.log(`Not signed in`);
   }
 });
