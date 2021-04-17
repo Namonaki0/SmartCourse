@@ -67,10 +67,14 @@ firebase.auth().onAuthStateChanged(function (user) {
 
     //? IF THERE IS A USER THEN DISPLAY WELCOME TEXT
     if (user != null) {
-      let email_id = user.email;
+      let name = user.displayName;
+      let email = user.email;
       document.querySelector(
-        "#welcome-text"
-      ).innerHTML = `You are currently logged in as ${email_id}`;
+        ".user-log-in-message"
+      ).innerHTML = `Welcome, ${email}`;
+      // document.querySelector(
+      //   "#welcome-text"
+      // ).innerHTML = `You are currently logged in as ${email_id}`;
     }
   } else {
     window.onclick = (e) => {
@@ -83,11 +87,12 @@ firebase.auth().onAuthStateChanged(function (user) {
         e.target == authOverallWrapper ||
         e.target == authWrapper ||
         e.target == userEmail ||
-        e.target == userPassword
+        e.target == userPassword ||
+        e.target == signInBtn
       ) {
-        authWrapper.style.display = "";
+        authWrapper.style.display = "flex";
       } else {
-        authOverallWrapper.classList.remove("show");
+        return;
       }
     };
 
