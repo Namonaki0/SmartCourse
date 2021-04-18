@@ -18,6 +18,7 @@ let firebaseApp = {};
 const signInWrapper = document.querySelector(".sign-in-wrapper");
 const signInBtn = document.querySelector("#sign_in_btn");
 const loggedInWrapper = document.querySelector("#logged-in-wrapper");
+const logOutWrapper = document.querySelector("#log-out-wrapper");
 const authWrapper = document.querySelector("#auth-wrapper");
 const authOverallWrapper = document.querySelector("#auth-overall-wrapper");
 const userInput = document.querySelectorAll(".user-input");
@@ -53,8 +54,17 @@ firebase.auth().onAuthStateChanged(function (user) {
     //? USER LOGGED IN
     loggedInWrapper.style.display = "flex";
     authWrapper.style.display = "none";
-    signInBtn.style.display = "none";
-    document.querySelector("#sign_out_btn").style.display = "flex";
+    signInBtn.innerText = `sign-out`;
+    // signInBtn.classList.add("second");
+
+    // signInBtn.onclick = (e) => {
+    //   console.log(authWrapper);
+    //   if (e.target.innerText == "sign-out") {
+    //     console.log("TREU");
+    //     loggedInWrapper.style.display = "flex";
+    //     document.querySelector(".main-auth-wrapper").style.display = "none";
+    //   }
+    // };
 
     //? MODAL DISAPPEARS AFTER LOGIN
     if (loggedInWrapper.style.display == "flex") {
@@ -76,30 +86,28 @@ firebase.auth().onAuthStateChanged(function (user) {
     }
   } else {
     //? CLOSING BY CLICKING OUTSIDE MODAL
-    window.onclick = (e) => {
-      if (e.target == signInBtn) {
-        authWrapper.style.display = "flex";
-        loggedInWrapper.style.display = "none";
-        signInBtn.style.display = "flex";
-        document.querySelector("#sign_out_btn").style.display = "none";
-      } else if (
-        e.target == authOverallWrapper ||
-        e.target == authWrapper ||
-        e.target == userEmail ||
-        e.target == userPassword ||
-        e.target == signInBtn
-      ) {
-        authWrapper.style.display = "flex";
-      } else {
-        return;
-      }
-    };
+    // window.onclick = (e) => {
+    //   if (e.target == signInBtn) {
+    //     authWrapper.style.display = "flex";
+    //     loggedInWrapper.style.display = "none";
+    //     signInBtn.style.display = "flex";
+    //   } else if (
+    //     e.target == authOverallWrapper ||
+    //     e.target == authWrapper ||
+    //     e.target == userEmail ||
+    //     e.target == userPassword ||
+    //     e.target == signInBtn
+    //   ) {
+    //     authWrapper.style.display = "flex";
+    //   } else {
+    //     return;
+    //   }
+    // };
 
     //? USER NOT LOGGED IN
     authWrapper.style.display = "flex";
     loggedInWrapper.style.display = "none";
     signInBtn.style.display = "flex";
-    document.querySelector("#sign_out_btn").style.display = "none";
   }
 });
 
@@ -126,7 +134,11 @@ const userAuth = () => {
 //? LOGOUT FUNCTION - CHANGE USER WELCOME TEXT AFTER SIGN-OUT
 const logout = () => {
   firebase.auth().signOut();
+  signInBtn.innerText = `sign-in`;
   document.querySelector(".user-log-in-message").innerHTML = "";
+  setTimeout(() => {
+    authOverallWrapper.classList.remove("show");
+  }, 2000);
 };
 
 //? STATE THROUGHOUT ENTIRE WEBSITE
