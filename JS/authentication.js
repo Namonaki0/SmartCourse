@@ -131,6 +131,21 @@ const userAuth = () => {
     });
 };
 
+//? CREATING USER ACCOUNT
+firebase
+  .auth()
+  .createUserWithEmailAndPassword(email, password)
+  .then((userCredential) => {
+    // Signed in
+    var user = userCredential.user;
+    // ...
+  })
+  .catch((error) => {
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    // ..
+  });
+
 //? LOGOUT FUNCTION - CHANGE USER WELCOME TEXT AFTER SIGN-OUT
 const logout = () => {
   firebase.auth().signOut();
