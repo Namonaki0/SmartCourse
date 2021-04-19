@@ -24,10 +24,19 @@ const authOverallWrapper = document.querySelector("#auth-overall-wrapper");
 const userInput = document.querySelectorAll(".user-input");
 const userEmail = document.querySelector("#user-email");
 const userPassword = document.querySelector("#user-password");
+const regModal = document.querySelector("#reg-overall-wrapper");
+const registeredWrapper = document.querySelector("#registered-wrapper");
+const noAccountSpan = document.querySelector("#no-account-span");
 
 signInBtn.addEventListener("click", () => {
-  authOverallWrapper.classList.add("show");
+  if (!authOverallWrapper.classList.contains("show")) {
+    authOverallWrapper.classList.add("show");
+  } else {
+    authOverallWrapper.classList.remove("show");
+  }
 });
+
+console.log(noAccountSpan);
 
 //? AUTHENTICATION
 window.addEventListener("onload", changeText);
@@ -55,16 +64,6 @@ firebase.auth().onAuthStateChanged(function (user) {
     loggedInWrapper.style.display = "flex";
     authWrapper.style.display = "none";
     signInBtn.innerText = `sign-out`;
-    // signInBtn.classList.add("second");
-
-    // signInBtn.onclick = (e) => {
-    //   console.log(authWrapper);
-    //   if (e.target.innerText == "sign-out") {
-    //     console.log("TREU");
-    //     loggedInWrapper.style.display = "flex";
-    //     document.querySelector(".main-auth-wrapper").style.display = "none";
-    //   }
-    // };
 
     //? MODAL DISAPPEARS AFTER LOGIN
     if (loggedInWrapper.style.display == "flex") {
@@ -111,6 +110,17 @@ firebase.auth().onAuthStateChanged(function (user) {
   }
 });
 
+//? REGISTRATION MODAL
+// const showRegModal = () => {
+noAccountSpan.addEventListener("click", () => {
+  console.log("yes");
+  authOverallWrapper.style.display = "none";
+  registeredWrapper.style.display = "none";
+  regModal.style.display = "flex";
+  // regModal.style.display = "flex";
+});
+// };
+
 //? USER AUTHENTICATION WITH EMAIL AND PASSWORD
 const userAuth = () => {
   let userEmail = document.querySelector("#user-email").value;
@@ -132,19 +142,24 @@ const userAuth = () => {
 };
 
 //? CREATING USER ACCOUNT
-firebase
-  .auth()
-  .createUserWithEmailAndPassword(email, password)
-  .then((userCredential) => {
-    // Signed in
-    var user = userCredential.user;
-    // ...
-  })
-  .catch((error) => {
-    var errorCode = error.code;
-    var errorMessage = error.message;
-    // ..
-  });
+const userReg = () => {
+  let username = document.querySelector("#reg-username").value;
+  let userEmail = document.querySelector("#user-email").value;
+  let userPassword = document.querySelector("#user-password").value;
+
+  //? REGISTER WITH USERNAME, MAIL AND PASSWORD
+  firebase
+    .auth()
+    .createUserWithEmailAndPassword(userEmail, userPassword)
+    .then((userCredential) => {
+      //? Signed in
+      var user = userCredential.user;
+    })
+    .catch((error) => {
+      var errorCode = error.code;
+      var errorMessage = error.message;
+    });
+};
 
 //? LOGOUT FUNCTION - CHANGE USER WELCOME TEXT AFTER SIGN-OUT
 const logout = () => {

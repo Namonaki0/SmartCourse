@@ -343,6 +343,8 @@
   <!--? COURSE MODAL OUTPUT -->
 
 <!--? AUTHENTICATION -->
+
+  <!--? USER SIGN-IN METHOD -->
   <div class="auth-overall-wrapper" id="auth-overall-wrapper">
       <div class="main-auth-wrapper" id="auth-wrapper">
         <input
@@ -356,6 +358,7 @@
         <button onclick="userAuth()" class="validate-btn" id="validate-btn">
           confirm
         </button>
+        <p class="no-account">don't have an account? <a class="no-account-span" id="no-account-span" href="#" onclick="">register here</a></p>
       </div>
 
       <div class="logged-in-wrapper" id="logged-in-wrapper">
@@ -365,7 +368,41 @@
           logout
         </button>
       </div>
+      
     </div>
+
+    <!--? USER REGISTRATION METHOD -->
+    <div class="reg-overall-wrapper" id="reg-overall-wrapper">
+      <div class="main-reg-wrapper" id="reg-wrapper">
+        <input
+          type="text"
+          class="reg-username user-input"
+          id="reg-username"
+          placeholder="enter username..."
+        />
+        <input
+          type="text"
+          class="reg-user-email user-input"
+          id="reg-user-email"
+          placeholder="enter email..."
+        />
+        <input type="text" class="user-password user-input" id="reg-user-password"
+        placeholder="enter password..."">
+        <button onclick="userReg()" class="reg-validate-btn" id="reg-validate-btn">
+          register
+        </button>
+      </div>
+
+      <div class="registered-wrapper" id="registered-wrapper">
+        <h2>Thank You for registering</h2>
+        <p id="reg-welcome-text">You are now logged-in.</p>
+        <!-- <button class="logout-btn" id="logout-btn" onclick="logout()">
+          logout
+        </button> -->
+      </div>
+    </div>
+
+<!--?-------------------->
 
 <!--? FOOTER -->
   <footer>

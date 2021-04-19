@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 
-.auth-overall-wrapper {
+.auth-overall-wrapper,
+.reg-overall-wrapper {
   background: white;
   z-index: 2000;
   display: none;
@@ -15,12 +16,38 @@
   border-bottom: 5px solid #3f50a0ea;
 }
 
-.auth-overall-wrapper.show {
+.auth-overall-wrapper.show,
+.reg-overall-wrapper.show{
   display: flex;
 }
 
+.reg-overall-wrapper {
+z-index: 5000;
+}
+
+.reg-overall-wrapper .reg-validate-btn {
+  all: unset;
+  border: 1px solid #404b86;
+  background: #515da0;
+  width: 80%;
+  padding: .5rem 1rem;
+  margin: 1rem auto 0;
+  display: block;
+  cursor: pointer;
+  transition: all 150ms ease;
+  color: white;
+}
+
+.reg-overall-wrapper .reg-validate-btn:hover {
+  border: 1px solid #5c69b3;
+  background: #5c69b3;
+
+}
+
 .main-auth-wrapper,
-.logged-in-wrapper {
+.logged-in-wrapper,
+.main-reg-wrapper,
+.registered-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -31,10 +58,11 @@
   margin: auto;
   font-family: "Montserrat", sans-serif;
   padding: 3rem .5rem;
-  
 }
 
-.logged-in-wrapper {
+.logged-in-wrapper,
+.main-reg-wrapper,
+.registered-wrapper {
   display: inherit;
   justify-self: flex-start;
   text-align: center;
@@ -99,3 +127,17 @@
   padding-right: 1.5rem;
   margin-top: 0;
 }
+
+
+.no-account {
+  font-size: .9rem;
+  margin-top: 2rem;
+}
+
+.no-account .no-account-span {
+  color: #404b86;
+  font-weight: 600;
+  margin-top: 0;
+  padding-top: 0;
+}
+
