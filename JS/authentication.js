@@ -25,6 +25,7 @@ const userInput = document.querySelectorAll(".user-input");
 const userEmail = document.querySelector("#user-email");
 const userPassword = document.querySelector("#user-password");
 const regModal = document.querySelector("#reg-overall-wrapper");
+const regUserWrapper = document.querySelector("#reg-user-wrapper");
 const registeredWrapper = document.querySelector("#registered-wrapper");
 const noAccountSpan = document.querySelector("#no-account-span");
 
@@ -35,17 +36,6 @@ signInBtn.addEventListener("click", () => {
     authOverallWrapper.classList.remove("show");
   }
 });
-
-console.log(noAccountSpan);
-
-//? AUTHENTICATION
-// window.addEventListener("onload", changeText);
-
-// function changeText(text) {
-//   const signInBtn = (document.querySelector(
-//     "#sign_in_btn"
-//   ).innerText = `${text}`);
-// }
 
 //? CHECK DOCUMENT STATE
 function checkState() {
@@ -60,6 +50,7 @@ function checkState() {
 //? AUTHENTICATION STATUS
 firebase.auth().onAuthStateChanged(function (user) {
   if (user) {
+    console.log(user);
     //? USER LOGGED IN
     loggedInWrapper.style.display = "flex";
     authWrapper.style.display = "none";
@@ -73,7 +64,7 @@ firebase.auth().onAuthStateChanged(function (user) {
     }
     var user = firebase.auth().currentUser;
 
-    function myInitCode() {}
+    // function myInitCode() {}
 
     //? IF THERE IS A USER THEN DISPLAY WELCOME TEXT
     if (user != null) {
@@ -84,25 +75,6 @@ firebase.auth().onAuthStateChanged(function (user) {
       ).innerHTML = `Logged in as ${email}`;
     }
   } else {
-    //? CLOSING BY CLICKING OUTSIDE MODAL
-    // window.onclick = (e) => {
-    //   if (e.target == signInBtn) {
-    //     authWrapper.style.display = "flex";
-    //     loggedInWrapper.style.display = "none";
-    //     signInBtn.style.display = "flex";
-    //   } else if (
-    //     e.target == authOverallWrapper ||
-    //     e.target == authWrapper ||
-    //     e.target == userEmail ||
-    //     e.target == userPassword ||
-    //     e.target == signInBtn
-    //   ) {
-    //     authWrapper.style.display = "flex";
-    //   } else {
-    //     return;
-    //   }
-    // };
-
     //? USER NOT LOGGED IN
     authWrapper.style.display = "flex";
     loggedInWrapper.style.display = "none";
@@ -111,15 +83,12 @@ firebase.auth().onAuthStateChanged(function (user) {
 });
 
 //? REGISTRATION MODAL
-// const showRegModal = () => {
 noAccountSpan.addEventListener("click", () => {
   console.log("yes");
   authOverallWrapper.style.display = "none";
   registeredWrapper.style.display = "none";
   regModal.style.display = "flex";
-  // regModal.style.display = "flex";
 });
-// };
 
 //? USER AUTHENTICATION WITH EMAIL AND PASSWORD
 const userAuth = () => {
@@ -141,35 +110,29 @@ const userAuth = () => {
     });
 };
 
-//! NEEDS WORK
 //? CREATING USER ACCOUNT
-// const userReg = () => {
-// let username = document.querySelector("#reg-username").value;
-// const regValidateBtn = document.querySelector("#reg-validate-btn");
+const createUser = () => {
+  let regUserName = document.querySelector("#reg-user-name").value;
+  let regUserEmail = document.querySelector("#reg-user-email").value;
+  let regUserPassword = document.querySelector("#reg-user-password").value;
 
-// regValidateBtn.addEventListener("click", () => {
-//   const regUserEmail = document.querySelector("#reg-user-email").value;
-//   const regUserPassword = document.querySelector("#reg-user-password").value;
-
-//   console.log(userEmail, userPassword);
-//   //? REGISTER WITH USERNAME, MAIL AND PASSWORD
-//   auth
-//     .createUserWithEmailAndPassword(regUserEmail, regUserPassword)
-//     .then((userCredential) => {
-//       console.log(userCredential.user);
-//       //? Signed in
-//       var user = userCredential.user;
-//       console.log(user);
-//     })
-//     .catch((error) => {
-//       var errorCode = error.code;
-//       var errorMessage = error.message;
-//       console.log("NOT OK", +errorCode);
-//     });
-// });
-//! NEEDS WORK
-
-// };
+  console.log(regUserName, regUserEmail, regUserPassword);
+  //? REGISTER WITH USERNAME, MAIL AND PASSWORD
+  firebase
+    .auth()
+    .createUserWithEmailAndPassword(regUserEmail, regUserPassword)
+    .then((userCredential) => {
+      console.log(userCredential.user);
+      //? Signed in
+      var user = userCredential.user;
+      console.log(user);
+    })
+    .catch((error) => {
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      console.log("NOT OK", +errorCode);
+    });
+};
 
 //? LOGOUT FUNCTION - CHANGE USER WELCOME TEXT AFTER SIGN-OUT
 const logout = () => {
