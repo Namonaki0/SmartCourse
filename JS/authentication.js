@@ -39,13 +39,13 @@ signInBtn.addEventListener("click", () => {
 console.log(noAccountSpan);
 
 //? AUTHENTICATION
-window.addEventListener("onload", changeText);
+// window.addEventListener("onload", changeText);
 
-function changeText(text) {
-  const signInBtn = (document.querySelector(
-    "#sign_in_btn"
-  ).innerText = `${text}`);
-}
+// function changeText(text) {
+//   const signInBtn = (document.querySelector(
+//     "#sign_in_btn"
+//   ).innerText = `${text}`);
+// }
 
 //? CHECK DOCUMENT STATE
 function checkState() {
@@ -141,25 +141,35 @@ const userAuth = () => {
     });
 };
 
+//! NEEDS WORK
 //? CREATING USER ACCOUNT
-const userReg = () => {
-  let username = document.querySelector("#reg-username").value;
-  let userEmail = document.querySelector("#user-email").value;
-  let userPassword = document.querySelector("#user-password").value;
+// const userReg = () => {
+// let username = document.querySelector("#reg-username").value;
+// const regValidateBtn = document.querySelector("#reg-validate-btn");
 
-  //? REGISTER WITH USERNAME, MAIL AND PASSWORD
-  firebase
-    .auth()
-    .createUserWithEmailAndPassword(userEmail, userPassword)
-    .then((userCredential) => {
-      //? Signed in
-      var user = userCredential.user;
-    })
-    .catch((error) => {
-      var errorCode = error.code;
-      var errorMessage = error.message;
-    });
-};
+// regValidateBtn.addEventListener("click", () => {
+//   const regUserEmail = document.querySelector("#reg-user-email").value;
+//   const regUserPassword = document.querySelector("#reg-user-password").value;
+
+//   console.log(userEmail, userPassword);
+//   //? REGISTER WITH USERNAME, MAIL AND PASSWORD
+//   auth
+//     .createUserWithEmailAndPassword(regUserEmail, regUserPassword)
+//     .then((userCredential) => {
+//       console.log(userCredential.user);
+//       //? Signed in
+//       var user = userCredential.user;
+//       console.log(user);
+//     })
+//     .catch((error) => {
+//       var errorCode = error.code;
+//       var errorMessage = error.message;
+//       console.log("NOT OK", +errorCode);
+//     });
+// });
+//! NEEDS WORK
+
+// };
 
 //? LOGOUT FUNCTION - CHANGE USER WELCOME TEXT AFTER SIGN-OUT
 const logout = () => {
