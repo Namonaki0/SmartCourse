@@ -52,6 +52,7 @@ footer div ul {
   padding: 0 0.5em;
   font-weight: 500;
   font-size: clamp(0.5rem, 0.8rem, 1rem);
+  color: #3f4c77;
 }
 
 .bottom-links a:first-child {
@@ -81,6 +82,8 @@ div.bottom-links-wrap {
 div.bottom-links-wrap p {
   text-align: center;
   margin-top: 0;
+  font-weight: 500;
+  color: #3f4c77;
 }
 
 .menu-wrapper-content {
@@ -90,9 +93,9 @@ div.bottom-links-wrap p {
 
 .menu-wrapper-content ul a {
   text-decoration: none;
-  /* color: #1c1c1c; */
   transition: all 100ms ease;
   font-weight: 500;
+  color: #3f4c77;
 }
 
 .menu-wrapper-content ul a:hover {

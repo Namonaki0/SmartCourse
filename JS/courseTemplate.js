@@ -18,7 +18,7 @@ const courseInfo = [
     name: "pattern design",
     src: "Images/Image1.jpeg",
     details:
-      "The most comprehensive course on how to create the best looking patterns for your web and mobile applications. Highly rated by the best in the business",
+      "The most comprehensive course on how to create the best looking patterns for your web and mobile applications. Highly rated by the best in the business.",
     instructor: "Anthony Jenkins",
     enrolled: "624 people",
     rating: "★★★★★",
@@ -28,7 +28,7 @@ const courseInfo = [
     name: "Design Thinking",
     src: "Images/Image2.jpg",
     details:
-      "From conception to prototyping and everything else you need to know about the design for web applications. ",
+      "From conception to prototyping and everything else you need to know about the design for web applications. Dive deep into what is essential.",
     instructor: "Mark Rogers",
     enrolled: "522 people",
     rating: "★★★★",
@@ -58,7 +58,7 @@ const courseInfo = [
     name: "Computer Science",
     src: "Images/image5.jpg",
     details:
-      "Get to know the ins and outs of your computer by diving deep into our CS course. It will provide you with invaluable knowledge.",
+      "Get to know the ins and outs of your computer by diving deep into our CS course. It will provide you with invaluable knowledge and make sure you are left with great confidence.",
     instructor: "Amelia Borges",
     enrolled: "2652 people",
     rating: "★★★★★",
@@ -68,7 +68,7 @@ const courseInfo = [
     name: "HTML & CSS Bootcamp",
     src: "Images/image6.jpeg",
     details:
-      "Go from absolute beginner to a pro by creating visually pleasing webpages in this project based course.",
+      "Go from absolute beginner to a pro by creating visually pleasing webpages in this project based course. Leave your 'footprint' in the vast world that is Web Development. See you inside.",
     instructor: "Kevin Powell",
     enrolled: "10239 people",
     rating: "★★★★★",

@@ -1,6 +1,6 @@
 // //? COUNTDOWN
 
-let futureDate = new Date("Apr 20, 2021 22:12:50").getTime();
+let futureDate = new Date("Apr 30, 2021 22:12:50").getTime();
 let counter = document.querySelector("#counter");
 
 function tellTime() {

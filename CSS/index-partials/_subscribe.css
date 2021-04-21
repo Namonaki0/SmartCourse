@@ -1,12 +1,4 @@
 #mc_embed_signup {
-  display: none;
-  opacity: 0;
-  transition: all 350ms ease;
-  background-color: rgba(0, 0, 0, 0.842);
-  pointer-events: none;
-}
-
-#mc_embed_signup.show {
   display: grid;
   opacity: 1;
   position: fixed;
@@ -15,10 +7,10 @@
   place-content: center;
   top: 0;
   width: 100%;
-  animation: showSlider 150ms ease;
   z-index: 10000;
   pointer-events: unset;
   overflow-y: hidden;
+  background: rgba(236, 236, 236, 0.747);
 }
 
 form {
@@ -26,12 +18,22 @@ form {
   min-width: 450px;
   margin: 0 auto;
   border: 1px solid rgba(192, 192, 192, 0.116);
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, .3);
 }
 
 form input {
   width: 90%;
-  padding: 0.5rem 0.2rem;
+  padding: 0.5rem 0.4rem;
   font-family: inherit;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  color: #323855;
+}
+
+form input:focus {
+  outline: none;  
+
 }
 
 .mc-field-group {
@@ -105,14 +107,6 @@ input[type="submit"]:hover {
   margin: 0;
 }
 
-@keyframes showSlider {
-  0% {
-    transform: translateY(-100%);
-  }
-  100% {
-    transform: translateY(0%);
-  }
-}
 
 @media (min-width: 700px) {
   form {
