@@ -64,8 +64,6 @@ firebase.auth().onAuthStateChanged(function (user) {
     }
     var user = firebase.auth().currentUser;
 
-    // function myInitCode() {}
-
     //? IF THERE IS A USER THEN DISPLAY WELCOME TEXT
     if (user != null) {
       let name = user.displayName;
@@ -84,7 +82,6 @@ firebase.auth().onAuthStateChanged(function (user) {
 
 //? REGISTRATION MODAL
 noAccountSpan.addEventListener("click", () => {
-  console.log("yes");
   authOverallWrapper.style.display = "none";
   registeredWrapper.style.display = "none";
   regModal.style.display = "flex";
@@ -122,10 +119,13 @@ const createUser = () => {
     .auth()
     .createUserWithEmailAndPassword(regUserEmail, regUserPassword)
     .then((userCredential) => {
-      console.log(userCredential.user);
-      //? Signed in
+      //? SIGNED IN
       var user = userCredential.user;
-      console.log(user);
+      registeredWrapper.style.display = "flex";
+      regUserWrapper.style.display = "none";
+      setTimeout(() => {
+        regModal.style.display = "none";
+      }, 2000);
     })
     .catch((error) => {
       var errorCode = error.code;
