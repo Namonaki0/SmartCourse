@@ -124,6 +124,8 @@
 .course-desc p {
   font-weight: 100;
   margin-left: 0.2rem;
+  color: white;
+  font-weight: 200;
 }
 
 .course-info h4 {
