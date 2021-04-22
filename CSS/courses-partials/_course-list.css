@@ -151,6 +151,52 @@
   font-style: italic;
 }
 
+/** SEARCH COURSE */
+
+.filter-course-wrapper {
+background: #272b41;
+padding: 0;
+overflow: hidden;
+}
+
+.filter-course {
+  all: unset;
+  position: relative;
+  width: 0%;
+  display: flex;
+  align-items: center;
+  background: transparent;
+  padding: 1rem;
+  border-bottom: none;
+  transition: all 150ms ease-in-out;
+}
+
+.filter-course input[type="text"] {
+  color: #ddd;
+  font-size: 1.2rem;
+  border-bottom: none;
+}
+
+.filter-course .course-filter-btn {
+  all: unset;
+  cursor: pointer;
+  padding: 1rem;
+  position: absolute;
+}
+
+.filter-course:hover,
+.filter-course:focus
+ {
+  width: 100%;
+  border-bottom: 1px solid silver;
+}
+
+.filter-course:hover .course-filter-btn {
+  right: 50px;
+}
+
+/** ------------- */
+
 /* ?/-------------------/ */
 
 @media (min-width: 850px) {
