@@ -157,6 +157,7 @@
 background: #272b41;
 padding: 0;
 overflow: hidden;
+
 }
 
 .filter-course {
@@ -169,19 +170,21 @@ overflow: hidden;
   padding: 1rem;
   border-bottom: none;
   transition: all 150ms ease-in-out;
+  max-width: 100%;
 }
 
 .filter-course input[type="text"] {
   color: #ddd;
   font-size: 1.2rem;
   border-bottom: none;
+  /* padding-left: 1.5rem; */
 }
 
 .filter-course .course-filter-btn {
   all: unset;
   cursor: pointer;
   padding: 1rem;
-  position: absolute;
+  /* position: absolute; */
 }
 
 .filter-course:hover,
@@ -191,8 +194,12 @@ overflow: hidden;
   border-bottom: 1px solid silver;
 }
 
-.filter-course:hover .course-filter-btn {
-  right: 50px;
+.filter-course:focus .course-filter-btn {
+
+  position: absolute;
+  transform: translateX(50%);
+  /* right: 50px; */
+  /* right: 0; */
 }
 
 /** ------------- */
