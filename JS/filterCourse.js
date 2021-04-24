@@ -5,11 +5,18 @@ const filterCourse = document.querySelector("#filter-course");
 // const filterUserInput = filterCourse[".filter-user-input"];
 // const courseUserBtn = filterCourse[".course-filter-btn"];
 const titles = document.querySelectorAll("h4");
-titles.forEach((title) => {
-  console.log(title.textContent);
-});
+
+// for (i = 0; i < titles.length; i++) {
+//   console.log(titles[i].textContent);
+// }
+
 const filterUserInput = document.querySelector(".filter-user-input");
 
 filterUserInput.addEventListener("change", (e) => {
-  console.log(e.target.value);
+  let inputValue = e.target.value.toLowerCase();
+  titles.forEach((title) => {
+    inputValue == title.textContent ? console.log("yes") : console.log("no");
+  });
+
+  console.log(inputValue);
 });
