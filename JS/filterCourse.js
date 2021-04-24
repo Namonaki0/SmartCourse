@@ -1,22 +1,18 @@
-// const { title } = require("node:process");
-
-const filterCourseWrapper = document.querySelector(".filter-course-wrapper");
-const filterCourse = document.querySelector("#filter-course");
-// const filterUserInput = filterCourse[".filter-user-input"];
-// const courseUserBtn = filterCourse[".course-filter-btn"];
-const titles = document.querySelectorAll("h4");
-
-// for (i = 0; i < titles.length; i++) {
-//   console.log(titles[i].textContent);
-// }
-
 const filterUserInput = document.querySelector(".filter-user-input");
+const courseDesc = document.querySelectorAll(".course-desc");
+const filterCourseWrapper = document.querySelector(".filter-course-wrapper");
+const filterCourses = document.querySelector(".filter-course");
 
-filterUserInput.addEventListener("change", (e) => {
-  let inputValue = e.target.value.toLowerCase();
-  titles.forEach((title) => {
-    inputValue == title.textContent ? console.log("yes") : console.log("no");
-  });
-
-  console.log(inputValue);
-});
+function filterCourse() {
+  let userInput = filterUserInput.value.toLowerCase();
+  for (i = 0; i < courseDesc.length; i++) {
+    const courseTitle = courseDesc[i].getElementsByTagName("h4");
+    let filterResult = courseTitle[0].textContent.toLowerCase();
+    filterResult.indexOf(userInput) > -1
+      ? (courseDesc[i].style.display = "")
+      : (courseDesc[i].style.display = "none");
+  }
+  userInput
+    ? (filterCourses.style.width = "100%")
+    : (filterCourses.style.width = "");
+}
