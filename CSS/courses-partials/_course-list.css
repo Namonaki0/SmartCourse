@@ -155,51 +155,43 @@
 
 .filter-course-wrapper {
 background: #272b41;
-padding: 0;
+padding: 0 1rem;
 overflow: hidden;
-
+transition: all 150ms ease-in-out;
+position: relative;
 }
 
 .filter-course {
   all: unset;
-  position: relative;
+  transition: all 150ms ease-in-out;
   width: 0%;
   display: flex;
   align-items: center;
   background: transparent;
-  padding: 1rem;
   border-bottom: none;
-  transition: all 150ms ease-in-out;
-  max-width: 100%;
 }
 
 .filter-course input[type="text"] {
   color: #ddd;
   font-size: 1.2rem;
   border-bottom: none;
-  /* padding-left: 1.5rem; */
 }
 
 .filter-course .course-filter-btn {
   all: unset;
   cursor: pointer;
-  padding: 1rem;
-  /* position: absolute; */
+  padding: 1rem 0;
 }
 
-.filter-course:hover,
-.filter-course:focus
+.filter-course-wrapper:hover,
+.filter-course-wrapper:focus
  {
-  width: 100%;
   border-bottom: 1px solid silver;
 }
 
-.filter-course:focus .course-filter-btn {
 
-  position: absolute;
-  transform: translateX(50%);
-  /* right: 50px; */
-  /* right: 0; */
+.filter-course-wrapper:hover .filter-course {
+  width: 100%;
 }
 
 /** ------------- */
