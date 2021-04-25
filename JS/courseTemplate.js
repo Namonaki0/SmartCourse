@@ -56,7 +56,7 @@ const courseInfo = [
   {
     //? COMPUTER SCIENCE
     name: "Computer Science",
-    src: "Images/image5.jpg",
+    src: "Images/Image5.jpg",
     details:
       "Get to know the ins and outs of your computer by diving deep into our CS course. It will provide you with invaluable knowledge and make sure you are left with great confidence.",
     instructor: "Amelia Borges",
@@ -66,7 +66,7 @@ const courseInfo = [
   {
     //? HTML & CSS BOOTCAMP
     name: "HTML & CSS Bootcamp",
-    src: "Images/image6.jpeg",
+    src: "Images/Image6.jpeg",
     details:
       "Go from absolute beginner to a pro by creating visually pleasing webpages in this project based course. Leave your 'footprint' in the vast world that is Web Development. See you inside.",
     instructor: "Kevin Powell",
@@ -76,7 +76,7 @@ const courseInfo = [
   {
     //? JAVASCRIPT BOOTCAMP
     name: "JavaScript Bootcamp",
-    src: "Images/image7.jpg",
+    src: "Images/Image7.jpg",
     details:
       "The most comprehensive JS course you will find online. Everything you need to know to get you hired is emphasized here.",
     instructor: "Bob Zeroll",

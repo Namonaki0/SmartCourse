@@ -5,17 +5,17 @@ const close = document.querySelector(".close-menu");
 const nav = document.querySelector(".navigation");
 const body = document.querySelector("body");
 
-open.addEventListener("click", () => {
+const openMenu = () => {
   open.style.display = "none";
   nav.classList.add("open-menu-sect");
   body.style.overflowY = "hidden";
-});
+};
 
-close.addEventListener("click", () => {
+const closeMenu = () => {
   nav.classList.remove("open-menu-sect");
   body.style.overflowY = "unset";
   open.style.display = "unset";
-});
+};
 
 //? DROP-DOWN + ICON CHANGE
 
