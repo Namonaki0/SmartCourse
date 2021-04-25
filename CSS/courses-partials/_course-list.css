@@ -171,6 +171,11 @@ position: relative;
   border-bottom: none;
 }
 
+ .filter-user-input {
+    width: 100%;
+  }
+
+
 .filter-course input[type="text"] {
   color: #ddd;
   font-size: 1.2rem;
@@ -188,7 +193,6 @@ position: relative;
  {
   border-bottom: 1px solid silver;
 }
-
 
 .filter-course-wrapper:hover .filter-course {
   width: 100%;
@@ -219,11 +223,7 @@ position: relative;
   .featured-course-inner > p {
     margin: 0 auto;
   }
-
-  .description-wrapper {
-    margin: 0;
-    padding: 0;
-  }
+  
 }
 
 @media (min-width: 1000px) {
