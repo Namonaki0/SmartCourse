@@ -35,24 +35,24 @@
     <header>
          <nav>
       <a href="index.html" class="logo">SC<span class="material-icons chevron">&#xe5e1</span></a>
-      <span class="open-menu">
+      <span class="open-menu" tabindex="0" onkeydown="openMenu()" onclick="openMenu()">
         <span class="material-icons menu">&#xe5cf</span>
       </span>
 
       <!--? NAVIGATION -->
       <ul class="navigation">
-        <a href="#" class="close-menu"><span class="material-icons close-menu">
+        <a href="#" class="close-menu"><span class="material-icons close-menu" tabindex="0" onclick="closeMenu()">
             &#xe5cd
           </span></a>
 
         <li>
-          <a href="index.html">Home</a>
+          <a href="index.html" aria-label="homepage">Home</a>
         </li>
         <li>
-          <a href="courses.html">Courses</a>
+          <a href="courses.html" aria-label="course-page">Courses</a>
         </li>
         <li>
-          <a href="testimonials.html" class="active">Testimonials</a>
+          <a href="testimonials.html" aria-label="testimonials-page" class="active">Testimonials</a>
         </li>
 
         <div class="sign-in-wrapper">
@@ -70,7 +70,7 @@
       </div>
       <div class="testimonials">
         <div class="testimonial">
-          <img src="./Images/image8.jpeg" alt="Liam S photograph" />
+          <img src="./Images/Image8.jpeg" alt="Liam S photograph" />
           <span></span>
           <div class="testimonial-content">
             <p>
@@ -86,7 +86,7 @@
         </div>
 
         <div class="testimonial">
-          <img src="./Images/image9.jpeg" alt="Joan P photograph" />
+          <img src="./Images/Image9.jpeg" alt="Joan P photograph" />
           <span></span>
           <div class="testimonial-content">
             <p>
@@ -103,7 +103,7 @@
         </div>
 
         <div class="testimonial">
-          <img src="./Images/image10.jpeg" alt="Helder M photograph" />
+          <img src="./Images/Image10.jpeg" alt="Helder M photograph" />
           <span></span>
           <div class="testimonial-content">
             <p>
@@ -119,7 +119,7 @@
         </div>
 
         <div class="testimonial">
-          <img src="./Images/image11.jpeg" alt="Stephen S photograph" />
+          <img src="./Images/Image11.jpeg" alt="Stephen S photograph" />
           <span></span>
           <div class="testimonial-content">
             <p>
@@ -139,14 +139,14 @@
         <h2>Some of our reviews</h2>
         <div class="secondary-testimonials-wrapper">
           <div class="secondary-testimonials-info">
-            <img src="./Images/image14.jpeg" alt="Dimitri J picture" />
+            <img src="./Images/Image14.jpeg" alt="Dimitri J picture" />
             <p class="rating">★★★★★</p>
             <p class="opinion">"Superb" - <i>JS Bootcamp</i></p>
             <p class="name">Dimitri J.</p>
           </div>
 
           <div class="secondary-testimonials-info">
-            <img src="./Images/image12.jpeg" alt="Spencer R picture" />
+            <img src="./Images/Image12.jpeg" alt="Spencer R picture" />
             <p class="rating">★★★★★</p>
             <p class="opinion">"Best course out there" - <i>CS</i></p>
             <p class="name">Spencer R.</p>
@@ -155,7 +155,7 @@
           <div class="secondary-testimonials-info">
             <img
               class="suzan"
-              src="./Images/image13.jpeg"
+              src="./Images/Image13.jpeg"
               alt="Suzan G picture"
             />
             <p class="rating">★★★★★</p>

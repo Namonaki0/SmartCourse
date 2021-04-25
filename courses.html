@@ -31,24 +31,24 @@
     <header>
          <nav>
       <a href="index.html" class="logo">SC<span class="material-icons chevron">&#xe5e1</span></a>
-      <span class="open-menu">
+      <span class="open-menu" tabindex="0" onkeydown="openMenu()" onclick="openMenu()">
         <span class="material-icons menu">&#xe5cf</span>
       </span>
 
       <!--? NAVIGATION -->
       <ul class="navigation">
-        <a href="#" class="close-menu"><span class="material-icons close-menu">
+        <a href="#" class="close-menu"><span class="material-icons close-menu" tabindex="0" onclick="closeMenu()">
             &#xe5cd
           </span></a>
 
         <li>
-          <a href="index.html">Home</a>
+          <a href="index.html" aria-label="homepage">Home</a>
         </li>
         <li>
-          <a href="courses.html" class="active">Courses</a>
+          <a href="courses.html" aria-label="course-page" class="active">Courses</a>
         </li>
         <li>
-          <a href="testimonials.html">Testimonials</a>
+          <a href="testimonials.html" aria-label="testimonials-page">Testimonials</a>
         </li>
 
          <div class="sign-in-wrapper">
@@ -63,7 +63,7 @@
     <!--? FEATURED COURSE -->
     <main class="courses-main">
       <div class="featured-course-wrap-courses">
-        <img src="Images/image7.jpg" alt="javascript screen" />
+        <img src="Images/Image7.jpg" alt="javascript screen" />
         <div class="featured-course-inner">
           <p>Featured Course</p>
           <h2 class="main-title-underline">JavaScript Bootcamp</h2>
