@@ -85,6 +85,7 @@ const courseInfo = [
   },
 ];
 
+//? MODAL SHARED PROPERTIES
 const modalSharedProps = () => {
   courseOutputWrapper.style.animation = "courseModal";
   courseOutputWrapper.style.animationDuration = "150ms";
@@ -95,6 +96,7 @@ const modalSharedProps = () => {
   document.body.style.overflowY = "hidden";
 };
 
+//? SCREEN RESPONSIVENESS
 function modalProps() {
   if (window.screen.width >= 900 && window.screen.height >= 750) {
     courseOutputWrapper.style.display = "flex";
@@ -105,10 +107,7 @@ function modalProps() {
   }
 }
 
-//? ----------------------------------
-
-//? ADDING VIDEO DURATION TO EACH LESSON
-
+//? VIDEO DURATION FOR EACH LESSON
 const videoDuration = [
   "30mins",
   "1h 05mins",
@@ -124,13 +123,12 @@ const videoDuration = [
   "35mins",
 ];
 
+//? ADDING VIDEO DURATION TO EACH LESSON
 for (i = 0; i < classVideos.length; i++) {
   classVideos[i].textContent = videoDuration[i];
 }
 
-//? ----------------------------------
-
-//? CTA - MODAL DISPLAY
+//? CTA - MODAL DISPLAY FOR EACH COURSE
 courseCtaAll.forEach((cta) => {
   cta.addEventListener("click", (e) => {
     e.preventDefault();
@@ -193,8 +191,7 @@ courseCtaAll.forEach((cta) => {
   });
 });
 
-//? CLOSE MODAL BY CLICKING BUTTON
-
+//? CLOSE MODAL VIA CLOSE BUTTON
 closeBtn.onclick = () => {
   document.body.style.overflowY = "unset";
   courseOutputWrapper.style.display = "none";

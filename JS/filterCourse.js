@@ -3,6 +3,7 @@ const courseDesc = document.querySelectorAll(".course-desc");
 const filterCourseWrapper = document.querySelector(".filter-course-wrapper");
 const filterCourses = document.querySelector(".filter-course");
 
+//? FILTER COURSE AS YOU TYPE
 function filterCourse() {
   let userInput = filterUserInput.value.toLowerCase();
   for (i = 0; i < courseDesc.length; i++) {
@@ -12,6 +13,7 @@ function filterCourse() {
       ? (courseDesc[i].style.display = "")
       : (courseDesc[i].style.display = "none");
   }
+  //? FIELD STAYS OPEN IF THERE IS USER INPUT
   userInput
     ? (filterCourses.style.width = "100%")
     : (filterCourses.style.width = "");

@@ -15,6 +15,7 @@ let firebaseApp = {};
   firebaseApp = firebase;
 })();
 
+//? GLOBAL
 const signInWrapper = document.querySelector(".sign-in-wrapper");
 const signInBtn = document.querySelector("#sign_in_btn");
 const loggedInWrapper = document.querySelector("#logged-in-wrapper");
@@ -29,6 +30,7 @@ const regUserWrapper = document.querySelector("#reg-user-wrapper");
 const registeredWrapper = document.querySelector("#registered-wrapper");
 const noAccountSpan = document.querySelector("#no-account-span");
 
+//? SIGN-IN MODAL DISPLAY FUNCTION - LEAD UP TO REGISTRATION
 signInBtn.addEventListener("click", () => {
   if (!authOverallWrapper.classList.contains("show")) {
     authOverallWrapper.classList.add("show");
@@ -64,7 +66,7 @@ firebase.auth().onAuthStateChanged(function (user) {
     }
     var user = firebase.auth().currentUser;
 
-    //? IF THERE IS A USER THEN DISPLAY WELCOME TEXT
+    //? IF THERE IS A USER - DISPLAY WELCOME TEXT
     if (user != null) {
       let name = user.displayName;
       let email = user.email;
@@ -92,7 +94,7 @@ const userAuth = () => {
   let userEmail = document.querySelector("#user-email").value;
   let userPassword = document.querySelector("#user-password").value;
 
-  //? SIGN IN WITH MAIL AND PASSWORD
+  //? SIGN IN WITH EMAIL AND PASSWORD
   firebase
     .auth()
     .signInWithEmailAndPassword(userEmail, userPassword)
@@ -100,6 +102,7 @@ const userAuth = () => {
       //? LOGGED IN
       var user = userCredential.user;
     })
+    //? ERROR HANDLING
     .catch((error) => {
       var errorCode = error.code;
       var errorMessage = error.message;
@@ -109,12 +112,10 @@ const userAuth = () => {
 
 //? CREATING USER ACCOUNT
 const createUser = () => {
-  let regUserName = document.querySelector("#reg-user-name").value;
   let regUserEmail = document.querySelector("#reg-user-email").value;
   let regUserPassword = document.querySelector("#reg-user-password").value;
 
-  console.log(regUserName, regUserEmail, regUserPassword);
-  //? REGISTER WITH USERNAME, MAIL AND PASSWORD
+  //? REGISTER WITH EMAIL AND PASSWORD
   firebase
     .auth()
     .createUserWithEmailAndPassword(regUserEmail, regUserPassword)
@@ -127,6 +128,7 @@ const createUser = () => {
         regModal.style.display = "none";
       }, 2000);
     })
+    //? ERROR HANDLING
     .catch((error) => {
       var errorCode = error.code;
       var errorMessage = error.message;

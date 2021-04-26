@@ -1,12 +1,10 @@
-//? SUBSCRIBE MODAL
-
+//? SUBSCRIPTION MODAL
 const formWrapper = document.querySelector("#mc_embed_signup");
 const subscription = document.querySelector("#subscription");
 const form = document.querySelector("form");
 const submitBtn = document.querySelector("#mc-embedded-subscribe");
 
-//? SHOW SUBSCRIPTION MODAL
-
+//? MAILCHIMP SERVICE
 (function ($) {
   window.fnames = new Array();
   window.ftypes = new Array();
