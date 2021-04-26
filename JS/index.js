@@ -17,6 +17,14 @@ const closeMenu = () => {
   open.style.display = "unset";
 };
 
+close.onkeydown = (e) => {
+  if (e.keyCode === 13) {
+    nav.classList.remove("open-menu-sect");
+    body.style.overflowY = "unset";
+    open.style.display = "unset";
+  }
+};
+
 //? DROP-DOWN + ICON CHANGE
 
 const btnSliders = document.querySelectorAll(".btn-slider");
