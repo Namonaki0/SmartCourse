@@ -1,10 +1,10 @@
-//? MENU
-
+//? MAIN MENU
 const open = document.querySelector(".open-menu");
 const close = document.querySelector(".close-menu");
 const nav = document.querySelector(".navigation");
 const body = document.querySelector("body");
 
+//? ACCESSIBLE NAVIGATION
 const openMenu = () => {
   open.style.display = "none";
   nav.classList.add("open-menu-sect");
@@ -25,8 +25,8 @@ close.onkeydown = (e) => {
   }
 };
 
-//? DROP-DOWN + ICON CHANGE
-
+//? BENEFITS AND REFUND POLICY DROP-DOWNS - *MOBILE VERSION*
+//? DROP-DOWN +
 const btnSliders = document.querySelectorAll(".btn-slider");
 const termsContent = document.querySelectorAll(".terms-content");
 const content = document.querySelectorAll(".content");
@@ -36,7 +36,7 @@ btnSliders.forEach((slider) => {
   slider.addEventListener("click", (e) => {
     if (e.target.classList.contains("btn-slider")) {
       const sliderPosition = e.target.classList.length;
-
+      //? ICON CHANGE WHEN CONTENT SHOWN
       switch (sliderPosition) {
         case 1:
           termsContent[0].classList.toggle("active");

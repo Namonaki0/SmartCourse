@@ -1,5 +1,4 @@
-//? FEATURED COURSE
-
+//? FEATURED COURSE PROPERTIES
 const courseModalProps = () => {
   courseOutputWrapper.style.animation = "courseModal";
   courseOutputWrapper.style.animationDuration = "150ms";
@@ -10,16 +9,19 @@ const courseModalProps = () => {
   document.body.style.overflowY = "hidden";
 };
 
+//? DESKTOP SCREEN LAYOUT
 const modalFlexLayout = () => {
   courseOutputWrapper.style.display = "flex";
   courseModalProps();
 };
 
+//? MOBILE SCREEN LAYOUT
 const modalOriginalLayout = () => {
   courseOutputWrapper.style.display = "";
   courseModalProps();
 };
 
+//? RESPONSIVENESS
 function modalProps() {
   if (window.screen.width >= 900 && window.screen.height >= 750) {
     modalFlexLayout();
@@ -41,6 +43,7 @@ const featuredCourseInfo = [
   },
 ];
 
+//? FEATURED COURSE CTA BUTTON - MODAL DISPLAY
 const featuredCourseBtn = document.querySelector(".explore-btn");
 
 featuredCourseBtn.addEventListener("click", (e) => {
