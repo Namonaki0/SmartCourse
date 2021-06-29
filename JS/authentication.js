@@ -17,7 +17,7 @@ let firebaseApp = {};
 
 //? GLOBAL
 const signInWrapper = document.querySelector(".sign-in-wrapper");
-const signInBtn = document.querySelector("#sign_in_btn");
+const signInBtn = document.querySelector("#sign-in-btn");
 const loggedInWrapper = document.querySelector("#logged-in-wrapper");
 const logOutWrapper = document.querySelector("#log-out-wrapper");
 const authWrapper = document.querySelector("#auth-wrapper");
