@@ -2,3 +2,6 @@
 .netlify
 /.netlify
 /.vscode
+debug.log
+firebase.json
+.firebaserc
