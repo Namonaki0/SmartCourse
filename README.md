@@ -1,5 +1,7 @@
 # SmartCourse - << Concept website for online learning >>
 
+https://www.smartcourseproject.com/
+
 The sole purpose of this project is to practice my Web Dev and problem-solving skills. 
 
 FEATURES
