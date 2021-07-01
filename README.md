@@ -1,4 +1,4 @@
-# SmartCourse - << Concept website for online learning >>
+# SmartCourse << Concept website for online learning >>
 
 https://www.smartcourseproject.com/
 
