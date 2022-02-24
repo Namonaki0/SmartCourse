@@ -42,7 +42,6 @@ signInBtn.addEventListener("click", () => {
 //? AUTHENTICATION STATUS
 firebase.auth().onAuthStateChanged(function (user) {
   if (user) {
-    console.log(user);
     //? USER LOGGED IN
     loggedInWrapper.style.display = "flex";
     authWrapper.style.display = "none";
@@ -122,7 +121,7 @@ const createUser = () => {
     .catch((error) => {
       var errorCode = error.code;
       var errorMessage = error.message;
-      console.log("NOT OK", +errorCode);
+      console.error("NOT OK", +errorCode);
     });
 };
 
@@ -143,9 +142,9 @@ auth.onAuthStateChanged(function (user) {
   if (user) {
     //? IS SIGNED IN
     let email = user.email;
-    console.log(`${email} signed in`);
+    console.info(`Signed in as ${email}`);
   } else {
     //? NOT SIGNED IN
-    console.log(`Not signed in`);
+    console.info(`Not signed in`);
   }
 });
