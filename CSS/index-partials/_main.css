@@ -78,9 +78,7 @@ body {
   .hero-message p {
     margin-top: 0.5rem;
   }
-  .hero-message h2 {
-    line-height: 30px;
-  }
+
 }
 
 /*? ----- */
@@ -98,8 +96,8 @@ body {
     width: 70%;
   }
 
-     .hero-message h2 {
-       margin-bottom: 1rem;
+     .hero-message h2 span {
+       margin-top: .3rem;
      }
 }
 
