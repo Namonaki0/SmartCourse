@@ -1,5 +1,5 @@
 //? FEATURED COURSE COUNTDOWN PROMO
-let futureDate = new Date("Mar 02, 2022 23:59:59").getTime();
+let futureDate = new Date("Jun 21, 2022 23:59:59").getTime();
 let counter = document.querySelector("#counter");
 
 function tellTime() {
